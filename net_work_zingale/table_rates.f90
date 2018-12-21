@@ -5,14 +5,12 @@ module table_rates
   implicit none
 
   public table_meta, tabular_evaluate
-  public j_f20_o20
-  public j_ne20_f20
 
   private num_tables, jtab_mu, jtab_dq, jtab_vs, jtab_rate, jtab_nuloss, jtab_gamma
   private k_drate_dt, add_vars
   private table_read_meta
   
-  integer, parameter :: num_tables   = 2
+  integer, parameter :: num_tables   = 0
   integer, parameter :: jtab_mu      = 1
   integer, parameter :: jtab_dq      = 2
   integer, parameter :: jtab_vs      = 3
@@ -26,8 +24,6 @@ module table_rates
   integer, parameter :: k_drate_dt   = 7
   integer, parameter :: add_vars     = 1 ! 1 Additional Var in entries
 
-  integer, parameter :: j_f20_o20   = 1
-  integer, parameter :: j_ne20_f20   = 2
 
   type :: table_info
      double precision, allocatable :: rate_table(:,:,:)
@@ -53,18 +49,6 @@ contains
 
   subroutine init_tabular()
     integer :: n
-
-    table_read_meta(j_f20_o20)%rate_table_file = '20f-20o_electroncapture.dat'
-    table_read_meta(j_f20_o20)%num_header = 5
-    table_meta(j_f20_o20)%num_rhoy = 152
-    table_meta(j_f20_o20)%num_temp = 39
-    table_meta(j_f20_o20)%num_vars = 6
-
-    table_read_meta(j_ne20_f20)%rate_table_file = '20ne-20f_electroncapture.dat'
-    table_read_meta(j_ne20_f20)%num_header = 7
-    table_meta(j_ne20_f20)%num_rhoy = 152
-    table_meta(j_ne20_f20)%num_temp = 39
-    table_meta(j_ne20_f20)%num_vars = 6
 
     
     do n = 1, num_tables
