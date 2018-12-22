@@ -18,7 +18,7 @@ module actual_network
   double precision, parameter :: mass_proton   = 1.67262163783d-24
   double precision, parameter :: mass_electron = 9.10938215450d-28
 
-  integer, parameter :: nrates = 16
+  integer, parameter :: nrates = 18
   integer, parameter :: num_rate_groups = 4
 
   ! Evolution and auxiliary
@@ -32,7 +32,7 @@ module actual_network
   integer, parameter :: nrat_reaclib = 16
   
   ! Number of tabular rates
-  integer, parameter :: nrat_tabular = 0
+  integer, parameter :: nrat_tabular = 2
 
   ! Binding Energies Per Nucleon (MeV)
   double precision :: ebind_per_nucleon(nspec)
@@ -72,6 +72,8 @@ module actual_network
   integer, parameter :: k_p_al27__he4_mg24   = 14
   integer, parameter :: k_he4_si28__p_p31   = 15
   integer, parameter :: k_p_p31__he4_si28   = 16
+  integer, parameter :: k_f20__o20   = 17
+  integer, parameter :: k_ne20__f20   = 18
 
   ! reactvec indices
   integer, parameter :: i_rate        = 1
