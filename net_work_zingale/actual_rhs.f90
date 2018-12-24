@@ -380,67 +380,65 @@ contains
     double precision :: scratch_44
     double precision :: scratch_45
     double precision :: scratch_46
-    double precision :: scratch_47
 
-    scratch_0 = screened_rates(k_p_p31__he4_si28)*dens
-    scratch_1 = Y(jp31)*scratch_0
-    scratch_2 = screened_rates(k_p_p31__s32)*dens
-    scratch_3 = Y(jp31)*scratch_2
-    scratch_4 = -scratch_1 - scratch_3
-    scratch_5 = Y(jal27)*dens
-    scratch_6 = screened_rates(k_p_al27__he4_mg24)*scratch_5
-    scratch_7 = screened_rates(k_p_al27__si28)*scratch_5
-    scratch_8 = -scratch_6 - scratch_7
-    scratch_9 = Y(jmg24)*dens
-    scratch_10 = screened_rates(k_he4_mg24__p_al27)*scratch_9
-    scratch_11 = Y(jsi28)*dens
-    scratch_12 = screened_rates(k_he4_si28__p_p31)*scratch_11
-    scratch_13 = screened_rates(k_o16_o16__p_p31)*Y(jo16)*dens
-    scratch_14 = 1.0d0*scratch_13
-    scratch_15 = Y(jhe4)*dens
-    scratch_16 = screened_rates(k_he4_mg24__p_al27)*scratch_15
-    scratch_17 = Y(jp)*dens
-    scratch_18 = screened_rates(k_p_al27__he4_mg24)*scratch_17
-    scratch_19 = screened_rates(k_p_al27__si28)*scratch_17
-    scratch_20 = -scratch_18 - scratch_19
-    scratch_21 = screened_rates(k_he4_si28__p_p31)*scratch_15
-    scratch_22 = Y(jp)*scratch_0
-    scratch_23 = Y(jp)*scratch_2
-    scratch_24 = -scratch_22 - scratch_23
-    scratch_25 = screened_rates(k_he4_al27__p31)*scratch_5
-    scratch_26 = -scratch_25
-    scratch_27 = screened_rates(k_he4_ne20__mg24)*Y(jne20)*dens
-    scratch_28 = -scratch_27
-    scratch_29 = screened_rates(k_he4_o16__ne20)*Y(jo16)*dens
-    scratch_30 = -scratch_29
-    scratch_31 = -scratch_12
-    scratch_32 = screened_rates(k_he4_si28__s32)*scratch_11
-    scratch_33 = -scratch_32
-    scratch_34 = screened_rates(k_he4_mg24__si28)*scratch_9
-    scratch_35 = -scratch_10 - scratch_34
-    scratch_36 = screened_rates(k_he4_o16__ne20)*scratch_15
-    scratch_37 = -scratch_36
-    scratch_38 = screened_rates(k_o16_o16__he4_si28)*Y(jo16)*dens
-    scratch_39 = 1.0d0*scratch_38
-    scratch_40 = screened_rates(k_he4_ne20__mg24)*scratch_15
-    scratch_41 = -scratch_40
-    scratch_42 = screened_rates(k_he4_mg24__si28)*scratch_15
-    scratch_43 = -scratch_16 - scratch_42
-    scratch_44 = screened_rates(k_he4_al27__p31)*scratch_15
-    scratch_45 = -scratch_44
-    scratch_46 = screened_rates(k_he4_si28__s32)*scratch_15
-    scratch_47 = -scratch_21 - scratch_46
+    scratch_0 = Y(jal27)*dens
+    scratch_1 = screened_rates(k_p_al27__he4_mg24)*scratch_0
+    scratch_2 = screened_rates(k_p_al27__si28)*scratch_0
+    scratch_3 = -scratch_1 - scratch_2
+    scratch_4 = screened_rates(k_p_p31__he4_si28)*dens
+    scratch_5 = Y(jp31)*scratch_4
+    scratch_6 = screened_rates(k_p_p31__s32)*Y(jp31)*dens
+    scratch_7 = -scratch_5 - scratch_6
+    scratch_8 = Y(jmg24)*dens
+    scratch_9 = screened_rates(k_he4_mg24__p_al27)*scratch_8
+    scratch_10 = Y(jsi28)*dens
+    scratch_11 = screened_rates(k_he4_si28__p_p31)*scratch_10
+    scratch_12 = screened_rates(k_o16_o16__p_p31)*Y(jo16)*dens
+    scratch_13 = 1.0d0*scratch_12
+    scratch_14 = Y(jhe4)*dens
+    scratch_15 = screened_rates(k_he4_mg24__p_al27)*scratch_14
+    scratch_16 = Y(jp)*dens
+    scratch_17 = screened_rates(k_p_al27__he4_mg24)*scratch_16
+    scratch_18 = screened_rates(k_p_al27__si28)*scratch_16
+    scratch_19 = -scratch_17 - scratch_18
+    scratch_20 = screened_rates(k_he4_si28__p_p31)*scratch_14
+    scratch_21 = Y(jp)*scratch_4
+    scratch_22 = screened_rates(k_p_p31__s32)*scratch_16
+    scratch_23 = -scratch_21 - scratch_22
+    scratch_24 = screened_rates(k_he4_al27__p31)*scratch_0
+    scratch_25 = -scratch_24
+    scratch_26 = screened_rates(k_he4_ne20__mg24)*Y(jne20)*dens
+    scratch_27 = -scratch_26
+    scratch_28 = screened_rates(k_he4_o16__ne20)*Y(jo16)*dens
+    scratch_29 = -scratch_28
+    scratch_30 = -scratch_11
+    scratch_31 = screened_rates(k_he4_si28__s32)*scratch_10
+    scratch_32 = -scratch_31
+    scratch_33 = screened_rates(k_he4_mg24__si28)*scratch_8
+    scratch_34 = -scratch_33 - scratch_9
+    scratch_35 = screened_rates(k_he4_o16__ne20)*scratch_14
+    scratch_36 = -scratch_35
+    scratch_37 = screened_rates(k_o16_o16__he4_si28)*Y(jo16)*dens
+    scratch_38 = 1.0d0*scratch_37
+    scratch_39 = screened_rates(k_he4_ne20__mg24)*scratch_14
+    scratch_40 = -scratch_39
+    scratch_41 = screened_rates(k_he4_mg24__si28)*scratch_14
+    scratch_42 = -scratch_15 - scratch_41
+    scratch_43 = screened_rates(k_he4_al27__p31)*scratch_14
+    scratch_44 = -scratch_43
+    scratch_45 = screened_rates(k_he4_si28__s32)*scratch_14
+    scratch_46 = -scratch_20 - scratch_45
 
     dfdy_nuc(jp,jp) = ( &
-      scratch_4 + scratch_8 &
+      scratch_3 + scratch_7 &
        )
 
     dfdy_nuc(jp,jhe4) = ( &
-      scratch_10 + scratch_12 &
+      scratch_11 + scratch_9 &
        )
 
     dfdy_nuc(jp,jo16) = ( &
-      scratch_14 &
+      scratch_13 &
        )
 
     dfdy_nuc(jp,jo20) = ( &
@@ -456,19 +454,19 @@ contains
        )
 
     dfdy_nuc(jp,jmg24) = ( &
-      scratch_16 &
+      scratch_15 &
        )
 
     dfdy_nuc(jp,jal27) = ( &
-      scratch_20 &
+      scratch_19 &
        )
 
     dfdy_nuc(jp,jsi28) = ( &
-      scratch_21 &
+      scratch_20 &
        )
 
     dfdy_nuc(jp,jp31) = ( &
-      scratch_24 &
+      scratch_23 &
        )
 
     dfdy_nuc(jp,js32) = ( &
@@ -476,16 +474,16 @@ contains
        )
 
     dfdy_nuc(jhe4,jp) = ( &
-      scratch_1 + scratch_6 &
+      scratch_1 + scratch_5 &
        )
 
     dfdy_nuc(jhe4,jhe4) = ( &
-      scratch_26 + scratch_28 + scratch_30 + scratch_31 + scratch_33 + &
-      scratch_35 &
+      scratch_25 + scratch_27 + scratch_29 + scratch_30 + scratch_32 + &
+      scratch_34 &
        )
 
     dfdy_nuc(jhe4,jo16) = ( &
-      scratch_37 + scratch_39 &
+      scratch_36 + scratch_38 &
        )
 
     dfdy_nuc(jhe4,jo20) = ( &
@@ -497,23 +495,23 @@ contains
        )
 
     dfdy_nuc(jhe4,jne20) = ( &
-      screened_rates(k_ne20__he4_o16) + scratch_41 &
+      screened_rates(k_ne20__he4_o16) + scratch_40 &
        )
 
     dfdy_nuc(jhe4,jmg24) = ( &
-      scratch_43 &
+      scratch_42 &
        )
 
     dfdy_nuc(jhe4,jal27) = ( &
-      scratch_18 + scratch_45 &
+      scratch_17 + scratch_44 &
        )
 
     dfdy_nuc(jhe4,jsi28) = ( &
-      scratch_47 &
+      scratch_46 &
        )
 
     dfdy_nuc(jhe4,jp31) = ( &
-      scratch_22 &
+      scratch_21 &
        )
 
     dfdy_nuc(jhe4,js32) = ( &
@@ -525,11 +523,11 @@ contains
        )
 
     dfdy_nuc(jo16,jhe4) = ( &
-      scratch_30 &
+      scratch_29 &
        )
 
     dfdy_nuc(jo16,jo16) = ( &
-      -2.0d0*scratch_13 + scratch_37 - 2.0d0*scratch_38 &
+      -2.0d0*scratch_12 + scratch_36 - 2.0d0*scratch_37 &
        )
 
     dfdy_nuc(jo16,jo20) = ( &
@@ -657,11 +655,11 @@ contains
        )
 
     dfdy_nuc(jne20,jhe4) = ( &
-      scratch_28 + scratch_29 &
+      scratch_27 + scratch_28 &
        )
 
     dfdy_nuc(jne20,jo16) = ( &
-      scratch_36 &
+      scratch_35 &
        )
 
     dfdy_nuc(jne20,jo20) = ( &
@@ -673,7 +671,7 @@ contains
        )
 
     dfdy_nuc(jne20,jne20) = ( &
-      -screened_rates(k_ne20__f20) - screened_rates(k_ne20__he4_o16) + scratch_41 &
+      -screened_rates(k_ne20__f20) - screened_rates(k_ne20__he4_o16) + scratch_40 &
        )
 
     dfdy_nuc(jne20,jmg24) = ( &
@@ -697,11 +695,11 @@ contains
        )
 
     dfdy_nuc(jmg24,jp) = ( &
-      scratch_6 &
+      scratch_1 &
        )
 
     dfdy_nuc(jmg24,jhe4) = ( &
-      scratch_27 + scratch_35 &
+      scratch_26 + scratch_34 &
        )
 
     dfdy_nuc(jmg24,jo16) = ( &
@@ -717,15 +715,15 @@ contains
        )
 
     dfdy_nuc(jmg24,jne20) = ( &
-      scratch_40 &
+      scratch_39 &
        )
 
     dfdy_nuc(jmg24,jmg24) = ( &
-      scratch_43 &
+      scratch_42 &
        )
 
     dfdy_nuc(jmg24,jal27) = ( &
-      scratch_18 &
+      scratch_17 &
        )
 
     dfdy_nuc(jmg24,jsi28) = ( &
@@ -741,11 +739,11 @@ contains
        )
 
     dfdy_nuc(jal27,jp) = ( &
-      scratch_8 &
+      scratch_3 &
        )
 
     dfdy_nuc(jal27,jhe4) = ( &
-      scratch_10 + scratch_26 &
+      scratch_25 + scratch_9 &
        )
 
     dfdy_nuc(jal27,jo16) = ( &
@@ -765,11 +763,11 @@ contains
        )
 
     dfdy_nuc(jal27,jmg24) = ( &
-      scratch_16 &
+      scratch_15 &
        )
 
     dfdy_nuc(jal27,jal27) = ( &
-      scratch_20 + scratch_45 &
+      scratch_19 + scratch_44 &
        )
 
     dfdy_nuc(jal27,jsi28) = ( &
@@ -785,15 +783,15 @@ contains
        )
 
     dfdy_nuc(jsi28,jp) = ( &
-      scratch_1 + scratch_7 &
+      scratch_2 + scratch_5 &
        )
 
     dfdy_nuc(jsi28,jhe4) = ( &
-      scratch_31 + scratch_33 + scratch_34 &
+      scratch_30 + scratch_32 + scratch_33 &
        )
 
     dfdy_nuc(jsi28,jo16) = ( &
-      scratch_39 &
+      scratch_38 &
        )
 
     dfdy_nuc(jsi28,jo20) = ( &
@@ -809,19 +807,19 @@ contains
        )
 
     dfdy_nuc(jsi28,jmg24) = ( &
-      scratch_42 &
+      scratch_41 &
        )
 
     dfdy_nuc(jsi28,jal27) = ( &
-      scratch_19 &
+      scratch_18 &
        )
 
     dfdy_nuc(jsi28,jsi28) = ( &
-      scratch_47 &
+      scratch_46 &
        )
 
     dfdy_nuc(jsi28,jp31) = ( &
-      scratch_22 &
+      scratch_21 &
        )
 
     dfdy_nuc(jsi28,js32) = ( &
@@ -829,15 +827,15 @@ contains
        )
 
     dfdy_nuc(jp31,jp) = ( &
-      scratch_4 &
+      scratch_7 &
        )
 
     dfdy_nuc(jp31,jhe4) = ( &
-      scratch_12 + scratch_25 &
+      scratch_11 + scratch_24 &
        )
 
     dfdy_nuc(jp31,jo16) = ( &
-      scratch_14 &
+      scratch_13 &
        )
 
     dfdy_nuc(jp31,jo20) = ( &
@@ -857,15 +855,15 @@ contains
        )
 
     dfdy_nuc(jp31,jal27) = ( &
-      scratch_44 &
+      scratch_43 &
        )
 
     dfdy_nuc(jp31,jsi28) = ( &
-      scratch_21 &
+      scratch_20 &
        )
 
     dfdy_nuc(jp31,jp31) = ( &
-      scratch_24 &
+      scratch_23 &
        )
 
     dfdy_nuc(jp31,js32) = ( &
@@ -873,11 +871,11 @@ contains
        )
 
     dfdy_nuc(js32,jp) = ( &
-      scratch_3 &
+      scratch_6 &
        )
 
     dfdy_nuc(js32,jhe4) = ( &
-      scratch_32 &
+      scratch_31 &
        )
 
     dfdy_nuc(js32,jo16) = ( &
@@ -905,11 +903,11 @@ contains
        )
 
     dfdy_nuc(js32,jsi28) = ( &
-      scratch_46 &
+      scratch_45 &
        )
 
     dfdy_nuc(js32,jp31) = ( &
-      scratch_23 &
+      scratch_22 &
        )
 
     dfdy_nuc(js32,js32) = ( &

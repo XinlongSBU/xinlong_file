@@ -54,13 +54,13 @@ contains
   subroutine init_tabular()
     integer :: n
 
-    table_read_meta(j_f20_o20)%rate_table_file = '20f-20o_electroncapture.dat'
+    table_read_meta(j_f20_o20)%rate_table_file = '20f-20o.dat'
     table_read_meta(j_f20_o20)%num_header = 5
     table_meta(j_f20_o20)%num_rhoy = 152
     table_meta(j_f20_o20)%num_temp = 39
     table_meta(j_f20_o20)%num_vars = 6
 
-    table_read_meta(j_ne20_f20)%rate_table_file = '20ne-20f_electroncapture.dat'
+    table_read_meta(j_ne20_f20)%rate_table_file = '20ne-20f.dat'
     table_read_meta(j_ne20_f20)%num_header = 7
     table_meta(j_ne20_f20)%num_rhoy = 152
     table_meta(j_ne20_f20)%num_temp = 39
