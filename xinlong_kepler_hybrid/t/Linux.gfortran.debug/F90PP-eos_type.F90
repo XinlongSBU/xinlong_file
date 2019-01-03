@@ -137,6 +137,7 @@ module eos_type_module
   ! dedZ     -- d energy/ d zbar
   ! dpde     -- d pressure / d energy |_rho
   ! dpdr_e   -- d pressure / d rho |_energy
+  ! conductivity -- thermal conductivity (in erg/cm/K/sec)
 
   type :: eos_t
 
@@ -187,6 +188,8 @@ module eos_type_module
 
 
 
+
+    real(rt) :: conductivity
 
   end type eos_t
 
@@ -239,7 +242,10 @@ contains
     to_eos % abar = from_eos % abar
     to_eos % zbar = from_eos % zbar
 
-# 237 "/raid2/xinlong/git_folder/Microphysics/interfaces/eos_type.F90"
+# 240 "/raid2/xinlong/git_folder/Microphysics/interfaces/eos_type.F90"
+
+    to_eos % conductivity = from_eos % conductivity
+
   end subroutine copy_eos_t
 
 
@@ -271,7 +277,7 @@ contains
 
   end subroutine composition
 
-# 302 "/raid2/xinlong/git_folder/Microphysics/interfaces/eos_type.F90"
+# 308 "/raid2/xinlong/git_folder/Microphysics/interfaces/eos_type.F90"
 
 
   ! Normalize the mass fractions: they must be individually positive

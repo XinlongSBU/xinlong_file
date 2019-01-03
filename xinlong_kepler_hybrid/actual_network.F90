@@ -29,8 +29,8 @@ module actual_network
 
   implicit none
 
-  integer, parameter :: nspec = 4
-  integer, parameter :: nspec_evolve = 4
+  integer, parameter :: nspec = 11
+  integer, parameter :: nspec_evolve = 11
   integer, parameter :: naux =  0
 
   character (len=16), save :: spec_names(nspec) 
@@ -53,28 +53,56 @@ contains
   
   subroutine actual_network_init
 
-    spec_names(1) = "carbon-12"
+    spec_names(1) = "neon-20"
     spec_names(2) = "oxygen-16"
-    spec_names(3) = "neon-20"
-    spec_names(4) = "ash"
+    spec_names(3) = "oxygen-20"
+    spec_names(4) = "magnesium24"
+    spec_names(5) = "fluorine20"
+    spec_names(6) = "helium4"
+    spec_names(7) = "aluminum27"
+    spec_names(8) = "silicon28"
+    spec_names(9) = "sulfur32"
+    spec_names(10) = "phosphorus31"
+    spec_names(11) = "proton"
 
-    short_spec_names(1) = "C12"
+    short_spec_names(1) = "Ne20"
     short_spec_names(2) = "O16"
-    short_spec_names(3) = "Ne20"
-    short_spec_names(4) = "ash"
+    short_spec_names(3) = "O20"
+    short_spec_names(4) = "Mg24"
+    short_spec_names(5) = "F20"
+    short_spec_names(6) = "He4"
+    short_spec_names(7) = "Al27"
+    short_spec_names(8) = "Si28"
+    short_spec_names(9) = "S32"
+    short_spec_names(10) = "P31"
+    short_spec_names(11) = "p"
 
     allocate(aion(nspec))
     allocate(zion(nspec))
 
-    aion(1) = 12.0
+    aion(1) = 20.0
     aion(2) = 16.0
     aion(3) = 20.0
-    aion(4) = 18.0
+    aion(4) = 24.0
+    aion(5) = 20.0
+    aion(6) = 4.0
+    aion(7) = 27.0
+    aion(8) = 28.0
+    aion(9) = 32.0
+    aion(10) = 31.0
+    aion(11) = 1.0
 
-    zion(1) = 6.0
+    zion(1) = 10.0
     zion(2) = 8.0
-    zion(3) = 10.0
-    zion(4) = 8.8
+    zion(3) = 8.0
+    zion(4) = 12.0
+    zion(5) = 9.0
+    zion(6) = 2.0
+    zion(7) = 13.0
+    zion(8) = 14.0
+    zion(9) = 16.0
+    zion(10) = 15.0
+    zion(11) = 1.0
 
 
     !$acc update device(aion, zion)

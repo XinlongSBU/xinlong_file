@@ -1,5 +1,5 @@
 GFORTRAN module version '10' created from /raid2/xinlong/git_folder/Microphysics/networks/general_null/actual_burner.f90
-MD5:3cfd6defd0ab7b0636b0713a621904d6 -- If you edit this, you'll get what you deserve.
+MD5:6ba456f1467ab0bf296a4386c415e51f -- If you edit this, you'll get what you deserve.
 
 (() () () () () () () () () () () () () () () () () () () () () () ()
 () () () ())
@@ -44,7 +44,7 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (32 't' (REAL 8 0 0 0 REAL ()) ()
 UNKNOWN-ACCESS ()) (33 'e' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (34
 'xn' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0
-INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4')) (
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11')) (
 UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION)
 UNKNOWN-ACCESS ()) (35 'cv' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (36
@@ -66,28 +66,29 @@ UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (45
 'dcpdt' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (46 'ydot' (REAL 8
 0 0 0 REAL ()) (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1')
-(CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6')) (UNKNOWN-FL
+(CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '13')) (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION)
 UNKNOWN-ACCESS ()) (47 'jac' (REAL 8 0 0 0 REAL ()) (2 0 EXPLICIT (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
-INTEGER ()) 0 '6') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (
-CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6')) (UNKNOWN-FL UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION) UNKNOWN-ACCESS ()) (48
-'self_heat' (LOGICAL 4 0 0 0 LOGICAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (49 'i' (INTEGER 4
-0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
-UNKNOWN 0 0) UNKNOWN-ACCESS ()) (50 'j' (INTEGER 4 0 0 0 INTEGER ()) ()
-(UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
-UNKNOWN-ACCESS ()) (51 'k' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL
-UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (52
-'n_rhs' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (53 'n_jac' (
-INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (54 'time' (REAL 8 0 0 0 REAL ())
-() (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
-UNKNOWN-ACCESS ()) (55 'success' (LOGICAL 4 0 0 0 LOGICAL ()) () (
+INTEGER ()) 0 '13') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '13')) (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION)
+UNKNOWN-ACCESS ()) (48 'self_heat' (LOGICAL 4 0 0 0 LOGICAL ()) () (
 UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
-UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0 92185986)
+UNKNOWN-ACCESS ()) (49 'i' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (50
+'j' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (51 'k' (INTEGER 4
+0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0) UNKNOWN-ACCESS ()) (52 'n_rhs' (INTEGER 4 0 0 0 INTEGER ())
+() (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (53 'n_jac' (INTEGER 4 0 0 0 INTEGER ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (54 'time' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (55
+'success' (LOGICAL 4 0 0 0 LOGICAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ())
+() 0 0 92185986)
 10 'Eos_t' 'eos_type_module' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 ((56 'rho'
 (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
@@ -101,7 +102,7 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (60 'h' (REAL 8 0 0 0 REAL ()) ()
 UNKNOWN-ACCESS ()) (61 's' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (62
 'xn' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0
-INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4')) (
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11')) (
 UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION)
 UNKNOWN-ACCESS ()) (63 'aux' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
@@ -146,491 +147,492 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (85 'cs' (REAL 8 0 0 0 REAL ())
 UNKNOWN-ACCESS ()) (86 'abar' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (87
 'zbar' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0
-559866)
-88 '__iso_c_binding' '__iso_c_binding' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (88 'conductivity' (REAL 8 0 0 0
+REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0 559866)
+89 '__iso_c_binding' '__iso_c_binding' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 INTRINSIC) (UNKNOWN 0 0 0 0 UNKNOWN ())
 0 0 () () 0 () () () 2 0)
-89 'actual_burner' 'actual_burner_module' '' 1 ((PROCEDURE
+90 'actual_burner' 'actual_burner_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 90 0 (91 92 93 94) () 0 () () () 0 0)
-95 'actual_burner_init' 'actual_burner_module' '' 1 ((PROCEDURE
+UNKNOWN 0 0 0 0 UNKNOWN ()) 91 0 (92 93 94 95) () 0 () () () 0 0)
+96 'actual_burner_init' 'actual_burner_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
 UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-96 'actual_burner_module' 'actual_burner_module' '' 1 ((MODULE
+97 'actual_burner_module' 'actual_burner_module' '' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-97 'actual_network' 'actual_network' '' 1 ((MODULE UNKNOWN-INTENT
+98 'actual_network' 'actual_network' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-98 'actual_network_finalize' 'actual_network' '' 1 ((PROCEDURE
+99 'actual_network_finalize' 'actual_network' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-99 'actual_network_init' 'actual_network' '' 1 ((PROCEDURE
+100 'actual_network_init' 'actual_network' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-100 'aion' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+101 'aion' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN EXPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-101 'aion_inv' 'network' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+102 'aion_inv' 'network' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
-102 'amrex_constants_module' 'amrex_constants_module' '' 1 ((MODULE
+103 'amrex_constants_module' 'amrex_constants_module' '' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-103 'amrex_error_module' 'amrex_error_module' '' 1 ((MODULE
+104 'amrex_error_module' 'amrex_error_module' '' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-104 'amrex_fort_module' 'amrex_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
+105 'amrex_fort_module' 'amrex_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-105 'aux_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
+106 'aux_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN EXPLICIT-SAVE 0 0 DIMENSION) (CHARACTER 1 0 0 0
 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '16'))) 0 0 () (1 0
 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (
 INTEGER 4 0 0 0 INTEGER ()) 0 '0')) 0 () () () 0 0)
-106 'bl_constants_module' 'bl_constants_module' '' 1 ((MODULE
+107 'bl_constants_module' 'bl_constants_module' '' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-107 'bl_fort_module' 'bl_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
+108 'bl_fort_module' 'bl_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-108 'bl_real' 'bl_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+109 'bl_real' 'bl_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-109 'bl_real_size' 'bl_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+110 'bl_real_size' 'bl_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (INTEGER 8 0 1 0
 INTEGER ()) 0 0 () (CONSTANT (INTEGER 8 0 1 0 INTEGER ()) 0 '8') () 0 ()
 () () 0 0)
-110 'bl_types' 'bl_types' '' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
+111 'bl_types' 'bl_types' '' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0
 0)
-111 'bl_types_info' 'bl_types' '' 1 ((PROCEDURE UNKNOWN-INTENT
+112 'bl_types_info' 'bl_types' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ())
-112 0 (113) () 0 () () () 0 0)
-114 'burn_t' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+113 0 (114) () 0 () () () 0 0)
+115 'burn_t' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (UNKNOWN 0 0 0 0 UNKNOWN
 ()) 0 0 () () 0 () () () 0 0)
-115 'burn_to_eos' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+116 'burn_to_eos' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ())
-116 0 (117 118) () 0 () () () 0 0)
-119 'burn_type_module' 'burn_type_module' '' 1 ((MODULE UNKNOWN-INTENT
+117 0 (118 119) () 0 () () () 0 0)
+120 'burn_type_module' 'burn_type_module' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-120 'c_size_t' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+121 'c_size_t' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
 INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '8') () 0 ()
 () () 2 7)
-121 'clean_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+122 'clean_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 122 0 (123) () 0 () () () 0 0)
-124 'composition' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 123 0 (124) () 0 () () () 0 0)
+125 'composition' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 125 0 (126) () 0 () () () 0 0)
-127 'copy_burn_t' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 126 0 (127) () 0 () () () 0 0)
+128 'copy_burn_t' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 128 0 (129 130) () 0 () () () 0 0)
-131 'copy_eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 129 0 (130 131) () 0 () () () 0 0)
+132 'copy_eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ())
-132 0 (133 134) () 0 () () () 0 0)
-135 'dp_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+133 0 (134 135) () 0 () () () 0 0)
+136 'dp_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-136 'eight' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+137 'eight' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.80000000000000@1') () 0 () () () 0
 0)
-137 'eighth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+138 'eighth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.20000000000000@0') () 0 () () () 0
 0)
-138 'eleven' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+139 'eleven' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.b0000000000000@1') () 0 () () () 0
 0)
-139 'eos_get_max_dens' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+140 'eos_get_max_dens' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 140 0 (141) () 0 () () () 0 0)
-142 'eos_get_max_temp' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 141 0 (142) () 0 () () () 0 0)
+143 'eos_get_max_temp' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 143 0 (144) () 0 () () () 0 0)
-145 'eos_get_small_dens' 'eos_type_module' '' 1 ((PROCEDURE
+UNKNOWN ()) 144 0 (145) () 0 () () () 0 0)
+146 'eos_get_small_dens' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 146 0 (147) () 0 () () () 0 0)
-148 'eos_get_small_temp' 'eos_type_module' '' 1 ((PROCEDURE
+UNKNOWN 0 0 0 0 UNKNOWN ()) 147 0 (148) () 0 () () () 0 0)
+149 'eos_get_small_temp' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 149 0 (150) () 0 () () () 0 0)
-151 'eos_input_has_var' 'eos_type_module' '' 1 ((PROCEDURE
+UNKNOWN 0 0 0 0 UNKNOWN ()) 150 0 (151) () 0 () () () 0 0)
+152 'eos_input_has_var' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (LOGICAL 4 0 0 0
-LOGICAL ()) 152 0 (153 154) () 155 () () () 0 0)
-156 'eos_input_ph' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+LOGICAL ()) 153 0 (154 155) () 156 () () () 0 0)
+157 'eos_input_ph' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '7') () 0 () () () 0 0)
-157 'eos_input_ps' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+158 'eos_input_ps' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-158 'eos_input_re' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+159 'eos_input_re' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-159 'eos_input_rh' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+160 'eos_input_rh' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
-160 'eos_input_rp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+161 'eos_input_rp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-161 'eos_input_rt' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+162 'eos_input_rt' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') () 0 () () () 0 0)
-162 'eos_input_th' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+163 'eos_input_th' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-163 'eos_input_tp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+164 'eos_input_tp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
-164 'eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+165 'eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (UNKNOWN 0 0 0 0 UNKNOWN
 ()) 0 0 () () 0 () () () 0 0)
-165 'eos_to_burn' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+166 'eos_to_burn' 'burn_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ())
-166 0 (167 168) () 0 () () () 0 0)
-169 'eos_type_module' 'eos_type_module' '' 1 ((MODULE UNKNOWN-INTENT
+167 0 (168 169) () 0 () () () 0 0)
+170 'eos_type_module' 'eos_type_module' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-170 'fifteen' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+171 'fifteen' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.f0000000000000@1') () 0 () () () 0
 0)
-171 'fifth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+172 'fifth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.33333333333334@0') () 0 () () () 0
 0)
-172 'five' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+173 'five' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.50000000000000@1') () 0 () () () 0
 0)
-173 'five12th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+174 'five12th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.6aaaaaaaaaaaac@0') () 0 () () () 0
 0)
-174 'five32nd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+175 'five32nd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.28000000000000@0') () 0 () () () 0
 0)
-175 'five3rd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+176 'five3rd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.1aaaaaaaaaaaab@1') () 0 () () () 0
 0)
-176 'five6th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+177 'five6th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.d5555555555558@0') () 0 () () () 0
 0)
-177 'four' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+178 'four' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.40000000000000@1') () 0 () () () 0
 0)
-178 'four3rd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+179 'four3rd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.15555555555555@1') () 0 () () () 0
 0)
-179 'fourth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+180 'fourth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.40000000000000@0') () 0 () () () 0
 0)
-180 'get_network_short_species_name' 'network' '' 1 ((PROCEDURE
+181 'get_network_short_species_name' 'network' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (CHARACTER 1 0 0 0
-CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 181 0 (182)
-() 183 () () () 0 0)
-184 'get_network_species_name' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT
+CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 182 0 (183)
+() 184 () () () 0 0)
+185 'get_network_species_name' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (CHARACTER 1 0 0 0 CHARACTER ((
-CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 185 0 (186) () 187 () ()
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 186 0 (187) () 188 () ()
 () 0 0)
-188 'half' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+189 'half' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.80000000000000@0') () 0 () () () 0
 0)
-189 'idens' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+190 'idens' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
-190 'iener' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+191 'iener' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
-191 'ienth' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+192 'ienth' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-192 'ientr' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+193 'ientr' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-193 'ierr_general' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+194 'ierr_general' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') () 0 () () () 0 0)
-194 'ierr_init' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+195 'ierr_init' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '9') () 0 () () () 0 0)
-195 'ierr_init_xn' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+196 'ierr_init_xn' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '10') () 0 () () () 0 0)
-196 'ierr_input' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+197 'ierr_input' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
-197 'ierr_iter_conv' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+198 'ierr_iter_conv' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
-198 'ierr_iter_var' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+199 'ierr_iter_var' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-199 'ierr_neg_e' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+200 'ierr_neg_e' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-200 'ierr_neg_h' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+201 'ierr_neg_h' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-201 'ierr_neg_p' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+202 'ierr_neg_p' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-202 'ierr_neg_s' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+203 'ierr_neg_s' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '7') () 0 () () () 0 0)
-203 'ierr_not_implemented' 'eos_type_module' '' 1 ((PARAMETER
+204 'ierr_not_implemented' 'eos_type_module' '' 1 ((PARAMETER
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
 INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '12') () 0 ()
 () () 0 0)
-204 'ierr_out_of_bounds' 'eos_type_module' '' 1 ((PARAMETER
+205 'ierr_out_of_bounds' 'eos_type_module' '' 1 ((PARAMETER
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
 INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11') () 0 ()
 () () 0 0)
-205 'int8_supported' 'bl_types' '' 1 ((PROCEDURE UNKNOWN-INTENT
+206 'int8_supported' 'bl_types' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 FUNCTION IMPLICIT_PURE) (LOGICAL 4 0 0 0
-LOGICAL ()) 0 0 () () 205 () () () 0 0)
-206 'ipres' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+LOGICAL ()) 0 0 () () 206 () () () 0 0)
+207 'ipres' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-207 'itemp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+208 'itemp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') () 0 () () () 0 0)
-208 'kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 208
+209 'kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 209
 () () () 0 0)
-209 'll_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+210 'll_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-210 'm_pi' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+211 'm_pi' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.3243f6a8885a30@1') () 0 () () () 0
 0)
-211 'm_sqrt_2' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+212 'm_sqrt_2' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.16a09e667f3bcd@1') () 0 () () () 0
 0)
-212 'm_sqrt_pi' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+213 'm_sqrt_pi' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.1c5bf891b4ef6b@1') () 0 () () () 0
 0)
-213 'maxdens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+214 'maxdens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-214 'maxe' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+215 'maxe' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-215 'maxh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+216 'maxh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-216 'maxp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+217 'maxp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-217 'maxs' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+218 'maxs' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-218 'maxtemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+219 'maxtemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-219 'maxx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+220 'maxx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-220 'maxye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+221 'maxye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-221 'mindens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+222 'mindens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-222 'mine' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+223 'mine' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-223 'minh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+224 'minh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-224 'minp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+225 'minp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-225 'mins' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+226 'mins' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-226 'mintemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+227 'mintemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-227 'minx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+228 'minx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-228 'minye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+229 'minye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-229 'naux' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+230 'naux' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '0') () 0 () () () 0 0)
-230 'neqs' 'burn_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+231 'neqs' 'burn_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
-() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-231 'net_ienuc' 'burn_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '13') () 0 () () () 0 0)
+232 'net_ienuc' 'burn_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
-() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-232 'net_itemp' 'burn_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '13') () 0 () () () 0 0)
+233 'net_itemp' 'burn_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
-() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-233 'network' 'network' '' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '12') () 0 () () () 0 0)
+234 'network' 'network' '' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0
 0)
-234 'network_finalize' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT
+235 'network_finalize' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0
 0 () () 0 () () () 0 0)
-235 'network_init' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+236 'network_init' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
 DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 ()
 () () 0 0)
-236 'network_initialized' 'network' '' 1 ((VARIABLE UNKNOWN-INTENT
+237 'network_initialized' 'network' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
 () () 0 () () () 0 0)
-237 'network_species_index' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT
-MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (INTEGER 4 0 0 0 INTEGER ()) 238
-0 (239) () 240 () () () 0 0)
-241 'nine' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+238 'network_species_index' 'network' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (INTEGER 4 0 0 0 INTEGER ()) 239
+0 (240) () 241 () () () 0 0)
+242 'nine' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.90000000000000@1') () 0 () () () 0
 0)
-242 'nineth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+243 'nineth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.1c71c71c71c71c@0') () 0 () () () 0
 0)
-243 'normalize_abundances' 'eos_type_module' '' 1 ((PROCEDURE
+244 'normalize_abundances' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 244 0 (245) () 0 () () () 0 0)
-246 'normalize_abundances_burn' 'burn_type_module' '' 1 ((PROCEDURE
+UNKNOWN 0 0 0 0 UNKNOWN ()) 245 0 (246) () 0 () () () 0 0)
+247 'normalize_abundances_burn' 'burn_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 247 0 (248) () 0 () () () 0 0)
-249 'nrates' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN 0 0 0 0 UNKNOWN ()) 248 0 (249) () 0 () () () 0 0)
+250 'nrates' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '0') () 0 () () () 0 0)
-250 'nspec' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
+251 'nspec' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
-() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-251 'nspec_evolve' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11') () 0 () () () 0 0)
+252 'nspec_evolve' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
-() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-252 'num_rate_groups' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11') () 0 () () () 0 0)
+253 'num_rate_groups' 'actual_network' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '0') () 0 () () () 0 0)
-253 'one' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+254 'one' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.10000000000000@1') () 0 () () () 0
 0)
-254 'print_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+255 'print_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ())
-255 0 (256) () 0 () () () 0 0)
-257 'qp_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+256 0 (257) () 0 () () () 0 0)
+258 'qp_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '16') () 0 () () () 0 0)
-258 'quad_precision_supported' 'bl_types' '' 1 ((PROCEDURE
+259 'quad_precision_supported' 'bl_types' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 FUNCTION IMPLICIT_PURE) (
-LOGICAL 4 0 0 0 LOGICAL ()) 0 0 () () 258 () () () 0 0)
-259 'selected_int_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
-UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ())
-0 0 () () 259 () () () 0 0)
-260 'selected_real_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+LOGICAL 4 0 0 0 LOGICAL ()) 0 0 () () 259 () () () 0 0)
+260 'selected_int_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ())
 0 0 () () 260 () () () 0 0)
-261 'seven' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+261 'selected_real_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ())
+0 0 () () 261 () () () 0 0)
+262 'seven' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.70000000000000@1') () 0 () () () 0
 0)
-262 'seven12th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+263 'seven12th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.95555555555558@0') () 0 () () () 0
 0)
-263 'seventh' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+264 'seventh' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.24924924924924@0') () 0 () () () 0
 0)
-264 'short_aux_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
+265 'short_aux_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN EXPLICIT-SAVE 0 0 DIMENSION) (CHARACTER 1 0 0 0
 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () (1 0
 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (
 INTEGER 4 0 0 0 INTEGER ()) 0 '0')) 0 () () () 0 0)
-265 'short_spec_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
+266 'short_spec_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN EXPLICIT-SAVE 0 0 DIMENSION) (CHARACTER 1 0 0 0
 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () (1 0
 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (
-INTEGER 4 0 0 0 INTEGER ()) 0 '4')) 0 () () () 0 0)
-266 'sign' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 266
+INTEGER 4 0 0 0 INTEGER ()) 0 '11')) 0 () () () 0 0)
+267 'sign' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 FUNCTION) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 267
 () () () 0 0)
-267 'six' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+268 'six' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.60000000000000@1') () 0 () () () 0
 0)
-268 'sixteen' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+269 'sixteen' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.10000000000000@2') () 0 () () () 0
 0)
-269 'sixth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+270 'sixth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.2aaaaaaaaaaaaa@0') () 0 () () () 0
 0)
-270 'sp_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
+271 'sp_t' 'bl_types' '' 1 ((PARAMETER UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-271 'spec_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
+272 'spec_names' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN EXPLICIT-SAVE 0 0 DIMENSION) (CHARACTER 1 0 0 0
 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '16'))) 0 0 () (1 0
 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (
-INTEGER 4 0 0 0 INTEGER ()) 0 '4')) 0 () () () 0 0)
-272 'ten' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+INTEGER 4 0 0 0 INTEGER ()) 0 '11')) 0 () () () 0 0)
+273 'ten' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.a0000000000000@1') () 0 () () () 0
 0)
-273 'tenth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+274 'tenth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.1999999999999a@0') () 0 () () () 0
 0)
-274 'third' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+275 'third' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.55555555555554@0') () 0 () () () 0
 0)
-275 'three' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+276 'three' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.30000000000000@1') () 0 () () () 0
 0)
-276 'three4th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+277 'three4th' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.c0000000000000@0') () 0 () () () 0
 0)
-277 'twelfth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+278 'twelfth' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.15555555555555@0') () 0 () () () 0
 0)
-278 'twelve' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+279 'twelve' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.c0000000000000@1') () 0 () () () 0
 0)
-279 'two' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+280 'two' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.20000000000000@1') () 0 () () () 0
 0)
-280 'two3rd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+281 'two3rd' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.aaaaaaaaaaaaa8@0') () 0 () () () 0
 0)
-281 'zero' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+282 'zero' 'bl_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
 CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.00000000000000@0') () 0 () () () 0
 0)
-282 'zion' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+283 'zion' 'actual_network' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN EXPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
 12 'str' '' '' 11 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
@@ -660,117 +662,117 @@ OPTIONAL DUMMY) (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () () ()
 (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () () () 0 0)
 30 'val' '' '' 28 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
 (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-91 'state_in' '' '' 90 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+92 'state_in' '' '' 91 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-92 'state_out' '' '' 90 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+93 'state_out' '' '' 91 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0
 0 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-93 'dt' '' '' 90 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+94 'dt' '' '' 91 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
 REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-94 'time' '' '' 90 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
+95 'time' '' '' 91 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
 (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-113 'unit' '' '' 112 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+114 'unit' '' '' 113 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-117 'burn_state' '' '' 116 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+118 'burn_state' '' '' 117 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () ()
 () 0 0)
-118 'eos_state' '' '' 116 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+119 'eos_state' '' '' 117 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0
 0)
-123 'state' '' '' 122 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+124 'state' '' '' 123 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-126 'state' '' '' 125 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+127 'state' '' '' 126 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-129 'to_state' '' '' 128 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+130 'to_state' '' '' 129 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-130 'from_state' '' '' 128 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0
+131 'from_state' '' '' 129 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0
 0 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-133 'to_eos' '' '' 132 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+134 'to_eos' '' '' 133 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0
 0)
-134 'from_eos' '' '' 132 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+135 'from_eos' '' '' 133 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0
 0)
-141 'max_dens_out' '' '' 140 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+142 'max_dens_out' '' '' 141 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
 0 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-144 'max_temp_out' '' '' 143 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+145 'max_temp_out' '' '' 144 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
 0 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-147 'small_dens_out' '' '' 146 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN
+148 'small_dens_out' '' '' 147 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-150 'small_temp_out' '' '' 149 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN
+151 'small_temp_out' '' '' 150 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-153 'input' '' '' 152 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+154 'input' '' '' 153 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-154 'ivar' '' '' 152 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+155 'ivar' '' '' 153 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-155 'has' '' '' 152 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+156 'has' '' '' 153 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 RESULT) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0 () () 0 () () () 0
 0)
-167 'eos_state' '' '' 166 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+168 'eos_state' '' '' 167 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0
 0)
-168 'burn_state' '' '' 166 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+169 'burn_state' '' '' 167 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () ()
 () 0 0)
-182 'index' '' '' 181 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+183 'index' '' '' 182 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-183 'name' '' '' 181 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+184 'name' '' '' 182 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 RESULT) (CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4 0
 0 0 INTEGER ()) 0 '128'))) 0 0 () () 0 () () () 0 0)
-186 'index' '' '' 185 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+187 'index' '' '' 186 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-187 'name' '' '' 185 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+188 'name' '' '' 186 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 RESULT) (CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4 0
 0 0 INTEGER ()) 0 '128'))) 0 0 () () 0 () () () 0 0)
-239 'name' '' '' 238 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+240 'name' '' '' 239 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () ()
 () 0 0)
-240 'r' '' '' 238 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+241 'r' '' '' 239 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
 0 0 RESULT) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-245 'state' '' '' 244 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+246 'state' '' '' 245 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-248 'state' '' '' 247 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+249 'state' '' '' 248 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-256 'state' '' '' 255 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+257 'state' '' '' 256 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 10 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
 )
 
-('Burn_t' 0 9 'Eos_t' 0 10 '__iso_c_binding' 0 88 'actual_burner' 0 89
-'actual_burner_init' 0 95 'actual_burner_module' 0 96 'actual_network' 0
-97 'actual_network_finalize' 0 98 'actual_network_init' 0 99 'aion' 0
-100 'aion_inv' 0 101 'amrex_constants_module' 0 102 'amrex_error_module'
-0 103 'amrex_fort_module' 0 104 'aux_names' 0 105 'bl_constants_module'
-0 106 'bl_fort_module' 0 107 'bl_real' 0 108 'bl_real_size' 0 109
-'bl_types' 0 110 'bl_types_info' 0 111 'burn_t' 0 114 'burn_to_eos' 0
-115 'burn_type_module' 0 119 'c_size_t' 0 120 'clean_state' 0 121
-'composition' 0 124 'copy_burn_t' 0 127 'copy_eos_t' 0 131 'dp_t' 0 135
-'eight' 0 136 'eighth' 0 137 'eleven' 0 138 'eos_get_max_dens' 0 139
-'eos_get_max_temp' 0 142 'eos_get_small_dens' 0 145 'eos_get_small_temp'
-0 148 'eos_input_has_var' 0 151 'eos_input_ph' 0 156 'eos_input_ps' 0
-157 'eos_input_re' 0 158 'eos_input_rh' 0 159 'eos_input_rp' 0 160
-'eos_input_rt' 0 161 'eos_input_th' 0 162 'eos_input_tp' 0 163 'eos_t' 0
-164 'eos_to_burn' 0 165 'eos_type_module' 0 169 'fifteen' 0 170 'fifth'
-0 171 'five' 0 172 'five12th' 0 173 'five32nd' 0 174 'five3rd' 0 175
-'five6th' 0 176 'four' 0 177 'four3rd' 0 178 'fourth' 0 179
-'get_network_short_species_name' 0 180 'get_network_species_name' 0 184
-'half' 0 188 'idens' 0 189 'iener' 0 190 'ienth' 0 191 'ientr' 0 192
-'ierr_general' 0 193 'ierr_init' 0 194 'ierr_init_xn' 0 195 'ierr_input'
-0 196 'ierr_iter_conv' 0 197 'ierr_iter_var' 0 198 'ierr_neg_e' 0 199
-'ierr_neg_h' 0 200 'ierr_neg_p' 0 201 'ierr_neg_s' 0 202
-'ierr_not_implemented' 0 203 'ierr_out_of_bounds' 0 204 'int8_supported'
-0 205 'ipres' 0 206 'itemp' 0 207 'kind' 0 208 'll_t' 0 209 'm_pi' 0 210
-'m_sqrt_2' 0 211 'm_sqrt_pi' 0 212 'maxdens' 0 213 'maxe' 0 214 'maxh' 0
-215 'maxp' 0 216 'maxs' 0 217 'maxtemp' 0 218 'maxx' 0 219 'maxye' 0 220
-'mindens' 0 221 'mine' 0 222 'minh' 0 223 'minp' 0 224 'mins' 0 225
-'mintemp' 0 226 'minx' 0 227 'minye' 0 228 'naux' 0 229 'neqs' 0 230
-'net_ienuc' 0 231 'net_itemp' 0 232 'network' 0 233 'network_finalize' 0
-234 'network_init' 0 235 'network_initialized' 0 236
-'network_species_index' 0 237 'nine' 0 241 'nineth' 0 242
-'normalize_abundances' 0 243 'normalize_abundances_burn' 0 246 'nrates'
-0 249 'nspec' 0 250 'nspec_evolve' 0 251 'num_rate_groups' 0 252 'one' 0
-253 'print_state' 0 254 'qp_t' 0 257 'quad_precision_supported' 0 258 'rt'
-0 135 'selected_int_kind' 0 259 'selected_real_kind' 0 260 'seven' 0 261
-'seven12th' 0 262 'seventh' 0 263 'short_aux_names' 0 264
-'short_spec_names' 0 265 'sign' 0 266 'six' 0 267 'sixteen' 0 268 'sixth'
-0 269 'sp_t' 0 270 'spec_names' 0 271 'ten' 0 272 'tenth' 0 273 'third'
-0 274 'three' 0 275 'three4th' 0 276 'twelfth' 0 277 'twelve' 0 278 'two'
-0 279 'two3rd' 0 280 'zero' 0 281 'zion' 0 282)
+('Burn_t' 0 9 'Eos_t' 0 10 '__iso_c_binding' 0 89 'actual_burner' 0 90
+'actual_burner_init' 0 96 'actual_burner_module' 0 97 'actual_network' 0
+98 'actual_network_finalize' 0 99 'actual_network_init' 0 100 'aion' 0
+101 'aion_inv' 0 102 'amrex_constants_module' 0 103 'amrex_error_module'
+0 104 'amrex_fort_module' 0 105 'aux_names' 0 106 'bl_constants_module'
+0 107 'bl_fort_module' 0 108 'bl_real' 0 109 'bl_real_size' 0 110
+'bl_types' 0 111 'bl_types_info' 0 112 'burn_t' 0 115 'burn_to_eos' 0
+116 'burn_type_module' 0 120 'c_size_t' 0 121 'clean_state' 0 122
+'composition' 0 125 'copy_burn_t' 0 128 'copy_eos_t' 0 132 'dp_t' 0 136
+'eight' 0 137 'eighth' 0 138 'eleven' 0 139 'eos_get_max_dens' 0 140
+'eos_get_max_temp' 0 143 'eos_get_small_dens' 0 146 'eos_get_small_temp'
+0 149 'eos_input_has_var' 0 152 'eos_input_ph' 0 157 'eos_input_ps' 0
+158 'eos_input_re' 0 159 'eos_input_rh' 0 160 'eos_input_rp' 0 161
+'eos_input_rt' 0 162 'eos_input_th' 0 163 'eos_input_tp' 0 164 'eos_t' 0
+165 'eos_to_burn' 0 166 'eos_type_module' 0 170 'fifteen' 0 171 'fifth'
+0 172 'five' 0 173 'five12th' 0 174 'five32nd' 0 175 'five3rd' 0 176
+'five6th' 0 177 'four' 0 178 'four3rd' 0 179 'fourth' 0 180
+'get_network_short_species_name' 0 181 'get_network_species_name' 0 185
+'half' 0 189 'idens' 0 190 'iener' 0 191 'ienth' 0 192 'ientr' 0 193
+'ierr_general' 0 194 'ierr_init' 0 195 'ierr_init_xn' 0 196 'ierr_input'
+0 197 'ierr_iter_conv' 0 198 'ierr_iter_var' 0 199 'ierr_neg_e' 0 200
+'ierr_neg_h' 0 201 'ierr_neg_p' 0 202 'ierr_neg_s' 0 203
+'ierr_not_implemented' 0 204 'ierr_out_of_bounds' 0 205 'int8_supported'
+0 206 'ipres' 0 207 'itemp' 0 208 'kind' 0 209 'll_t' 0 210 'm_pi' 0 211
+'m_sqrt_2' 0 212 'm_sqrt_pi' 0 213 'maxdens' 0 214 'maxe' 0 215 'maxh' 0
+216 'maxp' 0 217 'maxs' 0 218 'maxtemp' 0 219 'maxx' 0 220 'maxye' 0 221
+'mindens' 0 222 'mine' 0 223 'minh' 0 224 'minp' 0 225 'mins' 0 226
+'mintemp' 0 227 'minx' 0 228 'minye' 0 229 'naux' 0 230 'neqs' 0 231
+'net_ienuc' 0 232 'net_itemp' 0 233 'network' 0 234 'network_finalize' 0
+235 'network_init' 0 236 'network_initialized' 0 237
+'network_species_index' 0 238 'nine' 0 242 'nineth' 0 243
+'normalize_abundances' 0 244 'normalize_abundances_burn' 0 247 'nrates'
+0 250 'nspec' 0 251 'nspec_evolve' 0 252 'num_rate_groups' 0 253 'one' 0
+254 'print_state' 0 255 'qp_t' 0 258 'quad_precision_supported' 0 259 'rt'
+0 136 'selected_int_kind' 0 260 'selected_real_kind' 0 261 'seven' 0 262
+'seven12th' 0 263 'seventh' 0 264 'short_aux_names' 0 265
+'short_spec_names' 0 266 'sign' 0 267 'six' 0 268 'sixteen' 0 269 'sixth'
+0 270 'sp_t' 0 271 'spec_names' 0 272 'ten' 0 273 'tenth' 0 274 'third'
+0 275 'three' 0 276 'three4th' 0 277 'twelfth' 0 278 'twelve' 0 279 'two'
+0 280 'two3rd' 0 281 'zero' 0 282 'zion' 0 283)

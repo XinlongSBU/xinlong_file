@@ -1,5 +1,5 @@
 GFORTRAN module version '10' created from /raid2/xinlong/git_folder/Microphysics/interfaces/eos_type.F90
-MD5:720a4cd4cafe6823a6866c42f07a9e61 -- If you edit this, you'll get what you deserve.
+MD5:2416658e903b28495f22ad3444c46280 -- If you edit this, you'll get what you deserve.
 
 (() () () () () () () () () () () () () () () () () () () () () () ()
 () () () ())
@@ -49,7 +49,7 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (34 'h' (REAL 8 0 0 0 REAL ()) ()
 UNKNOWN-ACCESS ()) (35 's' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (36
 'xn' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0
-INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4')) (
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11')) (
 UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION)
 UNKNOWN-ACCESS ()) (37 'aux' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
@@ -94,181 +94,182 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (59 'cs' (REAL 8 0 0 0 REAL ())
 UNKNOWN-ACCESS ()) (60 'abar' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (61
 'zbar' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0
-559866)
-62 'amrex_error_module' 'amrex_error_module' '' 1 ((MODULE
+UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (62 'conductivity' (REAL 8 0 0 0
+REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0 559866)
+63 'amrex_error_module' 'amrex_error_module' '' 1 ((MODULE
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
 UNKNOWN ()) 0 0 () () 0 () () () 0 0)
-63 'amrex_fort_module' 'amrex_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
+64 'amrex_fort_module' 'amrex_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-64 'clean_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+65 'clean_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 65 0 (66) () 0 () () () 0 0)
-67 'composition' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 66 0 (67) () 0 () () () 0 0)
+68 'composition' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 68 0 (69) () 0 () () () 0 0)
-70 'copy_eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
-MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 71
-0 (72 73) () 0 () () () 0 0)
-74 'eos_get_max_dens' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 69 0 (70) () 0 () () () 0 0)
+71 'copy_eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 72
+0 (73 74) () 0 () () () 0 0)
+75 'eos_get_max_dens' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 75 0 (76) () 0 () () () 0 0)
-77 'eos_get_max_temp' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN ()) 76 0 (77) () 0 () () () 0 0)
+78 'eos_get_max_temp' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
-UNKNOWN ()) 78 0 (79) () 0 () () () 0 0)
-80 'eos_get_small_dens' 'eos_type_module' '' 1 ((PROCEDURE
+UNKNOWN ()) 79 0 (80) () 0 () () () 0 0)
+81 'eos_get_small_dens' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 81 0 (82) () 0 () () () 0 0)
-83 'eos_get_small_temp' 'eos_type_module' '' 1 ((PROCEDURE
+UNKNOWN 0 0 0 0 UNKNOWN ()) 82 0 (83) () 0 () () () 0 0)
+84 'eos_get_small_temp' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 84 0 (85) () 0 () () () 0 0)
-86 'eos_input_has_var' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
-MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (LOGICAL 4 0 0 0 LOGICAL ()) 87 0
-(88 89) () 90 () () () 0 0)
-91 'eos_input_ph' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN 0 0 0 0 UNKNOWN ()) 85 0 (86) () 0 () () () 0 0)
+87 'eos_input_has_var' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 FUNCTION) (LOGICAL 4 0 0 0 LOGICAL ()) 88 0
+(89 90) () 91 () () () 0 0)
+92 'eos_input_ph' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '7') () 0 () () () 0 0)
-92 'eos_input_ps' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+93 'eos_input_ps' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-93 'eos_input_re' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+94 'eos_input_re' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-94 'eos_input_rh' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+95 'eos_input_rh' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
-95 'eos_input_rp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+96 'eos_input_rp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-96 'eos_input_rt' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+97 'eos_input_rt' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') () 0 () () () 0 0)
-97 'eos_input_th' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+98 'eos_input_th' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-98 'eos_input_tp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+99 'eos_input_tp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
-99 'eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+100 'eos_t' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (UNKNOWN 0 0 0 0 UNKNOWN
 ()) 0 0 () () 0 () () () 0 0)
-100 'eos_type_module' 'eos_type_module' '' 1 ((MODULE UNKNOWN-INTENT
+101 'eos_type_module' 'eos_type_module' '' 1 ((MODULE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
 0 () () () 0 0)
-101 'idens' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+102 'idens' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
-102 'iener' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+103 'iener' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
-103 'ienth' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+104 'ienth' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-104 'ientr' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+105 'ientr' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-105 'ierr_general' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+106 'ierr_general' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') () 0 () () () 0 0)
-106 'ierr_init' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+107 'ierr_init' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '9') () 0 () () () 0 0)
-107 'ierr_init_xn' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+108 'ierr_init_xn' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '10') () 0 () () () 0 0)
-108 'ierr_input' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+109 'ierr_input' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
-109 'ierr_iter_conv' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+110 'ierr_iter_conv' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
-110 'ierr_iter_var' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+111 'ierr_iter_var' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
-111 'ierr_neg_e' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+112 'ierr_neg_e' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
-112 'ierr_neg_h' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+113 'ierr_neg_h' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-113 'ierr_neg_p' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+114 'ierr_neg_p' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 () () () 0 0)
-114 'ierr_neg_s' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+115 'ierr_neg_s' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '7') () 0 () () () 0 0)
-115 'ierr_not_implemented' 'eos_type_module' '' 1 ((PARAMETER
+116 'ierr_not_implemented' 'eos_type_module' '' 1 ((PARAMETER
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
 INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '12') () 0 ()
 () () 0 0)
-116 'ierr_out_of_bounds' 'eos_type_module' '' 1 ((PARAMETER
+117 'ierr_out_of_bounds' 'eos_type_module' '' 1 ((PARAMETER
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
 INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11') () 0 ()
 () () 0 0)
-117 'ipres' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+118 'ipres' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6') () 0 () () () 0 0)
-118 'itemp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+119 'itemp' 'eos_type_module' '' 1 ((PARAMETER UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') () 0 () () () 0 0)
-119 'maxdens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+120 'maxdens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-120 'maxe' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+121 'maxe' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-121 'maxh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+122 'maxh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-122 'maxp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+123 'maxp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-123 'maxs' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+124 'maxs' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-124 'maxtemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+125 'maxtemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-125 'maxx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+126 'maxx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-126 'maxye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+127 'maxye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-127 'mindens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+128 'mindens' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-128 'mine' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+129 'mine' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-129 'minh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+130 'minh' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-130 'minp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+131 'minp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-131 'mins' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+132 'mins' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-132 'mintemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+133 'mintemp' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-133 'minx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+134 'minx' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ()) 0 0 () ()
 0 () () () 0 0)
-134 'minye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
+135 'minye' 'eos_type_module' '' 1 ((VARIABLE UNKNOWN-INTENT
 UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE) (REAL 8 0 0 0 REAL ())
 0 0 () () 0 () () () 0 0)
-135 'network' 'network' '' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
+136 'network' 'network' '' 1 ((MODULE UNKNOWN-INTENT UNKNOWN-PROC
 UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 () () () 0
 0)
-136 'normalize_abundances' 'eos_type_module' '' 1 ((PROCEDURE
+137 'normalize_abundances' 'eos_type_module' '' 1 ((PROCEDURE
 UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (
-UNKNOWN 0 0 0 0 UNKNOWN ()) 137 0 (138) () 0 () () () 0 0)
-139 'print_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN 0 0 0 0 UNKNOWN ()) 138 0 (139) () 0 () () () 0 0)
+140 'print_state' 'eos_type_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
 MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0 UNKNOWN ())
-140 0 (141) () 0 () () () 0 0)
+141 0 (142) () 0 () () () 0 0)
 11 'str' '' '' 10 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
 (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () () () 0 0)
 12 'val' '' '' 10 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
@@ -296,47 +297,47 @@ OPTIONAL DUMMY) (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () () ()
 (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () () () 0 0)
 29 'val' '' '' 27 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
 (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-66 'state' '' '' 65 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+67 'state' '' '' 66 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-69 'state' '' '' 68 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+70 'state' '' '' 69 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-72 'to_eos' '' '' 71 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+73 'to_eos' '' '' 72 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-73 'from_eos' '' '' 71 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+74 'from_eos' '' '' 72 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
 UNKNOWN 0 0 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-76 'max_dens_out' '' '' 75 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+77 'max_dens_out' '' '' 76 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN 0
 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-79 'max_temp_out' '' '' 78 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+80 'max_temp_out' '' '' 79 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN 0
 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-82 'small_dens_out' '' '' 81 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+83 'small_dens_out' '' '' 82 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
 0 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-85 'small_temp_out' '' '' 84 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
+86 'small_temp_out' '' '' 85 ((VARIABLE OUT UNKNOWN-PROC UNKNOWN UNKNOWN
 0 0 DUMMY) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
-88 'input' '' '' 87 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
+89 'input' '' '' 88 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
 (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-89 'ivar' '' '' 87 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
+90 'ivar' '' '' 88 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
 (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
-90 'has' '' '' 87 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+91 'has' '' '' 88 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
 0 0 RESULT) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0 () () 0 () () () 0 0)
-138 'state' '' '' 137 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+139 'state' '' '' 138 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
-141 'state' '' '' 140 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+142 'state' '' '' 141 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
 DUMMY) (DERIVED 9 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
 )
 
-('Eos_t' 0 9 'amrex_error_module' 0 62 'amrex_fort_module' 0 63
-'clean_state' 0 64 'composition' 0 67 'copy_eos_t' 0 70 'eos_get_max_dens'
-0 74 'eos_get_max_temp' 0 77 'eos_get_small_dens' 0 80
-'eos_get_small_temp' 0 83 'eos_input_has_var' 0 86 'eos_input_ph' 0 91
-'eos_input_ps' 0 92 'eos_input_re' 0 93 'eos_input_rh' 0 94 'eos_input_rp'
-0 95 'eos_input_rt' 0 96 'eos_input_th' 0 97 'eos_input_tp' 0 98 'eos_t'
-0 99 'eos_type_module' 0 100 'idens' 0 101 'iener' 0 102 'ienth' 0 103
-'ientr' 0 104 'ierr_general' 0 105 'ierr_init' 0 106 'ierr_init_xn' 0
-107 'ierr_input' 0 108 'ierr_iter_conv' 0 109 'ierr_iter_var' 0 110
-'ierr_neg_e' 0 111 'ierr_neg_h' 0 112 'ierr_neg_p' 0 113 'ierr_neg_s' 0
-114 'ierr_not_implemented' 0 115 'ierr_out_of_bounds' 0 116 'ipres' 0
-117 'itemp' 0 118 'maxdens' 0 119 'maxe' 0 120 'maxh' 0 121 'maxp' 0 122
-'maxs' 0 123 'maxtemp' 0 124 'maxx' 0 125 'maxye' 0 126 'mindens' 0 127
-'mine' 0 128 'minh' 0 129 'minp' 0 130 'mins' 0 131 'mintemp' 0 132 'minx'
-0 133 'minye' 0 134 'network' 0 135 'normalize_abundances' 0 136
-'print_state' 0 139)
+('Eos_t' 0 9 'amrex_error_module' 0 63 'amrex_fort_module' 0 64
+'clean_state' 0 65 'composition' 0 68 'copy_eos_t' 0 71 'eos_get_max_dens'
+0 75 'eos_get_max_temp' 0 78 'eos_get_small_dens' 0 81
+'eos_get_small_temp' 0 84 'eos_input_has_var' 0 87 'eos_input_ph' 0 92
+'eos_input_ps' 0 93 'eos_input_re' 0 94 'eos_input_rh' 0 95 'eos_input_rp'
+0 96 'eos_input_rt' 0 97 'eos_input_th' 0 98 'eos_input_tp' 0 99 'eos_t'
+0 100 'eos_type_module' 0 101 'idens' 0 102 'iener' 0 103 'ienth' 0 104
+'ientr' 0 105 'ierr_general' 0 106 'ierr_init' 0 107 'ierr_init_xn' 0
+108 'ierr_input' 0 109 'ierr_iter_conv' 0 110 'ierr_iter_var' 0 111
+'ierr_neg_e' 0 112 'ierr_neg_h' 0 113 'ierr_neg_p' 0 114 'ierr_neg_s' 0
+115 'ierr_not_implemented' 0 116 'ierr_out_of_bounds' 0 117 'ipres' 0
+118 'itemp' 0 119 'maxdens' 0 120 'maxe' 0 121 'maxh' 0 122 'maxp' 0 123
+'maxs' 0 124 'maxtemp' 0 125 'maxx' 0 126 'maxye' 0 127 'mindens' 0 128
+'mine' 0 129 'minh' 0 130 'minp' 0 131 'mins' 0 132 'mintemp' 0 133 'minx'
+0 134 'minye' 0 135 'network' 0 136 'normalize_abundances' 0 137
+'print_state' 0 140)
