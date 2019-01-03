@@ -1,5 +1,5 @@
 GFORTRAN module version '10' created from /raid2/xinlong/git_folder/Microphysics/EOS/helmholtz/actual_eos.F90
-MD5:6a3cdf7857ead1e96e2440831e913684 -- If you edit this, you'll get what you deserve.
+MD5:cdd179fdb9693dfa210949e841792cf3 -- If you edit this, you'll get what you deserve.
 
 (() () () () () () () () () () () () () () () () () () () () () () ()
 () () () ())
@@ -43,7 +43,7 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (14 'h' (REAL 8 0 0 0 REAL ()) ()
 UNKNOWN-ACCESS ()) (15 's' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (16
 'xn' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0
-INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4')) (
+INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '11')) (
 UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DIMENSION)
 UNKNOWN-ACCESS ()) (17 'aux' (REAL 8 0 0 0 REAL ()) (1 0 EXPLICIT (
 CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
@@ -88,8 +88,9 @@ UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (39 'cs' (REAL 8 0 0 0 REAL ())
 UNKNOWN-ACCESS ()) (40 'abar' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
 UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (41
 'zbar' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
-UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0
-559866)
+UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (42 'conductivity' (REAL 8 0 0 0
+REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0 559866)
 )
 
 ('actual_eos' 0 2 'actual_eos_finalize' 0 6 'actual_eos_init' 0 7
