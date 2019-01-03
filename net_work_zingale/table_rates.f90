@@ -67,7 +67,7 @@ contains
     num_rhoy_j_f20_o20 = 152
     num_vars_j_f20_o20 = 6
     num_header_j_f20_o20 = 5
-    rate_table_file_j_f20_o20 = trim("20f-20o_electroncapture.dat")
+    rate_table_file_j_f20_o20 = trim("20f-20o.dat")
     allocate(rate_table_j_f20_o20(num_temp_j_f20_o20, num_rhoy_j_f20_o20, num_vars_j_f20_o20))
     allocate(rhoy_table_j_f20_o20(num_rhoy_j_f20_o20))
     allocate(temp_table_j_f20_o20(num_temp_j_f20_o20))
