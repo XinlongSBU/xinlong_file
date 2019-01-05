@@ -1,0 +1,344 @@
+GFORTRAN module version '10' created from /raid2/xinlong/git_folder/amrex/Src/Boundary/AMReX_LO_UTIL.F90
+MD5:91a3318f1145495f6d22e2e2b162ee17 -- If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () () () ()
+() () () ())
+
+()
+
+(('c_ptr' '__iso_c_binding' 2))
+
+()
+
+()
+
+()
+
+(2 'C_ptr' '__iso_c_binding' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 IS_BIND_C IS_C_INTEROP IS_ISO_C) (DERIVED 2 0 1 1
+UNKNOWN ()) 0 0 () () 0 ((3 '__c_ptr_c_address' (INTEGER 8 0 1 0 INTEGER
+()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ())) UNKNOWN-ACCESS () () 2 42 0)
+4 '__iso_c_binding' '__iso_c_binding' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 INTRINSIC) (UNKNOWN 0 0 0 0 UNKNOWN ())
+0 0 () () 0 () () () 2 0)
+5 'amrex_add' 'amrex_fort_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 6 0 (7 8) () 0 () () () 0 0)
+9 'amrex_coarsen_intvect' 'amrex_fort_module' '' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 DIMENSION FUNCTION
+IMPLICIT_PURE ALWAYS_EXPLICIT) (INTEGER 4 0 0 0 INTEGER ()) 10 0 (11 12
+13) (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (
+VARIABLE (INTEGER 4 0 0 0 INTEGER ()) 0 11 ())) 14 () () () 0 0)
+15 'amrex_constants_module' 'amrex_constants_module' '' 1 ((MODULE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+16 'amrex_fort_module' 'amrex_fort_module' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+17 'amrex_free' 'amrex_fort_module' 'amrex_free' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN 0 0 EXTERNAL SUBROUTINE
+IS_BIND_C IS_C_INTEROP) (UNKNOWN 0 0 1 0 UNKNOWN ()) 18 0 (19) () 0 () ()
+() 0 0)
+20 'amrex_get_loop_bounds' 'amrex_fort_module' 'amrex_get_loop_bounds' 1
+((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE
+IMPLICIT_PURE IS_BIND_C IS_C_INTEROP) (UNKNOWN 0 0 1 0 UNKNOWN ()) 21 0
+(22 23 24 25) () 0 () () () 0 0)
+26 'amrex_lo_util_module' 'amrex_lo_util_module' '' 1 ((MODULE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 0 0 () () 0 () () () 0 0)
+27 'amrex_malloc' 'amrex_fort_module' 'amrex_malloc' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN 0 0 EXTERNAL FUNCTION IS_BIND_C
+IS_C_INTEROP) (DERIVED 2 0 1 0 DERIVED ()) 28 0 (29) () 27 () () () 0 0)
+30 'amrex_max' 'amrex_fort_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 31 0 (32 33) () 0 () () () 0 0)
+34 'amrex_min' 'amrex_fort_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 35 0 (36 37) () 0 () () () 0 0)
+38 'amrex_particle_real' 'amrex_fort_module' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP
+IS_ISO_C) (INTEGER 4 0 1 1 REAL ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1
+REAL ()) 0 '8') () 0 () () () 0 0)
+39 'amrex_random' 'amrex_fort_module' 'amrex_random' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN 0 0 EXTERNAL FUNCTION IS_BIND_C
+IS_C_INTEROP) (REAL 8 0 1 0 REAL ()) 40 0 () () 39 () () () 0 0)
+41 'amrex_random_int' 'amrex_fort_module' 'amrex_random_int' 1 ((
+PROCEDURE UNKNOWN-INTENT MODULE-PROC BODY UNKNOWN 0 0 EXTERNAL FUNCTION
+IS_BIND_C IS_C_INTEROP) (INTEGER 8 0 1 0 INTEGER ()) 42 0 (43) () 41 ()
+() () 0 0)
+44 'amrex_real' 'amrex_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4
+0 1 1 REAL ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 REAL ()) 0 '8') () 0 ()
+() () 0 0)
+45 'amrex_real_size' 'amrex_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (INTEGER 8 0 1 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 8 0 1 0 INTEGER ()) 0 '8') () 0 ()
+() () 0 0)
+46 'amrex_spacedim' 'amrex_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
+47 'amrex_subtract' 'amrex_fort_module' '' 1 ((PROCEDURE UNKNOWN-INTENT
+MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE IMPLICIT_PURE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 48 0 (49 50) () 0 () () () 0 0)
+51 'bl_spacedim' 'amrex_fort_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 () () () 0 0)
+52 'c_char' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+CHARACTER ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '1') () 0
+() () () 2 33)
+53 'c_double' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+REAL ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '8') () 0 () ()
+() 2 25)
+54 'c_float' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+REAL ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '4') () 0 () ()
+() 2 24)
+55 'c_int' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '4') () 0 ()
+() () 2 0)
+56 'c_long' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '8') () 0 ()
+() () 2 2)
+57 'c_ptr' '__iso_c_binding' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION GENERIC) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 0 0 () () 0 () () () 2 42)
+58 'c_short' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '2') () 0 ()
+() () 2 1)
+59 'c_size_t' '__iso_c_binding' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 IS_C_INTEROP IS_ISO_C) (INTEGER 4 0 1 1
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 1 1 UNKNOWN ()) 0 '8') () 0 ()
+() () 2 7)
+60 'eight' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.80000000000000@1') () 0
+() () () 0 0)
+61 'eighth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.20000000000000@0') () 0
+() () () 0 0)
+62 'eleven' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.b0000000000000@1') () 0
+() () () 0 0)
+63 'fifteen' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.f0000000000000@1') () 0
+() () () 0 0)
+64 'fifth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.33333333333334@0') () 0 () () () 0
+0)
+65 'five' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.50000000000000@1') () 0
+() () () 0 0)
+66 'five12th' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.6aaaaaaaaaaaac@0') () 0 () () () 0
+0)
+67 'five32nd' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.28000000000000@0') () 0 () () () 0
+0)
+68 'five3rd' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.1aaaaaaaaaaaab@1') () 0 () () () 0
+0)
+69 'five6th' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.d5555555555558@0') () 0 () () () 0
+0)
+70 'four' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.40000000000000@1') () 0
+() () () 0 0)
+71 'four3rd' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.15555555555555@1') () 0 () () () 0
+0)
+72 'fourth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.40000000000000@0') () 0
+() () () 0 0)
+73 'half' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.80000000000000@0') () 0
+() () () 0 0)
+74 'm_pi' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.3243f6a8885a30@1') () 0
+() () () 0 0)
+75 'm_sqrt_2' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.16a09e667f3bcd@1') () 0
+() () () 0 0)
+76 'm_sqrt_pi' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.1c5bf891b4ef6b@1') () 0
+() () () 0 0)
+77 'nine' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.90000000000000@1') () 0
+() () () 0 0)
+78 'nineth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.1c71c71c71c71c@0') () 0 () () () 0
+0)
+79 'one' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.10000000000000@1') () 0
+() () () 0 0)
+80 'polyinterpcoeff' 'amrex_lo_util_module' '' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 81 0 (82 83 84 85) () 0 () () () 0 0)
+86 'seven' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.70000000000000@1') () 0
+() () () 0 0)
+87 'seven12th' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.95555555555558@0') () 0 () () () 0
+0)
+88 'seventh' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.24924924924924@0') () 0 () () () 0
+0)
+89 'six' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.60000000000000@1') () 0
+() () () 0 0)
+90 'sixteen' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.10000000000000@2') () 0
+() () () 0 0)
+91 'sixth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.2aaaaaaaaaaaaa@0') () 0 () () () 0
+0)
+92 'ten' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.a0000000000000@1') () 0
+() () () 0 0)
+93 'tenth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.1999999999999a@0') () 0
+() () () 0 0)
+94 'third' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.55555555555554@0') () 0 () () () 0
+0)
+95 'three' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.30000000000000@1') () 0
+() () () 0 0)
+96 'three4th' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.c0000000000000@0') () 0
+() () () 0 0)
+97 'twelfth' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.15555555555555@0') () 0 () () () 0
+0)
+98 'twelve' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.c0000000000000@1') () 0
+() () () 0 0)
+99 'two' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.20000000000000@1') () 0
+() () () 0 0)
+100 'two3rd' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 1 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.aaaaaaaaaaaaa8@0') () 0 () () () 0
+0)
+101 'zero' 'amrex_constants_module' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 IS_C_INTEROP) (REAL 8 0 1 0 REAL
+()) 0 0 () (CONSTANT (REAL 8 0 1 0 REAL ()) 0 '0.00000000000000@0') () 0
+() () () 0 0)
+7 'x' '' '' 6 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+8 'y' '' '' 6 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+11 'n' '' '' 10 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+12 'iv' '' '' 10 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DIMENSION DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (VARIABLE (INTEGER 4 0 0 0
+INTEGER ()) 0 11 ())) 0 () () () 0 0)
+13 'rr' '' '' 10 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+14 'civ' '' '' 10 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+0 0 DIMENSION RESULT ALWAYS_EXPLICIT) (INTEGER 4 0 0 0 INTEGER ()) 0 0 ()
+(1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (VARIABLE (
+INTEGER 4 0 0 0 INTEGER ()) 0 11 ())) 0 () () () 0 0)
+19 'p' '' '' 18 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 VALUE DUMMY) (DERIVED 2 0 0 0 DERIVED ()) 0 0 () () 0 () () () 0 0)
+22 'blo' '' '' 21 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DIMENSION DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
+INTEGER ()) 0 '3')) 0 () () () 0 0)
+23 'bhi' '' '' 21 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DIMENSION DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
+INTEGER ()) 0 '3')) 0 () () () 0 0)
+24 'lo' '' '' 21 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DIMENSION DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
+INTEGER ()) 0 '3')) 0 () () () 0 0)
+25 'hi' '' '' 21 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DIMENSION DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (CONSTANT (INTEGER 4 0 0 0
+INTEGER ()) 0 '3')) 0 () () () 0 0)
+29 's' '' '' 28 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 VALUE
+DUMMY) (INTEGER 8 0 1 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+32 'x' '' '' 31 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
+(REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+33 'y' '' '' 31 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+36 'x' '' '' 35 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
+(REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+37 'y' '' '' 35 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+43 'n' '' '' 42 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 VALUE
+DUMMY) (INTEGER 8 0 1 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+49 'x' '' '' 48 ((VARIABLE INOUT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY)
+(REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+50 'y' '' '' 48 ((VARIABLE IN UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (
+REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+82 'xint' '' '' 81 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0 DUMMY) (REAL 8 0 1 0 REAL ()) 0 0 () () 0 () () () 0 0)
+83 'x' '' '' 81 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DIMENSION DUMMY) (REAL 8 0 1 0 REAL ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (VARIABLE (INTEGER 4 0 0 0
+INTEGER ()) 0 84 ())) 0 () () () 0 0)
+84 'n' '' '' 81 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+85 'c' '' '' 81 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DIMENSION DUMMY) (REAL 8 0 1 0 REAL ()) 0 0 () (1 0 EXPLICIT (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (VARIABLE (INTEGER 4 0 0 0
+INTEGER ()) 0 84 ())) 0 () () () 0 0)
+)
+
+('C_ptr' 0 2 '__iso_c_binding' 0 4 'amrex_add' 0 5 'amrex_coarsen_intvect'
+0 9 'amrex_constants_module' 0 15 'amrex_fort_module' 0 16 'amrex_free'
+0 17 'amrex_get_loop_bounds' 0 20 'amrex_lo_util_module' 0 26
+'amrex_malloc' 0 27 'amrex_max' 0 30 'amrex_min' 0 34
+'amrex_particle_real' 0 38 'amrex_random' 0 39 'amrex_random_int' 0 41
+'amrex_real' 0 44 'amrex_real_size' 0 45 'amrex_spacedim' 0 46
+'amrex_subtract' 0 47 'bl_spacedim' 0 51 'c_char' 0 52 'c_double' 0 53
+'c_float' 0 54 'c_int' 0 55 'c_long' 0 56 'c_ptr' 0 57 'c_short' 0 58
+'c_size_t' 0 59 'eight' 0 60 'eighth' 0 61 'eleven' 0 62 'fifteen' 0 63
+'fifth' 0 64 'five' 0 65 'five12th' 0 66 'five32nd' 0 67 'five3rd' 0 68
+'five6th' 0 69 'four' 0 70 'four3rd' 0 71 'fourth' 0 72 'half' 0 73 'm_pi'
+0 74 'm_sqrt_2' 0 75 'm_sqrt_pi' 0 76 'nine' 0 77 'nineth' 0 78 'one' 0
+79 'polyinterpcoeff' 0 80 'seven' 0 86 'seven12th' 0 87 'seventh' 0 88
+'six' 0 89 'sixteen' 0 90 'sixth' 0 91 'ten' 0 92 'tenth' 0 93 'third' 0
+94 'three' 0 95 'three4th' 0 96 'twelfth' 0 97 'twelve' 0 98 'two' 0 99
+'two3rd' 0 100 'zero' 0 101)

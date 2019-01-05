@@ -1,0 +1,61 @@
+=== If no file names and line numbers are shown below, one can run
+            addr2line -Cfie my_exefile my_line_address
+    to convert `my_line_address` (e.g., 0x4a6b) into file name and line number.
+
+=== Please note that the line number reported by addr2line may not be accurate.
+    One can use
+            readelf -wl my_exefile | grep my_line_address'
+    to find out the offset for that line.
+
+ 0: ./Maestro3d.gnu.MPI.ex() [0x564e8e]
+    amrex::BLBackTrace::print_backtrace_info(_IO_FILE*)
+    /raid2/xinlong/git_folder/amrex/Src/Base/AMReX_BLBackTrace.cpp:108
+
+ 1: ./Maestro3d.gnu.MPI.ex() [0x56589d]
+    amrex::BLBackTrace::handler(int)
+    /raid2/xinlong/git_folder/amrex/Src/Base/AMReX_BLBackTrace.cpp:55
+
+ 2: /lib64/libc.so.6(+0x36280) [0x7f6f53a4a280]
+    ??
+    ??:0
+
+ 3: ./Maestro3d.gnu.MPI.ex() [0x965254]
+    __actual_eos_module_MOD_actual_eos
+    /raid2/xinlong/git_folder/Microphysics/EOS/helmholtz/actual_eos.F90:292
+
+ 4: ./Maestro3d.gnu.MPI.ex() [0x95dd54]
+    __eos_module_MOD_eos
+    /raid2/xinlong/git_folder/MAESTROeX/Exec/SCIENCE/wdconvect/../../../Microphysics/EOS/eos.F90:122
+
+ 5: ./Maestro3d.gnu.MPI.ex() [0x62f839]
+    initdata_sphr
+    /raid2/xinlong/git_folder/MAESTROeX/Exec/SCIENCE/wdconvect/initdata.f90:196
+
+ 6: ./Maestro3d.gnu.MPI.ex() [0x46d2af]
+    Maestro::MakeNewLevelFromScratch(int, double, amrex::BoxArray const&, amrex::DistributionMapping const&)
+    /raid2/xinlong/git_folder/MAESTROeX/Exec/SCIENCE/wdconvect/../../../Source/MaestroInit.cpp:347
+
+ 7: ./Maestro3d.gnu.MPI.ex() [0x5a4c38]
+    amrex::AmrMesh::MakeNewGrids(double)
+    /raid2/xinlong/git_folder/amrex/Src/AmrCore/AMReX_AmrMesh.cpp:723
+
+ 8: ./Maestro3d.gnu.MPI.ex() [0x46c0b6]
+    Maestro::InitData()
+    /raid2/xinlong/git_folder/MAESTROeX/Exec/SCIENCE/wdconvect/../../../Source/MaestroInit.cpp:199
+
+ 9: ./Maestro3d.gnu.MPI.ex() [0x472e6c]
+    Maestro::Init()
+    /raid2/xinlong/git_folder/MAESTROeX/Exec/SCIENCE/wdconvect/../../../Source/MaestroInit.cpp:26
+
+10: ./Maestro3d.gnu.MPI.ex() [0x409ae8]
+    main
+    /raid2/xinlong/git_folder/MAESTROeX/Exec/SCIENCE/wdconvect/../../../Source/main.cpp:52
+
+11: /lib64/libc.so.6(__libc_start_main+0xf5) [0x7f6f53a363d5]
+    ??
+    ??:0
+
+12: ./Maestro3d.gnu.MPI.ex() [0x40e80e]
+    _start
+    ??:?
+
