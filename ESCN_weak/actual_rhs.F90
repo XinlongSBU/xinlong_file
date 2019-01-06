@@ -488,97 +488,97 @@ contains
 
     !$gpu
 
-    scratch_0 = Y(jal27)*state % rho
-    scratch_1 = screened_rates(k_p_al27__he4_mg24)*scratch_0
-    scratch_2 = screened_rates(k_p_al27__si28)*scratch_0
-    scratch_3 = -scratch_1 - scratch_2
-    scratch_4 = Y(jp31)*state % rho
-    scratch_5 = screened_rates(k_p_p31__he4_si28)*scratch_4
-    scratch_6 = screened_rates(k_p_p31__s32)*scratch_4
-    scratch_7 = -scratch_5 - scratch_6
-    scratch_8 = Y(jmg24)*state % rho
-    scratch_9 = screened_rates(k_he4_mg24__p_al27)*scratch_8
-    scratch_10 = Y(jsi28)*state % rho
-    scratch_11 = screened_rates(k_he4_si28__p_p31)*scratch_10
-    scratch_12 = 1.0d0*Y(jo16)*state % rho
-    scratch_13 = screened_rates(k_o16_o16__p_p31)*scratch_12
-    scratch_14 = Y(jhe4)*state % rho
-    scratch_15 = screened_rates(k_he4_mg24__p_al27)*scratch_14
-    scratch_16 = Y(jp)*state % rho
-    scratch_17 = screened_rates(k_p_al27__he4_mg24)*scratch_16
-    scratch_18 = screened_rates(k_p_al27__si28)*scratch_16
-    scratch_19 = -scratch_17 - scratch_18
-    scratch_20 = screened_rates(k_he4_si28__p_p31)*scratch_14
-    scratch_21 = screened_rates(k_p_p31__he4_si28)*scratch_16
-    scratch_22 = screened_rates(k_p_p31__s32)*scratch_16
-    scratch_23 = -scratch_21 - scratch_22
-    scratch_24 = screened_rates(k_he4_al27__p31)*scratch_0
-    scratch_25 = -scratch_24
-    scratch_26 = screened_rates(k_he4_ne20__mg24)*Y(jne20)*state % rho
-    scratch_27 = -scratch_26
-    scratch_28 = screened_rates(k_he4_o16__ne20)*state % rho
-    scratch_29 = Y(jo16)*scratch_28
-    scratch_30 = -scratch_29
-    scratch_31 = -scratch_11
-    scratch_32 = screened_rates(k_he4_si28__s32)*scratch_10
+    scratch_0 = screened_rates(k_p_p31__he4_si28)*state % rho
+    scratch_1 = Y(jp31)*scratch_0
+    scratch_2 = screened_rates(k_p_p31__s32)*state % rho
+    scratch_3 = Y(jp31)*scratch_2
+    scratch_4 = -scratch_1 - scratch_3
+    scratch_5 = Y(jal27)*state % rho
+    scratch_6 = screened_rates(k_p_al27__he4_mg24)*scratch_5
+    scratch_7 = screened_rates(k_p_al27__si28)*scratch_5
+    scratch_8 = -scratch_6 - scratch_7
+    scratch_9 = Y(jmg24)*state % rho
+    scratch_10 = screened_rates(k_he4_mg24__p_al27)*scratch_9
+    scratch_11 = Y(jsi28)*state % rho
+    scratch_12 = screened_rates(k_he4_si28__p_p31)*scratch_11
+    scratch_13 = 1.0d0*Y(jo16)*state % rho
+    scratch_14 = screened_rates(k_o16_o16__p_p31)*scratch_13
+    scratch_15 = Y(jhe4)*state % rho
+    scratch_16 = screened_rates(k_he4_mg24__p_al27)*scratch_15
+    scratch_17 = Y(jp)*state % rho
+    scratch_18 = screened_rates(k_p_al27__he4_mg24)*scratch_17
+    scratch_19 = screened_rates(k_p_al27__si28)*scratch_17
+    scratch_20 = -scratch_18 - scratch_19
+    scratch_21 = screened_rates(k_he4_si28__p_p31)*scratch_15
+    scratch_22 = Y(jp)*scratch_0
+    scratch_23 = Y(jp)*scratch_2
+    scratch_24 = -scratch_22 - scratch_23
+    scratch_25 = screened_rates(k_he4_al27__p31)*scratch_5
+    scratch_26 = -scratch_25
+    scratch_27 = -scratch_10
+    scratch_28 = screened_rates(k_he4_mg24__si28)*scratch_9
+    scratch_29 = -scratch_28
+    scratch_30 = screened_rates(k_he4_ne20__mg24)*Y(jne20)*state % rho
+    scratch_31 = -scratch_30
+    scratch_32 = screened_rates(k_he4_o16__ne20)*Y(jo16)*state % rho
     scratch_33 = -scratch_32
-    scratch_34 = screened_rates(k_he4_mg24__si28)*scratch_8
-    scratch_35 = -scratch_34 - scratch_9
-    scratch_36 = Y(jhe4)*scratch_28
+    scratch_34 = screened_rates(k_he4_si28__s32)*scratch_11
+    scratch_35 = -scratch_12 - scratch_34
+    scratch_36 = screened_rates(k_he4_o16__ne20)*scratch_15
     scratch_37 = -scratch_36
-    scratch_38 = screened_rates(k_o16_o16__he4_si28)*scratch_12
-    scratch_39 = screened_rates(k_he4_ne20__mg24)*scratch_14
+    scratch_38 = screened_rates(k_o16_o16__he4_si28)*scratch_13
+    scratch_39 = screened_rates(k_he4_ne20__mg24)*scratch_15
     scratch_40 = -scratch_39
-    scratch_41 = screened_rates(k_he4_mg24__si28)*scratch_14
-    scratch_42 = -scratch_15 - scratch_41
-    scratch_43 = screened_rates(k_he4_al27__p31)*scratch_14
+    scratch_41 = screened_rates(k_he4_mg24__si28)*scratch_15
+    scratch_42 = -scratch_16 - scratch_41
+    scratch_43 = screened_rates(k_he4_al27__p31)*scratch_15
     scratch_44 = -scratch_43
-    scratch_45 = screened_rates(k_he4_si28__s32)*scratch_14
-    scratch_46 = -scratch_20 - scratch_45
+    scratch_45 = screened_rates(k_he4_si28__s32)*scratch_15
+    scratch_46 = -scratch_21 - scratch_45
     scratch_47 = 2.0d0*Y(jo16)*state % rho
 
     scratch = (&
-      scratch_3 + scratch_7 &
+      scratch_4 + scratch_8 &
        )
     call set_jac_entry(state, jp, jp, scratch)
 
     scratch = (&
-      scratch_11 + scratch_9 &
+      scratch_10 + scratch_12 &
        )
     call set_jac_entry(state, jp, jhe4, scratch)
 
     scratch = (&
-      scratch_13 &
+      scratch_14 &
        )
     call set_jac_entry(state, jp, jo16, scratch)
 
     scratch = (&
-      scratch_15 &
+      scratch_16 &
        )
     call set_jac_entry(state, jp, jmg24, scratch)
 
     scratch = (&
-      scratch_19 &
+      scratch_20 &
        )
     call set_jac_entry(state, jp, jal27, scratch)
 
     scratch = (&
-      scratch_20 &
+      scratch_21 &
        )
     call set_jac_entry(state, jp, jsi28, scratch)
 
     scratch = (&
-      scratch_23 &
+      scratch_24 &
        )
     call set_jac_entry(state, jp, jp31, scratch)
 
     scratch = (&
-      scratch_1 + scratch_5 &
+      scratch_1 + scratch_6 &
        )
     call set_jac_entry(state, jhe4, jp, scratch)
 
     scratch = (&
-      scratch_25 + scratch_27 + scratch_30 + scratch_31 + scratch_33 + &
+      scratch_26 + scratch_27 + scratch_29 + scratch_31 + scratch_33 + &
       scratch_35 &
        )
     call set_jac_entry(state, jhe4, jhe4, scratch)
@@ -599,7 +599,7 @@ contains
     call set_jac_entry(state, jhe4, jmg24, scratch)
 
     scratch = (&
-      scratch_17 + scratch_44 &
+      scratch_18 + scratch_44 &
        )
     call set_jac_entry(state, jhe4, jal27, scratch)
 
@@ -609,12 +609,12 @@ contains
     call set_jac_entry(state, jhe4, jsi28, scratch)
 
     scratch = (&
-      scratch_21 &
+      scratch_22 &
        )
     call set_jac_entry(state, jhe4, jp31, scratch)
 
     scratch = (&
-      scratch_30 &
+      scratch_33 &
        )
     call set_jac_entry(state, jo16, jhe4, scratch)
 
@@ -655,7 +655,7 @@ contains
     call set_jac_entry(state, jf20, jne20, scratch)
 
     scratch = (&
-      scratch_27 + scratch_29 &
+      scratch_31 + scratch_32 &
        )
     call set_jac_entry(state, jne20, jhe4, scratch)
 
@@ -675,12 +675,12 @@ contains
     call set_jac_entry(state, jne20, jne20, scratch)
 
     scratch = (&
-      scratch_1 &
+      scratch_6 &
        )
     call set_jac_entry(state, jmg24, jp, scratch)
 
     scratch = (&
-      scratch_26 + scratch_35 &
+      scratch_27 + scratch_29 + scratch_30 &
        )
     call set_jac_entry(state, jmg24, jhe4, scratch)
 
@@ -695,37 +695,37 @@ contains
     call set_jac_entry(state, jmg24, jmg24, scratch)
 
     scratch = (&
-      scratch_17 &
+      scratch_18 &
        )
     call set_jac_entry(state, jmg24, jal27, scratch)
 
     scratch = (&
-      scratch_3 &
+      scratch_8 &
        )
     call set_jac_entry(state, jal27, jp, scratch)
 
     scratch = (&
-      scratch_25 + scratch_9 &
+      scratch_10 + scratch_26 &
        )
     call set_jac_entry(state, jal27, jhe4, scratch)
 
     scratch = (&
-      scratch_15 &
+      scratch_16 &
        )
     call set_jac_entry(state, jal27, jmg24, scratch)
 
     scratch = (&
-      scratch_19 + scratch_44 &
+      scratch_20 + scratch_44 &
        )
     call set_jac_entry(state, jal27, jal27, scratch)
 
     scratch = (&
-      scratch_2 + scratch_5 &
+      scratch_1 + scratch_7 &
        )
     call set_jac_entry(state, jsi28, jp, scratch)
 
     scratch = (&
-      scratch_31 + scratch_33 + scratch_34 &
+      scratch_28 + scratch_35 &
        )
     call set_jac_entry(state, jsi28, jhe4, scratch)
 
@@ -740,7 +740,7 @@ contains
     call set_jac_entry(state, jsi28, jmg24, scratch)
 
     scratch = (&
-      scratch_18 &
+      scratch_19 &
        )
     call set_jac_entry(state, jsi28, jal27, scratch)
 
@@ -750,22 +750,22 @@ contains
     call set_jac_entry(state, jsi28, jsi28, scratch)
 
     scratch = (&
-      scratch_21 &
+      scratch_22 &
        )
     call set_jac_entry(state, jsi28, jp31, scratch)
 
     scratch = (&
-      scratch_7 &
+      scratch_4 &
        )
     call set_jac_entry(state, jp31, jp, scratch)
 
     scratch = (&
-      scratch_11 + scratch_24 &
+      scratch_12 + scratch_25 &
        )
     call set_jac_entry(state, jp31, jhe4, scratch)
 
     scratch = (&
-      scratch_13 &
+      scratch_14 &
        )
     call set_jac_entry(state, jp31, jo16, scratch)
 
@@ -775,22 +775,22 @@ contains
     call set_jac_entry(state, jp31, jal27, scratch)
 
     scratch = (&
-      scratch_20 &
+      scratch_21 &
        )
     call set_jac_entry(state, jp31, jsi28, scratch)
 
     scratch = (&
-      scratch_23 &
+      scratch_24 &
        )
     call set_jac_entry(state, jp31, jp31, scratch)
 
     scratch = (&
-      scratch_6 &
+      scratch_3 &
        )
     call set_jac_entry(state, js32, jp, scratch)
 
     scratch = (&
-      scratch_32 &
+      scratch_34 &
        )
     call set_jac_entry(state, js32, jhe4, scratch)
 
@@ -800,7 +800,7 @@ contains
     call set_jac_entry(state, js32, jsi28, scratch)
 
     scratch = (&
-      scratch_22 &
+      scratch_23 &
        )
     call set_jac_entry(state, js32, jp31, scratch)
 
