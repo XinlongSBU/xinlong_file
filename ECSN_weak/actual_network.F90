@@ -19,7 +19,7 @@ module actual_network
   real(rt), parameter :: mass_proton   = 1.67262163783d-24
   real(rt), parameter :: mass_electron = 9.10938215450d-28
 
-  integer, parameter :: nrates = 11
+  integer, parameter :: nrates = 18
   integer, parameter :: num_rate_groups = 4
 
   ! Evolution and auxiliary
@@ -30,8 +30,8 @@ module actual_network
   integer, parameter :: nspec = 11
 
   ! Number of reaclib rates
-  integer, parameter :: nrat_reaclib = 9
-  integer, parameter :: number_reaclib_sets = 15
+  integer, parameter :: nrat_reaclib = 16
+  integer, parameter :: number_reaclib_sets = 36
 
   ! Number of tabular rates
   integer, parameter :: nrat_tabular = 2
@@ -61,14 +61,21 @@ module actual_network
   integer, parameter :: k_o20__f20__weak__wc12   = 1
   integer, parameter :: k_f20__ne20__weak__wc12   = 2
   integer, parameter :: k_ne20__he4_o16   = 3
-  integer, parameter :: k_he4_al27__p31   = 4
-  integer, parameter :: k_he4_si28__s32   = 5
-  integer, parameter :: k_o16_o16__p_p31   = 6
-  integer, parameter :: k_o16_o16__he4_si28   = 7
-  integer, parameter :: k_he4_mg24__p_al27   = 8
-  integer, parameter :: k_he4_si28__p_p31   = 9
-  integer, parameter :: k_f20__o20   = 10
-  integer, parameter :: k_ne20__f20   = 11
+  integer, parameter :: k_he4_o16__ne20   = 4
+  integer, parameter :: k_he4_ne20__mg24   = 5
+  integer, parameter :: k_he4_mg24__si28   = 6
+  integer, parameter :: k_p_al27__si28   = 7
+  integer, parameter :: k_he4_al27__p31   = 8
+  integer, parameter :: k_he4_si28__s32   = 9
+  integer, parameter :: k_p_p31__s32   = 10
+  integer, parameter :: k_o16_o16__p_p31   = 11
+  integer, parameter :: k_o16_o16__he4_si28   = 12
+  integer, parameter :: k_he4_mg24__p_al27   = 13
+  integer, parameter :: k_p_al27__he4_mg24   = 14
+  integer, parameter :: k_he4_si28__p_p31   = 15
+  integer, parameter :: k_p_p31__he4_si28   = 16
+  integer, parameter :: k_f20__o20   = 17
+  integer, parameter :: k_ne20__f20   = 18
 
   ! reactvec indices
   integer, parameter :: i_rate        = 1
@@ -93,7 +100,7 @@ module actual_network
 
 #ifdef REACT_SPARSE_JACOBIAN
   ! Shape of Jacobian in Compressed Sparse Row format
-  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 72
+  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 90
   integer, allocatable :: csr_jac_col_index(:), csr_jac_row_count(:)
 
 #ifdef AMREX_USE_CUDA
@@ -215,15 +222,20 @@ contains
       2, &
       3, &
       7, &
+      8, &
       9, &
+      10, &
       12, &
+      1, &
       2, &
       3, &
       6, &
       7, &
       8, &
       9, &
+      10, &
       12, &
+      2, &
       3, &
       6, &
       12, &
@@ -234,28 +246,41 @@ contains
       5, &
       6, &
       12, &
+      2, &
+      3, &
       5, &
       6, &
       12, &
+      1, &
       2, &
+      6, &
       7, &
+      8, &
       12, &
+      1, &
       2, &
       7, &
       8, &
       12, &
+      1, &
       2, &
       3, &
+      7, &
+      8, &
       9, &
+      10, &
       12, &
+      1, &
       2, &
       3, &
       8, &
       9, &
       10, &
       12, &
+      1, &
       2, &
       9, &
+      10, &
       11, &
       12, &
       1, &
@@ -286,19 +311,19 @@ contains
 
     csr_jac_row_count = [ &
       1, &
-      7, &
-      14, &
-      17, &
-      20, &
-      24, &
-      27, &
-      30, &
+      9, &
+      18, &
+      22, &
+      25, &
+      29, &
       34, &
-      38, &
-      44, &
-      48, &
+      40, &
+      45, &
+      53, &
       60, &
-      73  ]
+      66, &
+      78, &
+      91  ]
 #endif
 
   end subroutine actual_network_init
