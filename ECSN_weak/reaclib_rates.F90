@@ -70,6 +70,18 @@ contains
   subroutine net_screening_init()
     ! Adds screening factors and calls screening_init
 
+    call add_screening_factor(zion(jhe4), aion(jhe4), &
+      zion(jal27), aion(jal27))
+
+    call add_screening_factor(zion(jhe4), aion(jhe4), &
+      zion(jsi28), aion(jsi28))
+
+    call add_screening_factor(zion(jo16), aion(jo16), &
+      zion(jo16), aion(jo16))
+
+    call add_screening_factor(zion(jhe4), aion(jhe4), &
+      zion(jmg24), aion(jmg24))
+
 
     call screening_init()
   end subroutine net_screening_init
