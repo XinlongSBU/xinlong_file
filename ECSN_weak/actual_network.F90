@@ -19,7 +19,7 @@ module actual_network
   real(rt), parameter :: mass_proton   = 1.67262163783d-24
   real(rt), parameter :: mass_electron = 9.10938215450d-28
 
-  integer, parameter :: nrates = 18
+  integer, parameter :: nrates = 16
   integer, parameter :: num_rate_groups = 4
 
   ! Evolution and auxiliary
@@ -30,8 +30,8 @@ module actual_network
   integer, parameter :: nspec = 11
 
   ! Number of reaclib rates
-  integer, parameter :: nrat_reaclib = 16
-  integer, parameter :: number_reaclib_sets = 36
+  integer, parameter :: nrat_reaclib = 14
+  integer, parameter :: number_reaclib_sets = 30
 
   ! Number of tabular rates
   integer, parameter :: nrat_tabular = 2
@@ -71,11 +71,9 @@ module actual_network
   integer, parameter :: k_o16_o16__p_p31   = 11
   integer, parameter :: k_o16_o16__he4_si28   = 12
   integer, parameter :: k_he4_mg24__p_al27   = 13
-  integer, parameter :: k_p_al27__he4_mg24   = 14
-  integer, parameter :: k_he4_si28__p_p31   = 15
-  integer, parameter :: k_p_p31__he4_si28   = 16
-  integer, parameter :: k_f20__o20   = 17
-  integer, parameter :: k_ne20__f20   = 18
+  integer, parameter :: k_he4_si28__p_p31   = 14
+  integer, parameter :: k_f20__o20   = 15
+  integer, parameter :: k_ne20__f20   = 16
 
   ! reactvec indices
   integer, parameter :: i_rate        = 1
@@ -100,7 +98,7 @@ module actual_network
 
 #ifdef REACT_SPARSE_JACOBIAN
   ! Shape of Jacobian in Compressed Sparse Row format
-  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 90
+  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 85
   integer, allocatable :: csr_jac_col_index(:), csr_jac_row_count(:)
 
 #ifdef AMREX_USE_CUDA
@@ -226,14 +224,12 @@ contains
       9, &
       10, &
       12, &
-      1, &
       2, &
       3, &
       6, &
       7, &
       8, &
       9, &
-      10, &
       12, &
       2, &
       3, &
@@ -251,11 +247,9 @@ contains
       5, &
       6, &
       12, &
-      1, &
       2, &
       6, &
       7, &
-      8, &
       12, &
       1, &
       2, &
@@ -268,7 +262,6 @@ contains
       7, &
       8, &
       9, &
-      10, &
       12, &
       1, &
       2, &
@@ -312,18 +305,18 @@ contains
     csr_jac_row_count = [ &
       1, &
       9, &
-      18, &
-      22, &
-      25, &
-      29, &
-      34, &
-      40, &
-      45, &
-      53, &
-      60, &
-      66, &
-      78, &
-      91  ]
+      16, &
+      20, &
+      23, &
+      27, &
+      32, &
+      36, &
+      41, &
+      48, &
+      55, &
+      61, &
+      73, &
+      86  ]
 #endif
 
   end subroutine actual_network_init
