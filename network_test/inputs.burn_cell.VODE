@@ -32,10 +32,13 @@
   temperature   = 1.0d8
 
 
-! f20   initial mass fraction
+! o20   initial mass fraction
   massfractions(1) = 0.0d0
 
-! ne20  initial mass fraction
+! f20   initial mass fraction
   massfractions(2) = 0.0d0
+
+! ne20  initial mass fraction
+  massfractions(3) = 0.0d0
 
 /
