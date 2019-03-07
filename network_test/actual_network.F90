@@ -19,22 +19,22 @@ module actual_network
   real(rt), parameter :: mass_proton   = 1.67262163783d-24
   real(rt), parameter :: mass_electron = 9.10938215450d-28
 
-  integer, parameter :: nrates = 4
+  integer, parameter :: nrates = 1
   integer, parameter :: num_rate_groups = 4
 
   ! Evolution and auxiliary
-  integer, parameter :: nspec_evolve = 3
+  integer, parameter :: nspec_evolve = 2
   integer, parameter :: naux  = 0
 
   ! Number of nuclear species in the network
-  integer, parameter :: nspec = 3
+  integer, parameter :: nspec = 2
 
   ! Number of reaclib rates
   integer, parameter :: nrat_reaclib = 0
   integer, parameter :: number_reaclib_sets = 0
 
   ! Number of tabular rates
-  integer, parameter :: nrat_tabular = 4
+  integer, parameter :: nrat_tabular = 1
 
   ! Binding Energies Per Nucleon (MeV)
   real(rt) :: ebind_per_nucleon(nspec)
@@ -45,15 +45,11 @@ module actual_network
   ! bion: Binding Energies (ergs)
 
   ! Nuclides
-  integer, parameter :: jo20   = 1
-  integer, parameter :: jf20   = 2
-  integer, parameter :: jne20   = 3
+  integer, parameter :: jf20   = 1
+  integer, parameter :: jne20   = 2
 
   ! Reactions
-  integer, parameter :: k_f20__o20   = 1
-  integer, parameter :: k_ne20__f20   = 2
-  integer, parameter :: k_o20__f20   = 3
-  integer, parameter :: k_f20__ne20   = 4
+  integer, parameter :: k_f20__ne20   = 1
 
   ! reactvec indices
   integer, parameter :: i_rate        = 1
@@ -78,7 +74,7 @@ module actual_network
 
 #ifdef REACT_SPARSE_JACOBIAN
   ! Shape of Jacobian in Compressed Sparse Row format
-  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 19
+  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 12
   integer, allocatable :: csr_jac_col_index(:), csr_jac_row_count(:)
 
 #ifdef AMREX_USE_CUDA
@@ -102,27 +98,21 @@ contains
     allocate(mion(nspec))
     allocate(wion(nspec))
 
-    spec_names(jo20)   = "oxygen-20"
     spec_names(jf20)   = "fluorine-20"
     spec_names(jne20)   = "neon-20"
 
-    short_spec_names(jo20)   = "o20"
     short_spec_names(jf20)   = "f20"
     short_spec_names(jne20)   = "ne20"
 
-    ebind_per_nucleon(jo20)   = 7.56857000000000d+00
     ebind_per_nucleon(jf20)   = 7.72013400000000d+00
     ebind_per_nucleon(jne20)   = 8.03224000000000d+00
 
-    aion(jo20)   = 2.00000000000000d+01
     aion(jf20)   = 2.00000000000000d+01
     aion(jne20)   = 2.00000000000000d+01
 
-    zion(jo20)   = 8.00000000000000d+00
     zion(jf20)   = 9.00000000000000d+00
     zion(jne20)   = 1.00000000000000d+01
 
-    nion(jo20)   = 1.20000000000000d+01
     nion(jf20)   = 1.10000000000000d+01
     nion(jne20)   = 1.00000000000000d+01
 
@@ -149,32 +139,24 @@ contains
 
     csr_jac_col_index = [ &
       1, &
-      2, &
-      4, &
+      3, &
       1, &
       2, &
       3, &
-      4, &
-      2, &
-      3, &
-      4, &
       1, &
       2, &
       3, &
-      4, &
       1, &
       2, &
       3, &
-      4, &
-      5  ]
+      4  ]
 
     csr_jac_row_count = [ &
       1, &
-      4, &
-      8, &
-      11, &
-      15, &
-      20  ]
+      3, &
+      6, &
+      9, &
+      13  ]
 #endif
 
   end subroutine actual_network_init

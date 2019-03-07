@@ -90,33 +90,12 @@ contains
     end if
 
     ! Calculate tabular rates
-    call tabular_evaluate(rate_table_j_f20_o20, rhoy_table_j_f20_o20, temp_table_j_f20_o20, &
-                          num_rhoy_j_f20_o20, num_temp_j_f20_o20, num_vars_j_f20_o20, &
+    call tabular_evaluate(rate_table_j_f20_ne20, rhoy_table_j_f20_ne20, temp_table_j_f20_ne20, &
+                          num_rhoy_j_f20_ne20, num_temp_j_f20_ne20, num_vars_j_f20_ne20, &
                           rhoy, state % T, reactvec)
     rate_eval % unscreened_rates(:,1) = reactvec(1:4)
     rate_eval % add_energy(1) = reactvec(5)
     rate_eval % add_energy_rate(1)  = reactvec(6)
-
-    call tabular_evaluate(rate_table_j_ne20_f20, rhoy_table_j_ne20_f20, temp_table_j_ne20_f20, &
-                          num_rhoy_j_ne20_f20, num_temp_j_ne20_f20, num_vars_j_ne20_f20, &
-                          rhoy, state % T, reactvec)
-    rate_eval % unscreened_rates(:,2) = reactvec(1:4)
-    rate_eval % add_energy(2) = reactvec(5)
-    rate_eval % add_energy_rate(2)  = reactvec(6)
-
-    call tabular_evaluate(rate_table_j_o20_f20, rhoy_table_j_o20_f20, temp_table_j_o20_f20, &
-                          num_rhoy_j_o20_f20, num_temp_j_o20_f20, num_vars_j_o20_f20, &
-                          rhoy, state % T, reactvec)
-    rate_eval % unscreened_rates(:,3) = reactvec(1:4)
-    rate_eval % add_energy(3) = reactvec(5)
-    rate_eval % add_energy_rate(3)  = reactvec(6)
-
-    call tabular_evaluate(rate_table_j_f20_ne20, rhoy_table_j_f20_ne20, temp_table_j_f20_ne20, &
-                          num_rhoy_j_f20_ne20, num_temp_j_f20_ne20, num_vars_j_f20_ne20, &
-                          rhoy, state % T, reactvec)
-    rate_eval % unscreened_rates(:,4) = reactvec(1:4)
-    rate_eval % add_energy(4) = reactvec(5)
-    rate_eval % add_energy_rate(4)  = reactvec(6)
 
 
     ! Compute screened rates
@@ -160,16 +139,10 @@ contains
 
     ! additional per-reaction energies
     ! including Q-value modification and electron chemical potential
-    enuc = enuc + N_AVO * state % ydot(jf20) * rate_eval % add_energy(j_f20_o20)
-    enuc = enuc + N_AVO * state % ydot(jne20) * rate_eval % add_energy(j_ne20_f20)
-    enuc = enuc + N_AVO * state % ydot(jo20) * rate_eval % add_energy(j_o20_f20)
     enuc = enuc + N_AVO * state % ydot(jf20) * rate_eval % add_energy(j_f20_ne20)
 
     ! additional energy generation rates
     ! including gamma heating and reaction neutrino losses (non-thermal)
-    enuc = enuc + N_AVO * Y(jf20) * rate_eval % add_energy_rate(j_f20_o20)
-    enuc = enuc + N_AVO * Y(jne20) * rate_eval % add_energy_rate(j_ne20_f20)
-    enuc = enuc + N_AVO * Y(jo20) * rate_eval % add_energy_rate(j_o20_f20)
     enuc = enuc + N_AVO * Y(jf20) * rate_eval % add_energy_rate(j_f20_ne20)
 
 
@@ -199,25 +172,15 @@ contains
     !$gpu
 
     double precision :: scratch_0
-    double precision :: scratch_1
-    double precision :: scratch_2
-    double precision :: scratch_3
 
-    scratch_0 = screened_rates(k_f20__o20)*Y(jf20)
-    scratch_1 = screened_rates(k_o20__f20)*Y(jo20)
-    scratch_2 = screened_rates(k_ne20__f20)*Y(jne20)
-    scratch_3 = screened_rates(k_f20__ne20)*Y(jf20)
-
-    ydot_nuc(jo20) = ( &
-      scratch_0 - scratch_1 &
-       )
+    scratch_0 = screened_rates(k_f20__ne20)*Y(jf20)
 
     ydot_nuc(jf20) = ( &
-      -scratch_0 + scratch_1 + scratch_2 - scratch_3 &
+      -scratch_0 &
        )
 
     ydot_nuc(jne20) = ( &
-      -scratch_2 + scratch_3 &
+      scratch_0 &
        )
 
 
@@ -321,39 +284,14 @@ contains
 
 
     scratch = (&
-      -screened_rates(k_o20__f20) &
-       )
-    call set_jac_entry(state, jo20, jo20, scratch)
-
-    scratch = (&
-      screened_rates(k_f20__o20) &
-       )
-    call set_jac_entry(state, jo20, jf20, scratch)
-
-    scratch = (&
-      screened_rates(k_o20__f20) &
-       )
-    call set_jac_entry(state, jf20, jo20, scratch)
-
-    scratch = (&
-      -screened_rates(k_f20__ne20) - screened_rates(k_f20__o20) &
+      -screened_rates(k_f20__ne20) &
        )
     call set_jac_entry(state, jf20, jf20, scratch)
-
-    scratch = (&
-      screened_rates(k_ne20__f20) &
-       )
-    call set_jac_entry(state, jf20, jne20, scratch)
 
     scratch = (&
       screened_rates(k_f20__ne20) &
        )
     call set_jac_entry(state, jne20, jf20, scratch)
-
-    scratch = (&
-      -screened_rates(k_ne20__f20) &
-       )
-    call set_jac_entry(state, jne20, jne20, scratch)
 
 
   end subroutine jac_nuc
