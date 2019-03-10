@@ -49,7 +49,7 @@ module actual_network
   integer, parameter :: jne20   = 2
 
   ! Reactions
-  integer, parameter :: k_f20__ne20   = 1
+  integer, parameter :: k_ne20__f20   = 1
 
   ! reactvec indices
   integer, parameter :: i_rate        = 1
@@ -139,8 +139,8 @@ contains
 
     csr_jac_col_index = [ &
       1, &
+      2, &
       3, &
-      1, &
       2, &
       3, &
       1, &
@@ -153,7 +153,7 @@ contains
 
     csr_jac_row_count = [ &
       1, &
-      3, &
+      4, &
       6, &
       9, &
       13  ]
