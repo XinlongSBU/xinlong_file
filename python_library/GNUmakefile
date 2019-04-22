@@ -31,7 +31,7 @@ MICROPHYSICS_HOME  := ../
 EOS_DIR     := helmholtz
 
 # This sets the network directory in Microphysics/networks
-NETWORK_DIR := aprox13
+NETWORK_DIR := ECSN_Donald
 
 CONDUCTIVITY_DIR := stellar
 

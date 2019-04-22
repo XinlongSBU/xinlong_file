@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_dvsol_module
 
   use cuvode_parameters_module, only: VODE_LMAX, VODE_NEQS, VODE_LIW,   &

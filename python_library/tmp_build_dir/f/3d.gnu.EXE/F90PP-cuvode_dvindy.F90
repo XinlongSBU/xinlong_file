@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_dvindy_module
 
   use cuvode_parameters_module, only: VODE_LMAX, VODE_NEQS, VODE_LIW,   &

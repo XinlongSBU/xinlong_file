@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_parameters_module
 
   use burn_type_module, only: neqs

@@ -1,341 +1,259 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module actual_network
 
-  use amrex_fort_module, only : rt => amrex_real
+  use physical_constants, only: ERG_PER_MeV
+  use amrex_fort_module, only: rt => amrex_real
 
   implicit none
 
-  integer, parameter :: nspec = 13
-  integer, parameter :: nspec_evolve = 13
+  public
+
+  real(rt), parameter :: avo = 6.0221417930d23
+  real(rt), parameter :: c_light = 2.99792458d10
+  real(rt), parameter :: enuc_conv2 = -avo*c_light*c_light
+
+  real(rt), parameter :: ev2erg  = 1.60217648740d-12
+  real(rt), parameter :: mev2erg = ev2erg*1.0d6
+  real(rt), parameter :: mev2gr  = mev2erg/c_light**2
+
+  real(rt), parameter :: mass_neutron  = 1.67492721184d-24
+  real(rt), parameter :: mass_proton   = 1.67262163783d-24
+  real(rt), parameter :: mass_electron = 9.10938215450d-28
+
+  integer, parameter :: nrates = 18
+  integer, parameter :: num_rate_groups = 4
+
+  ! Evolution and auxiliary
+  integer, parameter :: nspec_evolve = 11
   integer, parameter :: naux  = 0
 
-  integer, parameter :: ihe4  = 1
-  integer, parameter :: ic12  = 2
-  integer, parameter :: io16  = 3
-  integer, parameter :: ine20 = 4
-  integer, parameter :: img24 = 5
-  integer, parameter :: isi28 = 6
-  integer, parameter :: is32  = 7
-  integer, parameter :: iar36 = 8
-  integer, parameter :: ica40 = 9
-  integer, parameter :: iti44 = 10
-  integer, parameter :: icr48 = 11
-  integer, parameter :: ife52 = 12
-  integer, parameter :: ini56 = 13
+  ! Number of nuclear species in the network
+  integer, parameter :: nspec = 11
 
-  double precision, allocatable :: aion(:), zion(:), nion(:)
-  double precision, allocatable :: bion(:), mion(:), wion(:)
+  ! Number of reaclib rates
+  integer, parameter :: nrat_reaclib = 14
+  integer, parameter :: number_reaclib_sets = 34
 
+  ! Number of tabular rates
+  integer, parameter :: nrat_tabular = 4
+
+  ! Binding Energies Per Nucleon (MeV)
+  real(rt) :: ebind_per_nucleon(nspec)
+
+  ! aion: Nucleon mass number A
+  ! zion: Nucleon atomic number Z
+  ! nion: Nucleon neutron number N
+  ! bion: Binding Energies (ergs)
+
+  ! Nuclides
+  integer, parameter :: jp   = 1
+  integer, parameter :: jhe4   = 2
+  integer, parameter :: jo16   = 3
+  integer, parameter :: jo20   = 4
+  integer, parameter :: jf20   = 5
+  integer, parameter :: jne20   = 6
+  integer, parameter :: jmg24   = 7
+  integer, parameter :: jal27   = 8
+  integer, parameter :: jsi28   = 9
+  integer, parameter :: jp31   = 10
+  integer, parameter :: js32   = 11
+
+  ! Reactions
+  integer, parameter :: k_ne20__he4_o16   = 1
+  integer, parameter :: k_he4_o16__ne20   = 2
+  integer, parameter :: k_he4_ne20__mg24   = 3
+  integer, parameter :: k_he4_mg24__si28   = 4
+  integer, parameter :: k_p_al27__si28   = 5
+  integer, parameter :: k_he4_al27__p31   = 6
+  integer, parameter :: k_he4_si28__s32   = 7
+  integer, parameter :: k_p_p31__s32   = 8
+  integer, parameter :: k_o16_o16__p_p31   = 9
+  integer, parameter :: k_o16_o16__he4_si28   = 10
+  integer, parameter :: k_he4_mg24__p_al27   = 11
+  integer, parameter :: k_p_al27__he4_mg24   = 12
+  integer, parameter :: k_he4_si28__p_p31   = 13
+  integer, parameter :: k_p_p31__he4_si28   = 14
+  integer, parameter :: k_f20__o20   = 15
+  integer, parameter :: k_ne20__f20   = 16
+  integer, parameter :: k_o20__f20   = 17
+  integer, parameter :: k_f20__ne20   = 18
+
+  ! reactvec indices
+  integer, parameter :: i_rate        = 1
+  integer, parameter :: i_drate_dt    = 2
+  integer, parameter :: i_scor        = 3
+  integer, parameter :: i_dscor_dt    = 4
+  integer, parameter :: i_dqweak      = 5
+  integer, parameter :: i_epart       = 6
 
   character (len=16), save :: spec_names(nspec)
   character (len= 5), save :: short_spec_names(nspec)
   character (len= 5), save :: short_aux_names(naux)
 
-  character (len=32), parameter :: network_name = "aprox13"
+  real(rt), allocatable, save :: aion(:), zion(:), bion(:)
+  real(rt), allocatable, save :: nion(:), mion(:), wion(:)
 
-  ! Some fundamental physical constants
 
-  double precision, parameter :: avo = 6.0221417930d23
-  double precision, parameter :: c_light = 2.99792458d10
-
-  double precision, parameter :: ev2erg  = 1.60217648740d-12
-  double precision, parameter :: mev2erg = ev2erg*1.0d6
-  double precision, parameter :: mev2gr  = mev2erg/c_light**2
-
-  double precision, parameter :: mn = 1.67492721184d-24
-  double precision, parameter :: mp = 1.67262163783d-24
-  double precision, parameter :: me = 9.1093821545d-28
-
-  ! Conversion factor for the nuclear energy generation rate.
-
-  double precision, parameter :: enuc_conv2 = -avo*c_light*c_light
-
-  !$acc declare create(aion, zion, nion, bion, mion, wion)
-
-  ! Rates data
-
-  integer, parameter :: nrates = 67
-  integer, parameter :: num_rate_groups = 2
-
-  integer, parameter :: ir3a   = 1
-  integer, parameter :: irg3a  = 2
-  integer, parameter :: ircag  = 3
-  integer, parameter :: iroga  = 4
-  integer, parameter :: ir1212 = 5
-  integer, parameter :: ir1216 = 6
-  integer, parameter :: ir1616 = 7
-  integer, parameter :: iroag  = 8
-  integer, parameter :: irnega = 9
-  integer, parameter :: irneag = 10
-  integer, parameter :: irmgga = 11
-  integer, parameter :: irmgag = 12
-  integer, parameter :: irsiga = 13
-  integer, parameter :: irmgap = 14
-  integer, parameter :: iralpa = 15
-  integer, parameter :: iralpg = 16
-  integer, parameter :: irsigp = 17
-  integer, parameter :: irsiag = 18
-  integer, parameter :: irsga  = 19
-  integer, parameter :: irsiap = 20
-  integer, parameter :: irppa  = 21
-  integer, parameter :: irppg  = 22
-  integer, parameter :: irsgp  = 23
-  integer, parameter :: irsag  = 24
-  integer, parameter :: irarga = 25
-  integer, parameter :: irsap  = 26
-  integer, parameter :: irclpa = 27
-  integer, parameter :: irclpg = 28
-  integer, parameter :: irargp = 29
-  integer, parameter :: irarag = 30
-  integer, parameter :: ircaga = 31
-  integer, parameter :: irarap = 32
-  integer, parameter :: irkpa  = 33
-  integer, parameter :: irkpg  = 34
-  integer, parameter :: ircagp = 35
-  integer, parameter :: ircaag = 36
-  integer, parameter :: irtiga = 37
-  integer, parameter :: ircaap = 38
-  integer, parameter :: irscpa = 39
-  integer, parameter :: irscpg = 40
-  integer, parameter :: irtigp = 41
-  integer, parameter :: irtiag = 42
-  integer, parameter :: ircrga = 43
-  integer, parameter :: irtiap = 44
-  integer, parameter :: irvpa  = 45
-  integer, parameter :: irvpg  = 46
-  integer, parameter :: ircrgp = 47
-  integer, parameter :: ircrag = 48
-  integer, parameter :: irfega = 49
-  integer, parameter :: ircrap = 50
-  integer, parameter :: irmnpa = 51
-  integer, parameter :: irmnpg = 52
-  integer, parameter :: irfegp = 53
-  integer, parameter :: irfeag = 54
-  integer, parameter :: irniga = 55
-  integer, parameter :: irfeap = 56
-  integer, parameter :: ircopa = 57
-  integer, parameter :: ircopg = 58
-  integer, parameter :: irnigp = 59
-  integer, parameter :: irr1   = 60
-  integer, parameter :: irs1   = 61
-  integer, parameter :: irt1   = 62
-  integer, parameter :: iru1   = 63
-  integer, parameter :: irv1   = 64
-  integer, parameter :: irw1   = 65
-  integer, parameter :: irx1   = 66
-  integer, parameter :: iry1   = 67
-
-  character (len=16), save :: ratenames(nrates)
+  !$acc declare create(aion, zion, bion, nion, mion, wion)
 
 
 contains
 
-  subroutine actual_network_init
+  subroutine actual_network_init()
 
     implicit none
 
-    short_spec_names(ihe4)  = 'he4'
-    short_spec_names(ic12)  = 'c12'
-    short_spec_names(io16)  = 'o16'
-    short_spec_names(ine20) = 'ne20'
-    short_spec_names(img24) = 'mg24'
-    short_spec_names(isi28) = 'si28'
-    short_spec_names(is32)  = 's32'
-    short_spec_names(iar36) = 'ar36'
-    short_spec_names(ica40) = 'ca40'
-    short_spec_names(iti44) = 'ti44'
-    short_spec_names(icr48) = 'cr48'
-    short_spec_names(ife52) = 'fe52'
-    short_spec_names(ini56) = 'ni56'
+    integer :: i
 
-    spec_names(ihe4)  = "helium-4"
-    spec_names(ic12)  = "carbon-12"
-    spec_names(io16)  = "oxygen-16"
-    spec_names(ine20) = "neon-20"
-    spec_names(img24) = "magnesium-24"
-    spec_names(isi28) = "silicon-28"
-    spec_names(is32)  = "sulfur-32"
-    spec_names(iar36) = "argon-36"
-    spec_names(ica40) = "calcium-40"
-    spec_names(iti44) = "titanium-44"
-    spec_names(icr48) = "chromium-48"
-    spec_names(ife52) = "iron-52"
-    spec_names(ini56) = "nickel-56"
-
+    ! Allocate ion info arrays
     allocate(aion(nspec))
     allocate(zion(nspec))
-    allocate(nion(nspec))
     allocate(bion(nspec))
+    allocate(nion(nspec))
     allocate(mion(nspec))
     allocate(wion(nspec))
 
-    ! Set the number of nucleons in the element
-    aion(ihe4)  = 4.0d0
-    aion(ic12)  = 12.0d0
-    aion(io16)  = 16.0d0
-    aion(ine20) = 20.0d0
-    aion(img24) = 24.0d0
-    aion(isi28) = 28.0d0
-    aion(is32)  = 32.0d0
-    aion(iar36) = 36.0d0
-    aion(ica40) = 40.0d0
-    aion(iti44) = 44.0d0
-    aion(icr48) = 48.0d0
-    aion(ife52) = 52.0d0
-    aion(ini56) = 56.0d0
+    spec_names(jp)   = "hydrogen-1"
+    spec_names(jhe4)   = "helium-4"
+    spec_names(jo16)   = "oxygen-16"
+    spec_names(jo20)   = "oxygen-20"
+    spec_names(jf20)   = "fluorine-20"
+    spec_names(jne20)   = "neon-20"
+    spec_names(jmg24)   = "magnesium-24"
+    spec_names(jal27)   = "aluminum-27"
+    spec_names(jsi28)   = "silicon-28"
+    spec_names(jp31)   = "phosphorus-31"
+    spec_names(js32)   = "sulfur-32"
 
-    ! Set the number of protons in the element
-    zion(ihe4)  = 2.0d0
-    zion(ic12)  = 6.0d0
-    zion(io16)  = 8.0d0
-    zion(ine20) = 10.0d0
-    zion(img24) = 12.0d0
-    zion(isi28) = 14.0d0
-    zion(is32)  = 16.0d0
-    zion(iar36) = 18.0d0
-    zion(ica40) = 20.0d0
-    zion(iti44) = 22.0d0
-    zion(icr48) = 24.0d0
-    zion(ife52) = 26.0d0
-    zion(ini56) = 28.0d0
+    short_spec_names(jp)   = "h1"
+    short_spec_names(jhe4)   = "he4"
+    short_spec_names(jo16)   = "o16"
+    short_spec_names(jo20)   = "o20"
+    short_spec_names(jf20)   = "f20"
+    short_spec_names(jne20)   = "ne20"
+    short_spec_names(jmg24)   = "mg24"
+    short_spec_names(jal27)   = "al27"
+    short_spec_names(jsi28)   = "si28"
+    short_spec_names(jp31)   = "p31"
+    short_spec_names(js32)   = "s32"
 
-    ! Set the binding energy of the element (MeV)
-    bion(ihe4)  =  28.29603d0
-    bion(ic12)  =  92.16294d0
-    bion(io16)  = 127.62093d0
-    bion(ine20) = 160.64788d0
-    bion(img24) = 198.25790d0
-    bion(isi28) = 236.53790d0
-    bion(is32)  = 271.78250d0
-    bion(iar36) = 306.72020d0
-    bion(ica40) = 342.05680d0
-    bion(iti44) = 375.47720d0
-    bion(icr48) = 411.46900d0
-    bion(ife52) = 447.70800d0
-    bion(ini56) = 484.00300d0
+    ebind_per_nucleon(jp)   = 0.00000000000000d+00
+    ebind_per_nucleon(jhe4)   = 7.07391500000000d+00
+    ebind_per_nucleon(jo16)   = 7.97620600000000d+00
+    ebind_per_nucleon(jo20)   = 7.56857000000000d+00
+    ebind_per_nucleon(jf20)   = 7.72013400000000d+00
+    ebind_per_nucleon(jne20)   = 8.03224000000000d+00
+    ebind_per_nucleon(jmg24)   = 8.26070900000000d+00
+    ebind_per_nucleon(jal27)   = 8.33155300000000d+00
+    ebind_per_nucleon(jsi28)   = 8.44774400000000d+00
+    ebind_per_nucleon(jp31)   = 8.48116700000000d+00
+    ebind_per_nucleon(js32)   = 8.49312900000000d+00
 
-    ! Set the number of neutrons
-    nion(:) = aion(:) - zion(:)
+    aion(jp)   = 1.00000000000000d+00
+    aion(jhe4)   = 4.00000000000000d+00
+    aion(jo16)   = 1.60000000000000d+01
+    aion(jo20)   = 2.00000000000000d+01
+    aion(jf20)   = 2.00000000000000d+01
+    aion(jne20)   = 2.00000000000000d+01
+    aion(jmg24)   = 2.40000000000000d+01
+    aion(jal27)   = 2.70000000000000d+01
+    aion(jsi28)   = 2.80000000000000d+01
+    aion(jp31)   = 3.10000000000000d+01
+    aion(js32)   = 3.20000000000000d+01
+
+    zion(jp)   = 1.00000000000000d+00
+    zion(jhe4)   = 2.00000000000000d+00
+    zion(jo16)   = 8.00000000000000d+00
+    zion(jo20)   = 8.00000000000000d+00
+    zion(jf20)   = 9.00000000000000d+00
+    zion(jne20)   = 1.00000000000000d+01
+    zion(jmg24)   = 1.20000000000000d+01
+    zion(jal27)   = 1.30000000000000d+01
+    zion(jsi28)   = 1.40000000000000d+01
+    zion(jp31)   = 1.50000000000000d+01
+    zion(js32)   = 1.60000000000000d+01
+
+    nion(jp)   = 0.00000000000000d+00
+    nion(jhe4)   = 2.00000000000000d+00
+    nion(jo16)   = 8.00000000000000d+00
+    nion(jo20)   = 1.20000000000000d+01
+    nion(jf20)   = 1.10000000000000d+01
+    nion(jne20)   = 1.00000000000000d+01
+    nion(jmg24)   = 1.20000000000000d+01
+    nion(jal27)   = 1.40000000000000d+01
+    nion(jsi28)   = 1.40000000000000d+01
+    nion(jp31)   = 1.60000000000000d+01
+    nion(js32)   = 1.60000000000000d+01
+
+    do i = 1, nspec
+       bion(i) = ebind_per_nucleon(i) * aion(i) * ERG_PER_MeV
+    end do
 
     ! Set the mass
-    mion(:) = nion(:) * mn + zion(:) * (mp + me) - bion(:) * mev2gr
+    mion(:) = nion(:) * mass_neutron + zion(:) * (mass_proton + mass_electron) &
+         - bion(:)/(c_light**2)
 
     ! Molar mass
     wion(:) = avo * mion(:)
 
     ! Common approximation
-    wion(:) = aion(:)
+    !wion(:) = aion(:)
 
-    !$acc update device(aion, zion, nion, bion, mion, wion)
-
-    ratenames(ir3a)   = 'r3a  '
-    ratenames(irg3a)  = 'rg3a '
-    ratenames(ircag)  = 'rcag '
-    ratenames(ir1212) = 'r1212'
-    ratenames(ir1216) = 'r1216'
-    ratenames(ir1616) = 'r1616'
-    ratenames(iroga)  = 'roga '
-    ratenames(iroag)  = 'roag '
-    ratenames(irnega) = 'rnega'
-    ratenames(irneag) = 'rneag'
-    ratenames(irmgga) = 'rmgga'
-    ratenames(irmgag) = 'rmgag'
-    ratenames(irsiga) = 'rsiga'
-    ratenames(irmgap) = 'rmgap'
-    ratenames(iralpa) = 'ralpa'
-    ratenames(iralpg) = 'ralpg'
-    ratenames(irsigp) = 'rsigp'
-    ratenames(irsiag) = 'rsiag'
-    ratenames(irsga)  = 'rsga '
-    ratenames(irsiap) = 'rsiap'
-    ratenames(irppa)  = 'rppa '
-    ratenames(irppg)  = 'rppg '
-    ratenames(irsgp)  = 'rsgp '
-    ratenames(irsag)  = 'rsag '
-    ratenames(irarga) = 'rarga'
-    ratenames(irsap)  = 'rsap '
-    ratenames(irclpa) = 'rclpa'
-    ratenames(irclpg) = 'rclpg'
-    ratenames(irargp) = 'rargp'
-    ratenames(irarag) = 'rarag'
-    ratenames(ircaga) = 'rcaga'
-    ratenames(irarap) = 'rarap'
-    ratenames(irkpa)  = 'rkpa '
-    ratenames(irkpg)  = 'rkpg '
-    ratenames(ircagp) = 'rcagp'
-    ratenames(ircaag) = 'rcaag'
-    ratenames(irtiga) = 'rtiga'
-    ratenames(ircaap) = 'rcaap'
-    ratenames(irscpa) = 'rscpa'
-    ratenames(irscpg) = 'rscpg'
-    ratenames(irtigp) = 'rtigp'
-    ratenames(irtiag) = 'rtiag'
-    ratenames(ircrga) = 'rcrga'
-    ratenames(irtiap) = 'rtiap'
-    ratenames(irvpa)  = 'rvpa '
-    ratenames(irvpg)  = 'rvpg '
-    ratenames(ircrgp) = 'rcrgp'
-    ratenames(ircrag) = 'rcrag'
-    ratenames(irfega) = 'rfega'
-    ratenames(ircrap) = 'rcrap'
-    ratenames(irmnpa) = 'rmnpa'
-    ratenames(irmnpg) = 'rmnpg'
-    ratenames(irfegp) = 'rfegp'
-    ratenames(irfeag) = 'rfeag'
-    ratenames(irniga) = 'rniga'
-    ratenames(irfeap) = 'rfeap'
-    ratenames(ircopa) = 'rcopa'
-    ratenames(ircopg) = 'rcopg'
-    ratenames(irnigp) = 'rnigp'
-    ratenames(irr1)   = 'r1   '
-    ratenames(irs1)   = 's1   '
-    ratenames(irt1)   = 't1   '
-    ratenames(iru1)   = 'u1   '
-    ratenames(irv1)   = 'v1   '
-    ratenames(irw1)   = 'w1   '
-    ratenames(irx1)   = 'x1   '
-    ratenames(iry1)   = 'y1   '
+    !$acc update device(aion, zion, bion, nion, mion, wion)
 
 
   end subroutine actual_network_init
 
 
-
-  subroutine actual_network_finalize
-
-    implicit none
+  subroutine actual_network_finalize()
+    ! Deallocate storage arrays
 
     if (allocated(aion)) then
        deallocate(aion)
     endif
+
     if (allocated(zion)) then
        deallocate(zion)
     endif
-    if (allocated(nion)) then
-       deallocate(nion)
-    endif
+
     if (allocated(bion)) then
        deallocate(bion)
     endif
+
+    if (allocated(nion)) then
+       deallocate(nion)
+    endif
+
     if (allocated(mion)) then
        deallocate(mion)
     endif
+
     if (allocated(wion)) then
        deallocate(wion)
     endif
 
+
   end subroutine actual_network_finalize
+
+
+  subroutine ener_gener_rate(dydt, enuc)
+    ! Computes the instantaneous energy generation rate
+
+    !$acc routine seq
+
+    implicit none
+
+    real(rt) :: dydt(nspec), enuc
+
+    !$gpu
+
+    ! This is basically e = m c**2
+
+    enuc = sum(dydt(:) * mion(:)) * enuc_conv2
+
+!    print*,"enuc =",enuc
+!    print*,"dydt(:) =",dydt(:)
+!    print*,"mion(:) =",mion(:)
+
+  end subroutine ener_gener_rate
 
 end module actual_network

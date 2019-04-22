@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 module amrex_paralleldescriptor_module
   use iso_c_binding
   use amrex_fort_module

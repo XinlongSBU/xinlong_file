@@ -7,39 +7,51 @@ class Actual_Burner_Module(f90wrap.runtime.FortranModule):
     Module actual_burner_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 14-52
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 1-55
     
     """
-    @staticmethod
-    def actual_burner(state_in, state_out, dt, time):
-        """
-        actual_burner(state_in, state_out, dt, time)
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 26-42
-        
-        Parameters
-        ----------
-        state_in : Burn_T
-        state_out : Burn_T
-        dt : unknown
-        time : unknown
-        
-        """
-        _StarKillerMicrophysics.f90wrap_actual_burner(state_in=state_in._handle, \
-            state_out=state_out._handle, dt=dt, time=time)
-    
     @staticmethod
     def actual_burner_init():
         """
         actual_burner_init()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 44-52
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 9-24
         
         
         """
         _StarKillerMicrophysics.f90wrap_actual_burner_init()
+    
+    @staticmethod
+    def actual_burner_finalize():
+        """
+        actual_burner_finalize()
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 26-36
+        
+        
+        """
+        _StarKillerMicrophysics.f90wrap_actual_burner_finalize()
+    
+    @staticmethod
+    def actual_burner(state_in, state_out, dt, time):
+        """
+        actual_burner(state_in, state_out, dt, time)
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_burner.F90 lines 38-55
+        
+        Parameters
+        ----------
+        state_in : Burn_T
+        state_out : Burn_T
+        dt : float
+        time : float
+        
+        """
+        _StarKillerMicrophysics.f90wrap_actual_burner(state_in=state_in._handle, \
+            state_out=state_out._handle, dt=dt, time=time)
     
     _dt_array_initialisers = []
     
@@ -51,7 +63,7 @@ class Actual_Network(f90wrap.runtime.FortranModule):
     Module actual_network
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 14-339
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 1-257
     
     """
     @staticmethod
@@ -60,7 +72,7 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         actual_network_init()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 145-314
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 101-205
         
         
         """
@@ -72,22 +84,148 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         actual_network_finalize()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 316-339
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 207-236
         
         
         """
         _StarKillerMicrophysics.f90wrap_actual_network_finalize()
     
-    @property
-    def nspec(self):
+    @staticmethod
+    def ener_gener_rate(dydt, enuc):
         """
-        Element nspec ftype=integer pytype=int
+        ener_gener_rate(dydt, enuc)
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 lines 238-257
+        
+        Parameters
+        ----------
+        dydt : float array
+        enuc : float
+        
+        """
+        _StarKillerMicrophysics.f90wrap_ener_gener_rate(dydt=dydt, enuc=enuc)
+    
+    @property
+    def avo(self):
+        """
+        Element avo ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 10
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__avo()
+    
+    @property
+    def c_light(self):
+        """
+        Element c_light ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 11
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__c_light()
+    
+    @property
+    def enuc_conv2(self):
+        """
+        Element enuc_conv2 ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 12
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__enuc_conv2()
+    
+    @property
+    def ev2erg(self):
+        """
+        Element ev2erg ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 14
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__ev2erg()
+    
+    @property
+    def mev2erg(self):
+        """
+        Element mev2erg ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 15
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__mev2erg()
+    
+    @property
+    def mev2gr(self):
+        """
+        Element mev2gr ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 16
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__mev2gr()
+    
+    @property
+    def mass_neutron(self):
+        """
+        Element mass_neutron ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 18
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__mass_neutron()
+    
+    @property
+    def mass_proton(self):
+        """
+        Element mass_proton ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 19
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__mass_proton()
+    
+    @property
+    def mass_electron(self):
+        """
+        Element mass_electron ftype=real(rt) pytype=float
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 20
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__nspec()
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__mass_electron()
+    
+    @property
+    def nrates(self):
+        """
+        Element nrates ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 22
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__nrates()
+    
+    @property
+    def num_rate_groups(self):
+        """
+        Element num_rate_groups ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 23
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__num_rate_groups()
     
     @property
     def nspec_evolve(self):
@@ -95,7 +233,7 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         Element nspec_evolve ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 21
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 26
         
         """
         return _StarKillerMicrophysics.f90wrap_actual_network__get__nspec_evolve()
@@ -106,297 +244,465 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         Element naux ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 22
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 27
         
         """
         return _StarKillerMicrophysics.f90wrap_actual_network__get__naux()
     
     @property
-    def ihe4(self):
+    def nspec(self):
         """
-        Element ihe4 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 24
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ihe4()
-    
-    @property
-    def ic12(self):
-        """
-        Element ic12 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 25
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ic12()
-    
-    @property
-    def io16(self):
-        """
-        Element io16 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 26
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__io16()
-    
-    @property
-    def ine20(self):
-        """
-        Element ine20 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 27
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ine20()
-    
-    @property
-    def img24(self):
-        """
-        Element img24 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 28
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__img24()
-    
-    @property
-    def isi28(self):
-        """
-        Element isi28 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 29
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__isi28()
-    
-    @property
-    def is32(self):
-        """
-        Element is32 ftype=integer pytype=int
+        Element nspec ftype=integer pytype=int
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 30
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__is32()
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__nspec()
     
     @property
-    def iar36(self):
+    def nrat_reaclib(self):
         """
-        Element iar36 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 31
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iar36()
-    
-    @property
-    def ica40(self):
-        """
-        Element ica40 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 32
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ica40()
-    
-    @property
-    def iti44(self):
-        """
-        Element iti44 ftype=integer pytype=int
+        Element nrat_reaclib ftype=integer pytype=int
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 33
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iti44()
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__nrat_reaclib()
     
     @property
-    def icr48(self):
+    def number_reaclib_sets(self):
         """
-        Element icr48 ftype=integer pytype=int
+        Element number_reaclib_sets ftype=integer pytype=int
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 34
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__icr48()
+        return \
+            _StarKillerMicrophysics.f90wrap_actual_network__get__number_reaclib_sets()
     
     @property
-    def ife52(self):
+    def nrat_tabular(self):
         """
-        Element ife52 ftype=integer pytype=int
+        Element nrat_tabular ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 35
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 37
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ife52()
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__nrat_tabular()
     
     @property
-    def ini56(self):
+    def ebind_per_nucleon(self):
         """
-        Element ini56 ftype=integer pytype=int
+        Element ebind_per_nucleon ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 36
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ini56()
-    
-    @property
-    def aion(self):
-        """
-        Element aion ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 38
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 40
         
         """
         array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__aion(f90wrap.runtime.empty_handle)
+            _StarKillerMicrophysics.f90wrap_actual_network__array__ebind_per_nucleon(f90wrap.runtime.empty_handle)
         if array_handle in self._arrays:
-            aion = self._arrays[array_handle]
+            ebind_per_nucleon = self._arrays[array_handle]
         else:
-            aion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+            ebind_per_nucleon = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
                                     f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__aion)
-            self._arrays[array_handle] = aion
-        return aion
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__ebind_per_nucleon)
+            self._arrays[array_handle] = ebind_per_nucleon
+        return ebind_per_nucleon
     
-    @aion.setter
-    def aion(self, aion):
-        self.aion[...] = aion
+    @ebind_per_nucleon.setter
+    def ebind_per_nucleon(self, ebind_per_nucleon):
+        self.ebind_per_nucleon[...] = ebind_per_nucleon
     
     @property
-    def zion(self):
+    def jp(self):
         """
-        Element zion ftype=double precision pytype=unknown
+        Element jp ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 38
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 48
         
         """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__zion(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            zion = self._arrays[array_handle]
-        else:
-            zion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__zion)
-            self._arrays[array_handle] = zion
-        return zion
-    
-    @zion.setter
-    def zion(self, zion):
-        self.zion[...] = zion
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jp()
     
     @property
-    def nion(self):
+    def jhe4(self):
         """
-        Element nion ftype=double precision pytype=unknown
+        Element jhe4 ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 38
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 49
         
         """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__nion(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            nion = self._arrays[array_handle]
-        else:
-            nion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__nion)
-            self._arrays[array_handle] = nion
-        return nion
-    
-    @nion.setter
-    def nion(self, nion):
-        self.nion[...] = nion
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jhe4()
     
     @property
-    def bion(self):
+    def jo16(self):
         """
-        Element bion ftype=double precision pytype=unknown
+        Element jo16 ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 39
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 50
         
         """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__bion(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            bion = self._arrays[array_handle]
-        else:
-            bion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__bion)
-            self._arrays[array_handle] = bion
-        return bion
-    
-    @bion.setter
-    def bion(self, bion):
-        self.bion[...] = bion
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jo16()
     
     @property
-    def mion(self):
+    def jo20(self):
         """
-        Element mion ftype=double precision pytype=unknown
+        Element jo20 ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 39
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 51
         
         """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__mion(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            mion = self._arrays[array_handle]
-        else:
-            mion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__mion)
-            self._arrays[array_handle] = mion
-        return mion
-    
-    @mion.setter
-    def mion(self, mion):
-        self.mion[...] = mion
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jo20()
     
     @property
-    def wion(self):
+    def jf20(self):
         """
-        Element wion ftype=double precision pytype=unknown
+        Element jf20 ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 39
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 52
         
         """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__wion(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            wion = self._arrays[array_handle]
-        else:
-            wion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__wion)
-            self._arrays[array_handle] = wion
-        return wion
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jf20()
     
-    @wion.setter
-    def wion(self, wion):
-        self.wion[...] = wion
+    @property
+    def jne20(self):
+        """
+        Element jne20 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 53
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jne20()
+    
+    @property
+    def jmg24(self):
+        """
+        Element jmg24 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 54
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jmg24()
+    
+    @property
+    def jal27(self):
+        """
+        Element jal27 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 55
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jal27()
+    
+    @property
+    def jsi28(self):
+        """
+        Element jsi28 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 56
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jsi28()
+    
+    @property
+    def jp31(self):
+        """
+        Element jp31 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 57
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__jp31()
+    
+    @property
+    def js32(self):
+        """
+        Element js32 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 58
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__js32()
+    
+    @property
+    def k_ne20__he4_o16(self):
+        """
+        Element k_ne20__he4_o16 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 61
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_ne20__he4_o16()
+    
+    @property
+    def k_he4_o16__ne20(self):
+        """
+        Element k_he4_o16__ne20 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 62
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_o16__ne20()
+    
+    @property
+    def k_he4_ne20__mg24(self):
+        """
+        Element k_he4_ne20__mg24 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 63
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_ne20__mg24()
+    
+    @property
+    def k_he4_mg24__si28(self):
+        """
+        Element k_he4_mg24__si28 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 64
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_mg24__si28()
+    
+    @property
+    def k_p_al27__si28(self):
+        """
+        Element k_p_al27__si28 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 65
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_p_al27__si28()
+    
+    @property
+    def k_he4_al27__p31(self):
+        """
+        Element k_he4_al27__p31 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 66
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_al27__p31()
+    
+    @property
+    def k_he4_si28__s32(self):
+        """
+        Element k_he4_si28__s32 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 67
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_si28__s32()
+    
+    @property
+    def k_p_p31__s32(self):
+        """
+        Element k_p_p31__s32 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 68
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_p_p31__s32()
+    
+    @property
+    def k_o16_o16__p_p31(self):
+        """
+        Element k_o16_o16__p_p31 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 69
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_o16_o16__p_p31()
+    
+    @property
+    def k_o16_o16__he4_si28(self):
+        """
+        Element k_o16_o16__he4_si28 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 70
+        
+        """
+        return \
+            _StarKillerMicrophysics.f90wrap_actual_network__get__k_o16_o16__he4_si28()
+    
+    @property
+    def k_he4_mg24__p_al27(self):
+        """
+        Element k_he4_mg24__p_al27 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 71
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_mg24__p_al27()
+    
+    @property
+    def k_p_al27__he4_mg24(self):
+        """
+        Element k_p_al27__he4_mg24 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 72
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_p_al27__he4_mg24()
+    
+    @property
+    def k_he4_si28__p_p31(self):
+        """
+        Element k_he4_si28__p_p31 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 73
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_he4_si28__p_p31()
+    
+    @property
+    def k_p_p31__he4_si28(self):
+        """
+        Element k_p_p31__he4_si28 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 74
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_p_p31__he4_si28()
+    
+    @property
+    def k_f20__o20(self):
+        """
+        Element k_f20__o20 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 75
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_f20__o20()
+    
+    @property
+    def k_ne20__f20(self):
+        """
+        Element k_ne20__f20 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 76
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_ne20__f20()
+    
+    @property
+    def k_o20__f20(self):
+        """
+        Element k_o20__f20 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 77
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_o20__f20()
+    
+    @property
+    def k_f20__ne20(self):
+        """
+        Element k_f20__ne20 ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 78
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__k_f20__ne20()
+    
+    @property
+    def i_rate(self):
+        """
+        Element i_rate ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 81
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__i_rate()
+    
+    @property
+    def i_drate_dt(self):
+        """
+        Element i_drate_dt ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 82
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__i_drate_dt()
+    
+    @property
+    def i_scor(self):
+        """
+        Element i_scor ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 83
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__i_scor()
+    
+    @property
+    def i_dscor_dt(self):
+        """
+        Element i_dscor_dt ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 84
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__i_dscor_dt()
+    
+    @property
+    def i_dqweak(self):
+        """
+        Element i_dqweak ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 85
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__i_dqweak()
+    
+    @property
+    def i_epart(self):
+        """
+        Element i_epart ftype=integer pytype=int
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 86
+        
+        """
+        return _StarKillerMicrophysics.f90wrap_actual_network__get__i_epart()
     
     @property
     def spec_names(self):
@@ -404,7 +710,7 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         Element spec_names ftype=character (len=16) pytype=str
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 42
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 88
         
         """
         array_ndim, array_type, array_shape, array_handle = \
@@ -428,7 +734,7 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         Element short_spec_names ftype=character (len= 5) pytype=str
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 43
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 89
         
         """
         array_ndim, array_type, array_shape, array_handle = \
@@ -452,7 +758,7 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         Element short_aux_names ftype=character (len= 5) pytype=str
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 44
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 90
         
         """
         array_ndim, array_type, array_shape, array_handle = \
@@ -471,1110 +777,275 @@ class Actual_Network(f90wrap.runtime.FortranModule):
         self.short_aux_names[...] = short_aux_names
     
     @property
-    def network_name(self):
+    def aion(self):
         """
-        Element network_name ftype=character (len=32) pytype=str
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 46
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__network_name()
-    
-    @property
-    def avo(self):
-        """
-        Element avo ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 50
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__avo()
-    
-    @property
-    def c_light(self):
-        """
-        Element c_light ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 51
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__c_light()
-    
-    @property
-    def ev2erg(self):
-        """
-        Element ev2erg ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 53
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ev2erg()
-    
-    @property
-    def mev2erg(self):
-        """
-        Element mev2erg ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 54
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__mev2erg()
-    
-    @property
-    def mev2gr(self):
-        """
-        Element mev2gr ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 55
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__mev2gr()
-    
-    @property
-    def mn(self):
-        """
-        Element mn ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 57
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__mn()
-    
-    @property
-    def mp(self):
-        """
-        Element mp ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 58
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__mp()
-    
-    @property
-    def me(self):
-        """
-        Element me ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 59
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__me()
-    
-    @property
-    def enuc_conv2(self):
-        """
-        Element enuc_conv2 ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 63
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__enuc_conv2()
-    
-    @property
-    def nrates(self):
-        """
-        Element nrates ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 69
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__nrates()
-    
-    @property
-    def num_rate_groups(self):
-        """
-        Element num_rate_groups ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 70
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__num_rate_groups()
-    
-    @property
-    def ir3a(self):
-        """
-        Element ir3a ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 72
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ir3a()
-    
-    @property
-    def irg3a(self):
-        """
-        Element irg3a ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 73
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irg3a()
-    
-    @property
-    def ircag(self):
-        """
-        Element ircag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 74
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircag()
-    
-    @property
-    def iroga(self):
-        """
-        Element iroga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 75
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iroga()
-    
-    @property
-    def ir1212(self):
-        """
-        Element ir1212 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 76
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ir1212()
-    
-    @property
-    def ir1216(self):
-        """
-        Element ir1216 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 77
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ir1216()
-    
-    @property
-    def ir1616(self):
-        """
-        Element ir1616 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 78
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ir1616()
-    
-    @property
-    def iroag(self):
-        """
-        Element iroag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 79
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iroag()
-    
-    @property
-    def irnega(self):
-        """
-        Element irnega ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 80
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irnega()
-    
-    @property
-    def irneag(self):
-        """
-        Element irneag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 81
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irneag()
-    
-    @property
-    def irmgga(self):
-        """
-        Element irmgga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 82
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irmgga()
-    
-    @property
-    def irmgag(self):
-        """
-        Element irmgag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 83
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irmgag()
-    
-    @property
-    def irsiga(self):
-        """
-        Element irsiga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 84
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsiga()
-    
-    @property
-    def irmgap(self):
-        """
-        Element irmgap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 85
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irmgap()
-    
-    @property
-    def iralpa(self):
-        """
-        Element iralpa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 86
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iralpa()
-    
-    @property
-    def iralpg(self):
-        """
-        Element iralpg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 87
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iralpg()
-    
-    @property
-    def irsigp(self):
-        """
-        Element irsigp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 88
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsigp()
-    
-    @property
-    def irsiag(self):
-        """
-        Element irsiag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 89
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsiag()
-    
-    @property
-    def irsga(self):
-        """
-        Element irsga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 90
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsga()
-    
-    @property
-    def irsiap(self):
-        """
-        Element irsiap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 91
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsiap()
-    
-    @property
-    def irppa(self):
-        """
-        Element irppa ftype=integer pytype=int
+        Element aion ftype=real(rt) pytype=float
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 92
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irppa()
+        array_ndim, array_type, array_shape, array_handle = \
+            _StarKillerMicrophysics.f90wrap_actual_network__array__aion(f90wrap.runtime.empty_handle)
+        if array_handle in self._arrays:
+            aion = self._arrays[array_handle]
+        else:
+            aion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                    f90wrap.runtime.empty_handle,
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__aion)
+            self._arrays[array_handle] = aion
+        return aion
+    
+    @aion.setter
+    def aion(self, aion):
+        self.aion[...] = aion
     
     @property
-    def irppg(self):
+    def zion(self):
         """
-        Element irppg ftype=integer pytype=int
+        Element zion ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 92
+        
+        """
+        array_ndim, array_type, array_shape, array_handle = \
+            _StarKillerMicrophysics.f90wrap_actual_network__array__zion(f90wrap.runtime.empty_handle)
+        if array_handle in self._arrays:
+            zion = self._arrays[array_handle]
+        else:
+            zion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                    f90wrap.runtime.empty_handle,
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__zion)
+            self._arrays[array_handle] = zion
+        return zion
+    
+    @zion.setter
+    def zion(self, zion):
+        self.zion[...] = zion
+    
+    @property
+    def bion(self):
+        """
+        Element bion ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 92
+        
+        """
+        array_ndim, array_type, array_shape, array_handle = \
+            _StarKillerMicrophysics.f90wrap_actual_network__array__bion(f90wrap.runtime.empty_handle)
+        if array_handle in self._arrays:
+            bion = self._arrays[array_handle]
+        else:
+            bion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                    f90wrap.runtime.empty_handle,
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__bion)
+            self._arrays[array_handle] = bion
+        return bion
+    
+    @bion.setter
+    def bion(self, bion):
+        self.bion[...] = bion
+    
+    @property
+    def nion(self):
+        """
+        Element nion ftype=real(rt) pytype=float
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 93
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irppg()
+        array_ndim, array_type, array_shape, array_handle = \
+            _StarKillerMicrophysics.f90wrap_actual_network__array__nion(f90wrap.runtime.empty_handle)
+        if array_handle in self._arrays:
+            nion = self._arrays[array_handle]
+        else:
+            nion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                    f90wrap.runtime.empty_handle,
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__nion)
+            self._arrays[array_handle] = nion
+        return nion
+    
+    @nion.setter
+    def nion(self, nion):
+        self.nion[...] = nion
     
     @property
-    def irsgp(self):
+    def mion(self):
         """
-        Element irsgp ftype=integer pytype=int
+        Element mion ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 94
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsgp()
-    
-    @property
-    def irsag(self):
-        """
-        Element irsag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 95
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsag()
-    
-    @property
-    def irarga(self):
-        """
-        Element irarga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 96
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irarga()
-    
-    @property
-    def irsap(self):
-        """
-        Element irsap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 97
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irsap()
-    
-    @property
-    def irclpa(self):
-        """
-        Element irclpa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 98
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irclpa()
-    
-    @property
-    def irclpg(self):
-        """
-        Element irclpg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 99
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irclpg()
-    
-    @property
-    def irargp(self):
-        """
-        Element irargp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 100
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irargp()
-    
-    @property
-    def irarag(self):
-        """
-        Element irarag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 101
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irarag()
-    
-    @property
-    def ircaga(self):
-        """
-        Element ircaga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 102
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircaga()
-    
-    @property
-    def irarap(self):
-        """
-        Element irarap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 103
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irarap()
-    
-    @property
-    def irkpa(self):
-        """
-        Element irkpa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 104
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irkpa()
-    
-    @property
-    def irkpg(self):
-        """
-        Element irkpg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 105
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irkpg()
-    
-    @property
-    def ircagp(self):
-        """
-        Element ircagp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 106
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircagp()
-    
-    @property
-    def ircaag(self):
-        """
-        Element ircaag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 107
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircaag()
-    
-    @property
-    def irtiga(self):
-        """
-        Element irtiga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 108
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irtiga()
-    
-    @property
-    def ircaap(self):
-        """
-        Element ircaap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 109
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircaap()
-    
-    @property
-    def irscpa(self):
-        """
-        Element irscpa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 110
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irscpa()
-    
-    @property
-    def irscpg(self):
-        """
-        Element irscpg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 111
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irscpg()
-    
-    @property
-    def irtigp(self):
-        """
-        Element irtigp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 112
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irtigp()
-    
-    @property
-    def irtiag(self):
-        """
-        Element irtiag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 113
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irtiag()
-    
-    @property
-    def ircrga(self):
-        """
-        Element ircrga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 114
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircrga()
-    
-    @property
-    def irtiap(self):
-        """
-        Element irtiap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 115
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irtiap()
-    
-    @property
-    def irvpa(self):
-        """
-        Element irvpa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 116
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irvpa()
-    
-    @property
-    def irvpg(self):
-        """
-        Element irvpg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 117
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irvpg()
-    
-    @property
-    def ircrgp(self):
-        """
-        Element ircrgp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 118
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircrgp()
-    
-    @property
-    def ircrag(self):
-        """
-        Element ircrag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 119
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircrag()
-    
-    @property
-    def irfega(self):
-        """
-        Element irfega ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 120
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irfega()
-    
-    @property
-    def ircrap(self):
-        """
-        Element ircrap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 121
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircrap()
-    
-    @property
-    def irmnpa(self):
-        """
-        Element irmnpa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 122
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irmnpa()
-    
-    @property
-    def irmnpg(self):
-        """
-        Element irmnpg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 123
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irmnpg()
-    
-    @property
-    def irfegp(self):
-        """
-        Element irfegp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 124
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irfegp()
-    
-    @property
-    def irfeag(self):
-        """
-        Element irfeag ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 125
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irfeag()
-    
-    @property
-    def irniga(self):
-        """
-        Element irniga ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 126
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irniga()
-    
-    @property
-    def irfeap(self):
-        """
-        Element irfeap ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 127
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irfeap()
-    
-    @property
-    def ircopa(self):
-        """
-        Element ircopa ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 128
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircopa()
-    
-    @property
-    def ircopg(self):
-        """
-        Element ircopg ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 129
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__ircopg()
-    
-    @property
-    def irnigp(self):
-        """
-        Element irnigp ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 130
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irnigp()
-    
-    @property
-    def irr1(self):
-        """
-        Element irr1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 131
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irr1()
-    
-    @property
-    def irs1(self):
-        """
-        Element irs1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 132
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irs1()
-    
-    @property
-    def irt1(self):
-        """
-        Element irt1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 133
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irt1()
-    
-    @property
-    def iru1(self):
-        """
-        Element iru1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 134
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iru1()
-    
-    @property
-    def irv1(self):
-        """
-        Element irv1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 135
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irv1()
-    
-    @property
-    def irw1(self):
-        """
-        Element irw1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 136
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irw1()
-    
-    @property
-    def irx1(self):
-        """
-        Element irx1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 137
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__irx1()
-    
-    @property
-    def iry1(self):
-        """
-        Element iry1 ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 138
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_network__get__iry1()
-    
-    @property
-    def ratenames(self):
-        """
-        Element ratenames ftype=character (len=16) pytype=str
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 140
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 93
         
         """
         array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_network__array__ratenames(f90wrap.runtime.empty_handle)
+            _StarKillerMicrophysics.f90wrap_actual_network__array__mion(f90wrap.runtime.empty_handle)
         if array_handle in self._arrays:
-            ratenames = self._arrays[array_handle]
+            mion = self._arrays[array_handle]
         else:
-            ratenames = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+            mion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
                                     f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_network__array__ratenames)
-            self._arrays[array_handle] = ratenames
-        return ratenames
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__mion)
+            self._arrays[array_handle] = mion
+        return mion
     
-    @ratenames.setter
-    def ratenames(self, ratenames):
-        self.ratenames[...] = ratenames
+    @mion.setter
+    def mion(self, mion):
+        self.mion[...] = mion
+    
+    @property
+    def wion(self):
+        """
+        Element wion ftype=real(rt) pytype=float
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_network.F90 line 93
+        
+        """
+        array_ndim, array_type, array_shape, array_handle = \
+            _StarKillerMicrophysics.f90wrap_actual_network__array__wion(f90wrap.runtime.empty_handle)
+        if array_handle in self._arrays:
+            wion = self._arrays[array_handle]
+        else:
+            wion = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                    f90wrap.runtime.empty_handle,
+                                    _StarKillerMicrophysics.f90wrap_actual_network__array__wion)
+            self._arrays[array_handle] = wion
+        return wion
+    
+    @wion.setter
+    def wion(self, wion):
+        self.wion[...] = wion
     
     def __str__(self):
         ret = ['<actual_network>{\n']
-        ret.append('    nspec : ')
-        ret.append(repr(self.nspec))
-        ret.append(',\n    nspec_evolve : ')
-        ret.append(repr(self.nspec_evolve))
-        ret.append(',\n    naux : ')
-        ret.append(repr(self.naux))
-        ret.append(',\n    ihe4 : ')
-        ret.append(repr(self.ihe4))
-        ret.append(',\n    ic12 : ')
-        ret.append(repr(self.ic12))
-        ret.append(',\n    io16 : ')
-        ret.append(repr(self.io16))
-        ret.append(',\n    ine20 : ')
-        ret.append(repr(self.ine20))
-        ret.append(',\n    img24 : ')
-        ret.append(repr(self.img24))
-        ret.append(',\n    isi28 : ')
-        ret.append(repr(self.isi28))
-        ret.append(',\n    is32 : ')
-        ret.append(repr(self.is32))
-        ret.append(',\n    iar36 : ')
-        ret.append(repr(self.iar36))
-        ret.append(',\n    ica40 : ')
-        ret.append(repr(self.ica40))
-        ret.append(',\n    iti44 : ')
-        ret.append(repr(self.iti44))
-        ret.append(',\n    icr48 : ')
-        ret.append(repr(self.icr48))
-        ret.append(',\n    ife52 : ')
-        ret.append(repr(self.ife52))
-        ret.append(',\n    ini56 : ')
-        ret.append(repr(self.ini56))
-        ret.append(',\n    aion : ')
-        ret.append(repr(self.aion))
-        ret.append(',\n    zion : ')
-        ret.append(repr(self.zion))
-        ret.append(',\n    nion : ')
-        ret.append(repr(self.nion))
-        ret.append(',\n    bion : ')
-        ret.append(repr(self.bion))
-        ret.append(',\n    mion : ')
-        ret.append(repr(self.mion))
-        ret.append(',\n    wion : ')
-        ret.append(repr(self.wion))
-        ret.append(',\n    spec_names : ')
-        ret.append(repr(self.spec_names))
-        ret.append(',\n    short_spec_names : ')
-        ret.append(repr(self.short_spec_names))
-        ret.append(',\n    short_aux_names : ')
-        ret.append(repr(self.short_aux_names))
-        ret.append(',\n    network_name : ')
-        ret.append(repr(self.network_name))
-        ret.append(',\n    avo : ')
+        ret.append('    avo : ')
         ret.append(repr(self.avo))
         ret.append(',\n    c_light : ')
         ret.append(repr(self.c_light))
+        ret.append(',\n    enuc_conv2 : ')
+        ret.append(repr(self.enuc_conv2))
         ret.append(',\n    ev2erg : ')
         ret.append(repr(self.ev2erg))
         ret.append(',\n    mev2erg : ')
         ret.append(repr(self.mev2erg))
         ret.append(',\n    mev2gr : ')
         ret.append(repr(self.mev2gr))
-        ret.append(',\n    mn : ')
-        ret.append(repr(self.mn))
-        ret.append(',\n    mp : ')
-        ret.append(repr(self.mp))
-        ret.append(',\n    me : ')
-        ret.append(repr(self.me))
-        ret.append(',\n    enuc_conv2 : ')
-        ret.append(repr(self.enuc_conv2))
+        ret.append(',\n    mass_neutron : ')
+        ret.append(repr(self.mass_neutron))
+        ret.append(',\n    mass_proton : ')
+        ret.append(repr(self.mass_proton))
+        ret.append(',\n    mass_electron : ')
+        ret.append(repr(self.mass_electron))
         ret.append(',\n    nrates : ')
         ret.append(repr(self.nrates))
         ret.append(',\n    num_rate_groups : ')
         ret.append(repr(self.num_rate_groups))
-        ret.append(',\n    ir3a : ')
-        ret.append(repr(self.ir3a))
-        ret.append(',\n    irg3a : ')
-        ret.append(repr(self.irg3a))
-        ret.append(',\n    ircag : ')
-        ret.append(repr(self.ircag))
-        ret.append(',\n    iroga : ')
-        ret.append(repr(self.iroga))
-        ret.append(',\n    ir1212 : ')
-        ret.append(repr(self.ir1212))
-        ret.append(',\n    ir1216 : ')
-        ret.append(repr(self.ir1216))
-        ret.append(',\n    ir1616 : ')
-        ret.append(repr(self.ir1616))
-        ret.append(',\n    iroag : ')
-        ret.append(repr(self.iroag))
-        ret.append(',\n    irnega : ')
-        ret.append(repr(self.irnega))
-        ret.append(',\n    irneag : ')
-        ret.append(repr(self.irneag))
-        ret.append(',\n    irmgga : ')
-        ret.append(repr(self.irmgga))
-        ret.append(',\n    irmgag : ')
-        ret.append(repr(self.irmgag))
-        ret.append(',\n    irsiga : ')
-        ret.append(repr(self.irsiga))
-        ret.append(',\n    irmgap : ')
-        ret.append(repr(self.irmgap))
-        ret.append(',\n    iralpa : ')
-        ret.append(repr(self.iralpa))
-        ret.append(',\n    iralpg : ')
-        ret.append(repr(self.iralpg))
-        ret.append(',\n    irsigp : ')
-        ret.append(repr(self.irsigp))
-        ret.append(',\n    irsiag : ')
-        ret.append(repr(self.irsiag))
-        ret.append(',\n    irsga : ')
-        ret.append(repr(self.irsga))
-        ret.append(',\n    irsiap : ')
-        ret.append(repr(self.irsiap))
-        ret.append(',\n    irppa : ')
-        ret.append(repr(self.irppa))
-        ret.append(',\n    irppg : ')
-        ret.append(repr(self.irppg))
-        ret.append(',\n    irsgp : ')
-        ret.append(repr(self.irsgp))
-        ret.append(',\n    irsag : ')
-        ret.append(repr(self.irsag))
-        ret.append(',\n    irarga : ')
-        ret.append(repr(self.irarga))
-        ret.append(',\n    irsap : ')
-        ret.append(repr(self.irsap))
-        ret.append(',\n    irclpa : ')
-        ret.append(repr(self.irclpa))
-        ret.append(',\n    irclpg : ')
-        ret.append(repr(self.irclpg))
-        ret.append(',\n    irargp : ')
-        ret.append(repr(self.irargp))
-        ret.append(',\n    irarag : ')
-        ret.append(repr(self.irarag))
-        ret.append(',\n    ircaga : ')
-        ret.append(repr(self.ircaga))
-        ret.append(',\n    irarap : ')
-        ret.append(repr(self.irarap))
-        ret.append(',\n    irkpa : ')
-        ret.append(repr(self.irkpa))
-        ret.append(',\n    irkpg : ')
-        ret.append(repr(self.irkpg))
-        ret.append(',\n    ircagp : ')
-        ret.append(repr(self.ircagp))
-        ret.append(',\n    ircaag : ')
-        ret.append(repr(self.ircaag))
-        ret.append(',\n    irtiga : ')
-        ret.append(repr(self.irtiga))
-        ret.append(',\n    ircaap : ')
-        ret.append(repr(self.ircaap))
-        ret.append(',\n    irscpa : ')
-        ret.append(repr(self.irscpa))
-        ret.append(',\n    irscpg : ')
-        ret.append(repr(self.irscpg))
-        ret.append(',\n    irtigp : ')
-        ret.append(repr(self.irtigp))
-        ret.append(',\n    irtiag : ')
-        ret.append(repr(self.irtiag))
-        ret.append(',\n    ircrga : ')
-        ret.append(repr(self.ircrga))
-        ret.append(',\n    irtiap : ')
-        ret.append(repr(self.irtiap))
-        ret.append(',\n    irvpa : ')
-        ret.append(repr(self.irvpa))
-        ret.append(',\n    irvpg : ')
-        ret.append(repr(self.irvpg))
-        ret.append(',\n    ircrgp : ')
-        ret.append(repr(self.ircrgp))
-        ret.append(',\n    ircrag : ')
-        ret.append(repr(self.ircrag))
-        ret.append(',\n    irfega : ')
-        ret.append(repr(self.irfega))
-        ret.append(',\n    ircrap : ')
-        ret.append(repr(self.ircrap))
-        ret.append(',\n    irmnpa : ')
-        ret.append(repr(self.irmnpa))
-        ret.append(',\n    irmnpg : ')
-        ret.append(repr(self.irmnpg))
-        ret.append(',\n    irfegp : ')
-        ret.append(repr(self.irfegp))
-        ret.append(',\n    irfeag : ')
-        ret.append(repr(self.irfeag))
-        ret.append(',\n    irniga : ')
-        ret.append(repr(self.irniga))
-        ret.append(',\n    irfeap : ')
-        ret.append(repr(self.irfeap))
-        ret.append(',\n    ircopa : ')
-        ret.append(repr(self.ircopa))
-        ret.append(',\n    ircopg : ')
-        ret.append(repr(self.ircopg))
-        ret.append(',\n    irnigp : ')
-        ret.append(repr(self.irnigp))
-        ret.append(',\n    irr1 : ')
-        ret.append(repr(self.irr1))
-        ret.append(',\n    irs1 : ')
-        ret.append(repr(self.irs1))
-        ret.append(',\n    irt1 : ')
-        ret.append(repr(self.irt1))
-        ret.append(',\n    iru1 : ')
-        ret.append(repr(self.iru1))
-        ret.append(',\n    irv1 : ')
-        ret.append(repr(self.irv1))
-        ret.append(',\n    irw1 : ')
-        ret.append(repr(self.irw1))
-        ret.append(',\n    irx1 : ')
-        ret.append(repr(self.irx1))
-        ret.append(',\n    iry1 : ')
-        ret.append(repr(self.iry1))
-        ret.append(',\n    ratenames : ')
-        ret.append(repr(self.ratenames))
+        ret.append(',\n    nspec_evolve : ')
+        ret.append(repr(self.nspec_evolve))
+        ret.append(',\n    naux : ')
+        ret.append(repr(self.naux))
+        ret.append(',\n    nspec : ')
+        ret.append(repr(self.nspec))
+        ret.append(',\n    nrat_reaclib : ')
+        ret.append(repr(self.nrat_reaclib))
+        ret.append(',\n    number_reaclib_sets : ')
+        ret.append(repr(self.number_reaclib_sets))
+        ret.append(',\n    nrat_tabular : ')
+        ret.append(repr(self.nrat_tabular))
+        ret.append(',\n    ebind_per_nucleon : ')
+        ret.append(repr(self.ebind_per_nucleon))
+        ret.append(',\n    jp : ')
+        ret.append(repr(self.jp))
+        ret.append(',\n    jhe4 : ')
+        ret.append(repr(self.jhe4))
+        ret.append(',\n    jo16 : ')
+        ret.append(repr(self.jo16))
+        ret.append(',\n    jo20 : ')
+        ret.append(repr(self.jo20))
+        ret.append(',\n    jf20 : ')
+        ret.append(repr(self.jf20))
+        ret.append(',\n    jne20 : ')
+        ret.append(repr(self.jne20))
+        ret.append(',\n    jmg24 : ')
+        ret.append(repr(self.jmg24))
+        ret.append(',\n    jal27 : ')
+        ret.append(repr(self.jal27))
+        ret.append(',\n    jsi28 : ')
+        ret.append(repr(self.jsi28))
+        ret.append(',\n    jp31 : ')
+        ret.append(repr(self.jp31))
+        ret.append(',\n    js32 : ')
+        ret.append(repr(self.js32))
+        ret.append(',\n    k_ne20__he4_o16 : ')
+        ret.append(repr(self.k_ne20__he4_o16))
+        ret.append(',\n    k_he4_o16__ne20 : ')
+        ret.append(repr(self.k_he4_o16__ne20))
+        ret.append(',\n    k_he4_ne20__mg24 : ')
+        ret.append(repr(self.k_he4_ne20__mg24))
+        ret.append(',\n    k_he4_mg24__si28 : ')
+        ret.append(repr(self.k_he4_mg24__si28))
+        ret.append(',\n    k_p_al27__si28 : ')
+        ret.append(repr(self.k_p_al27__si28))
+        ret.append(',\n    k_he4_al27__p31 : ')
+        ret.append(repr(self.k_he4_al27__p31))
+        ret.append(',\n    k_he4_si28__s32 : ')
+        ret.append(repr(self.k_he4_si28__s32))
+        ret.append(',\n    k_p_p31__s32 : ')
+        ret.append(repr(self.k_p_p31__s32))
+        ret.append(',\n    k_o16_o16__p_p31 : ')
+        ret.append(repr(self.k_o16_o16__p_p31))
+        ret.append(',\n    k_o16_o16__he4_si28 : ')
+        ret.append(repr(self.k_o16_o16__he4_si28))
+        ret.append(',\n    k_he4_mg24__p_al27 : ')
+        ret.append(repr(self.k_he4_mg24__p_al27))
+        ret.append(',\n    k_p_al27__he4_mg24 : ')
+        ret.append(repr(self.k_p_al27__he4_mg24))
+        ret.append(',\n    k_he4_si28__p_p31 : ')
+        ret.append(repr(self.k_he4_si28__p_p31))
+        ret.append(',\n    k_p_p31__he4_si28 : ')
+        ret.append(repr(self.k_p_p31__he4_si28))
+        ret.append(',\n    k_f20__o20 : ')
+        ret.append(repr(self.k_f20__o20))
+        ret.append(',\n    k_ne20__f20 : ')
+        ret.append(repr(self.k_ne20__f20))
+        ret.append(',\n    k_o20__f20 : ')
+        ret.append(repr(self.k_o20__f20))
+        ret.append(',\n    k_f20__ne20 : ')
+        ret.append(repr(self.k_f20__ne20))
+        ret.append(',\n    i_rate : ')
+        ret.append(repr(self.i_rate))
+        ret.append(',\n    i_drate_dt : ')
+        ret.append(repr(self.i_drate_dt))
+        ret.append(',\n    i_scor : ')
+        ret.append(repr(self.i_scor))
+        ret.append(',\n    i_dscor_dt : ')
+        ret.append(repr(self.i_dscor_dt))
+        ret.append(',\n    i_dqweak : ')
+        ret.append(repr(self.i_dqweak))
+        ret.append(',\n    i_epart : ')
+        ret.append(repr(self.i_epart))
+        ret.append(',\n    spec_names : ')
+        ret.append(repr(self.spec_names))
+        ret.append(',\n    short_spec_names : ')
+        ret.append(repr(self.short_spec_names))
+        ret.append(',\n    short_aux_names : ')
+        ret.append(repr(self.short_aux_names))
+        ret.append(',\n    aion : ')
+        ret.append(repr(self.aion))
+        ret.append(',\n    zion : ')
+        ret.append(repr(self.zion))
+        ret.append(',\n    bion : ')
+        ret.append(repr(self.bion))
+        ret.append(',\n    nion : ')
+        ret.append(repr(self.nion))
+        ret.append(',\n    mion : ')
+        ret.append(repr(self.mion))
+        ret.append(',\n    wion : ')
+        ret.append(repr(self.wion))
         ret.append('}')
         return ''.join(ret)
     
@@ -1588,278 +1059,294 @@ class Actual_Rhs_Module(f90wrap.runtime.FortranModule):
     Module actual_rhs_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 14-2298
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 1-831
     
     """
+    class Rate_Eval_T(f90wrap.runtime.FortranDerivedType):
+        """
+        Type(name=rate_eval_t)
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 12-17
+        
+        """
+        def __init__(self, handle=None):
+            """
+            self = Rate_Eval_T()
+            
+            
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 12-17
+            
+            
+            Returns
+            -------
+            this : Rate_Eval_T
+            	Object to be constructed
+            
+            
+            Automatically generated constructor for rate_eval_t
+            """
+            f90wrap.runtime.FortranDerivedType.__init__(self)
+            self._handle = _StarKillerMicrophysics.f90wrap_rate_eval_t_initialise()
+        
+        def __del__(self):
+            """
+            Destructor for class Rate_Eval_T
+            
+            
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 12-17
+            
+            Parameters
+            ----------
+            this : Rate_Eval_T
+            	Object to be destructed
+            
+            
+            Automatically generated destructor for rate_eval_t
+            """
+            if self._alloc:
+                _StarKillerMicrophysics.f90wrap_rate_eval_t_finalise(this=self._handle)
+        
+        @property
+        def unscreened_rates(self):
+            """
+            Element unscreened_rates ftype=real(rt) pytype=float
+            
+            
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 13
+            
+            """
+            array_ndim, array_type, array_shape, array_handle = \
+                _StarKillerMicrophysics.f90wrap_rate_eval_t__array__unscreened_rates(self._handle)
+            if array_handle in self._arrays:
+                unscreened_rates = self._arrays[array_handle]
+            else:
+                unscreened_rates = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                        self._handle,
+                                        _StarKillerMicrophysics.f90wrap_rate_eval_t__array__unscreened_rates)
+                self._arrays[array_handle] = unscreened_rates
+            return unscreened_rates
+        
+        @unscreened_rates.setter
+        def unscreened_rates(self, unscreened_rates):
+            self.unscreened_rates[...] = unscreened_rates
+        
+        @property
+        def screened_rates(self):
+            """
+            Element screened_rates ftype=real(rt) pytype=float
+            
+            
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 14
+            
+            """
+            array_ndim, array_type, array_shape, array_handle = \
+                _StarKillerMicrophysics.f90wrap_rate_eval_t__array__screened_rates(self._handle)
+            if array_handle in self._arrays:
+                screened_rates = self._arrays[array_handle]
+            else:
+                screened_rates = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                        self._handle,
+                                        _StarKillerMicrophysics.f90wrap_rate_eval_t__array__screened_rates)
+                self._arrays[array_handle] = screened_rates
+            return screened_rates
+        
+        @screened_rates.setter
+        def screened_rates(self, screened_rates):
+            self.screened_rates[...] = screened_rates
+        
+        @property
+        def add_energy(self):
+            """
+            Element add_energy ftype=real(rt) pytype=float
+            
+            
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 15
+            
+            """
+            array_ndim, array_type, array_shape, array_handle = \
+                _StarKillerMicrophysics.f90wrap_rate_eval_t__array__add_energy(self._handle)
+            if array_handle in self._arrays:
+                add_energy = self._arrays[array_handle]
+            else:
+                add_energy = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                        self._handle,
+                                        _StarKillerMicrophysics.f90wrap_rate_eval_t__array__add_energy)
+                self._arrays[array_handle] = add_energy
+            return add_energy
+        
+        @add_energy.setter
+        def add_energy(self, add_energy):
+            self.add_energy[...] = add_energy
+        
+        @property
+        def add_energy_rate(self):
+            """
+            Element add_energy_rate ftype=real(rt) pytype=float
+            
+            
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 16
+            
+            """
+            array_ndim, array_type, array_shape, array_handle = \
+                _StarKillerMicrophysics.f90wrap_rate_eval_t__array__add_energy_rate(self._handle)
+            if array_handle in self._arrays:
+                add_energy_rate = self._arrays[array_handle]
+            else:
+                add_energy_rate = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
+                                        self._handle,
+                                        _StarKillerMicrophysics.f90wrap_rate_eval_t__array__add_energy_rate)
+                self._arrays[array_handle] = add_energy_rate
+            return add_energy_rate
+        
+        @add_energy_rate.setter
+        def add_energy_rate(self, add_energy_rate):
+            self.add_energy_rate[...] = add_energy_rate
+        
+        def __str__(self):
+            ret = ['<rate_eval_t>{\n']
+            ret.append('    unscreened_rates : ')
+            ret.append(repr(self.unscreened_rates))
+            ret.append(',\n    screened_rates : ')
+            ret.append(repr(self.screened_rates))
+            ret.append(',\n    add_energy : ')
+            ret.append(repr(self.add_energy))
+            ret.append(',\n    add_energy_rate : ')
+            ret.append(repr(self.add_energy_rate))
+            ret.append('}')
+            return ''.join(ret)
+        
+        _dt_array_initialisers = []
+        
     @staticmethod
     def actual_rhs_init():
         """
         actual_rhs_init()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 44-73
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 21-25
         
         
         """
         _StarKillerMicrophysics.f90wrap_actual_rhs_init()
     
     @staticmethod
-    def actual_rhs(state):
+    def update_unevolved_species(self):
         """
-        actual_rhs(state)
+        update_unevolved_species(self)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 75-140
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 27-35
         
         Parameters
         ----------
         state : Burn_T
         
         """
-        _StarKillerMicrophysics.f90wrap_actual_rhs(state=state._handle)
+        _StarKillerMicrophysics.f90wrap_update_unevolved_species(state=self._handle)
     
     @staticmethod
-    def actual_jac(state):
+    def zero_rate_eval(self):
         """
-        actual_jac(state)
+        zero_rate_eval(self)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 144-228
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 37-54
+        
+        Parameters
+        ----------
+        rate_eval : Rate_Eval_T
+        
+        """
+        _StarKillerMicrophysics.f90wrap_zero_rate_eval(rate_eval=self._handle)
+    
+    @staticmethod
+    def evaluate_rates(self):
+        """
+        rate_eval = evaluate_rates(self)
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 56-177
+        
+        Parameters
+        ----------
+        state : Burn_T
+        
+        Returns
+        -------
+        rate_eval : Rate_Eval_T
+        
+        """
+        rate_eval = _StarKillerMicrophysics.f90wrap_evaluate_rates(state=self._handle)
+        rate_eval = actual_rhs_module.Rate_Eval_T.from_handle(rate_eval)
+        return rate_eval
+    
+    @staticmethod
+    def actual_rhs(self):
+        """
+        actual_rhs(self)
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 179-244
         
         Parameters
         ----------
         state : Burn_T
         
         """
-        _StarKillerMicrophysics.f90wrap_actual_jac(state=state._handle)
+        _StarKillerMicrophysics.f90wrap_actual_rhs(state=self._handle)
     
     @staticmethod
-    def create_rates_table():
+    def rhs_nuc(state, ydot_nuc, y, screened_rates):
         """
-        create_rates_table()
+        rhs_nuc(state, ydot_nuc, y, screened_rates)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 409-426
-        
-        
-        """
-        _StarKillerMicrophysics.f90wrap_create_rates_table()
-    
-    @staticmethod
-    def set_aprox13rat():
-        """
-        set_aprox13rat()
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 428-455
-        
-        
-        """
-        _StarKillerMicrophysics.f90wrap_set_aprox13rat()
-    
-    @staticmethod
-    def ener_gener_rate(dydt, enuc):
-        """
-        ener_gener_rate(dydt, enuc)
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 2209-2225
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 246-372
         
         Parameters
         ----------
-        dydt : unknown array
-        enuc : unknown
+        state : Burn_T
+        ydot_nuc : float array
+        y : float array
+        screened_rates : float array
         
         """
-        _StarKillerMicrophysics.f90wrap_ener_gener_rate(dydt=dydt, enuc=enuc)
+        _StarKillerMicrophysics.f90wrap_rhs_nuc(state=state._handle, ydot_nuc=ydot_nuc, \
+            y=y, screened_rates=screened_rates)
     
     @staticmethod
-    def set_up_screening_factors():
+    def actual_jac(self):
         """
-        set_up_screening_factors()
+        actual_jac(self)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 2229-2288
-        
-        
-        """
-        _StarKillerMicrophysics.f90wrap_set_up_screening_factors()
-    
-    @staticmethod
-    def update_unevolved_species(state):
-        """
-        update_unevolved_species(state)
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 2290-2298
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 374-451
         
         Parameters
         ----------
         state : Burn_T
         
         """
-        _StarKillerMicrophysics.f90wrap_update_unevolved_species(state=state._handle)
+        _StarKillerMicrophysics.f90wrap_actual_jac(state=self._handle)
     
-    @property
-    def tab_tlo(self):
+    @staticmethod
+    def jac_nuc(self, y, screened_rates):
         """
-        Element tab_tlo ftype=double precision pytype=unknown
+        jac_nuc(self, y, screened_rates)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 26
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 lines 453-831
         
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_rhs_module__get__tab_tlo()
-    
-    @property
-    def tab_thi(self):
-        """
-        Element tab_thi ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 26
+        Parameters
+        ----------
+        state : Burn_T
+        y : float array
+        screened_rates : float array
         
         """
-        return _StarKillerMicrophysics.f90wrap_actual_rhs_module__get__tab_thi()
-    
-    @property
-    def tab_per_decade(self):
-        """
-        Element tab_per_decade ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 27
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_rhs_module__get__tab_per_decade()
-    
-    @property
-    def nrattab(self):
-        """
-        Element nrattab ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 28
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_rhs_module__get__nrattab()
-    
-    @property
-    def tab_imax(self):
-        """
-        Element tab_imax ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 29
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_rhs_module__get__tab_imax()
-    
-    @property
-    def tab_tstp(self):
-        """
-        Element tab_tstp ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 30
-        
-        """
-        return _StarKillerMicrophysics.f90wrap_actual_rhs_module__get__tab_tstp()
-    
-    @property
-    def rattab(self):
-        """
-        Element rattab ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 32
-        
-        """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_rhs_module__array__rattab(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            rattab = self._arrays[array_handle]
-        else:
-            rattab = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_rhs_module__array__rattab)
-            self._arrays[array_handle] = rattab
-        return rattab
-    
-    @rattab.setter
-    def rattab(self, rattab):
-        self.rattab[...] = rattab
-    
-    @property
-    def drattabdt(self):
-        """
-        Element drattabdt ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 33
-        
-        """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_rhs_module__array__drattabdt(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            drattabdt = self._arrays[array_handle]
-        else:
-            drattabdt = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_rhs_module__array__drattabdt)
-            self._arrays[array_handle] = drattabdt
-        return drattabdt
-    
-    @drattabdt.setter
-    def drattabdt(self, drattabdt):
-        self.drattabdt[...] = drattabdt
-    
-    @property
-    def ttab(self):
-        """
-        Element ttab ftype=double precision pytype=unknown
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-actual_rhs.F90 line 35
-        
-        """
-        array_ndim, array_type, array_shape, array_handle = \
-            _StarKillerMicrophysics.f90wrap_actual_rhs_module__array__ttab(f90wrap.runtime.empty_handle)
-        if array_handle in self._arrays:
-            ttab = self._arrays[array_handle]
-        else:
-            ttab = f90wrap.runtime.get_array(f90wrap.runtime.sizeof_fortran_t,
-                                    f90wrap.runtime.empty_handle,
-                                    _StarKillerMicrophysics.f90wrap_actual_rhs_module__array__ttab)
-            self._arrays[array_handle] = ttab
-        return ttab
-    
-    @ttab.setter
-    def ttab(self, ttab):
-        self.ttab[...] = ttab
-    
-    def __str__(self):
-        ret = ['<actual_rhs_module>{\n']
-        ret.append('    tab_tlo : ')
-        ret.append(repr(self.tab_tlo))
-        ret.append(',\n    tab_thi : ')
-        ret.append(repr(self.tab_thi))
-        ret.append(',\n    tab_per_decade : ')
-        ret.append(repr(self.tab_per_decade))
-        ret.append(',\n    nrattab : ')
-        ret.append(repr(self.nrattab))
-        ret.append(',\n    tab_imax : ')
-        ret.append(repr(self.tab_imax))
-        ret.append(',\n    tab_tstp : ')
-        ret.append(repr(self.tab_tstp))
-        ret.append(',\n    rattab : ')
-        ret.append(repr(self.rattab))
-        ret.append(',\n    drattabdt : ')
-        ret.append(repr(self.drattabdt))
-        ret.append(',\n    ttab : ')
-        ret.append(repr(self.ttab))
-        ret.append('}')
-        return ''.join(ret)
+        _StarKillerMicrophysics.f90wrap_jac_nuc(state=self._handle, y=y, \
+            screened_rates=screened_rates)
     
     _dt_array_initialisers = []
     
@@ -1871,7 +1358,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
     Module burn_type_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 14-225
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 1-212
     
     """
     class Burn_T(f90wrap.runtime.FortranDerivedType):
@@ -1879,7 +1366,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         Type(name=burn_t)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 35-90
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 22-77
         
         """
         def __init__(self, handle=None):
@@ -1887,7 +1374,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             self = Burn_T()
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 35-90
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 22-77
             
             
             Returns
@@ -1906,7 +1393,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Destructor for class Burn_T
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 35-90
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 22-77
             
             Parameters
             ----------
@@ -1925,7 +1412,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element rho ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 37
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 24
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__rho(self._handle)
@@ -1940,7 +1427,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element t ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 38
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 25
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__t(self._handle)
@@ -1955,7 +1442,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element e ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 39
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 26
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__e(self._handle)
@@ -1970,7 +1457,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element xn ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 40
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 27
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -1994,7 +1481,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element cv ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 42
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 29
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__cv(self._handle)
@@ -2009,7 +1496,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element cp ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 43
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 30
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__cp(self._handle)
@@ -2024,7 +1511,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element y_e ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 44
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 31
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__y_e(self._handle)
@@ -2039,7 +1526,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element eta ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 45
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 32
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__eta(self._handle)
@@ -2054,7 +1541,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element cs ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 46
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 33
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__cs(self._handle)
@@ -2069,7 +1556,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element dx ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 47
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 34
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__dx(self._handle)
@@ -2084,7 +1571,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element abar ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 48
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 35
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__abar(self._handle)
@@ -2099,7 +1586,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element zbar ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 49
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 36
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__zbar(self._handle)
@@ -2114,7 +1601,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element t_old ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 52
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 39
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__t_old(self._handle)
@@ -2129,7 +1616,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element dcvdt ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 55
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 42
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__dcvdt(self._handle)
@@ -2144,7 +1631,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element dcpdt ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 56
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 43
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__dcpdt(self._handle)
@@ -2159,7 +1646,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element ydot ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 64
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 51
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -2183,7 +1670,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element jac ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 66
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 53
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -2207,7 +1694,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element self_heat ftype=logical pytype=bool
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 70
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 57
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__self_heat(self._handle)
@@ -2222,7 +1709,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element i ftype=integer           pytype=int
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 74
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 61
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__i(self._handle)
@@ -2237,7 +1724,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element j ftype=integer           pytype=int
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 75
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 62
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__j(self._handle)
@@ -2252,7 +1739,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element k ftype=integer           pytype=int
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 76
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 63
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__k(self._handle)
@@ -2267,7 +1754,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element n_rhs ftype=integer  pytype=int
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 79
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 66
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__n_rhs(self._handle)
@@ -2282,7 +1769,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element n_jac ftype=integer  pytype=int
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 80
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 67
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__n_jac(self._handle)
@@ -2297,7 +1784,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element time ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 84
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 71
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__time(self._handle)
@@ -2312,7 +1799,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
             Element success ftype=logical pytype=bool
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 88
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 75
             
             """
             return _StarKillerMicrophysics.f90wrap_burn_t__get__success(self._handle)
@@ -2384,7 +1871,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         copy_burn_t(to_state, from_state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 96-146
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 83-133
         
         Parameters
         ----------
@@ -2401,7 +1888,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         eos_to_burn(eos_state, burn_state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 150-177
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 137-164
         
         Parameters
         ----------
@@ -2418,7 +1905,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         burn_to_eos(burn_state, eos_state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 181-207
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 168-194
         
         Parameters
         ----------
@@ -2435,7 +1922,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         normalize_abundances_burn(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 209-225
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 lines 196-212
         
         Parameters
         ----------
@@ -2450,7 +1937,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         Element neqs ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 28
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 15
         
         """
         return _StarKillerMicrophysics.f90wrap_burn_type_module__get__neqs()
@@ -2461,7 +1948,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         Element net_itemp ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 32
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 19
         
         """
         return _StarKillerMicrophysics.f90wrap_burn_type_module__get__net_itemp()
@@ -2472,7 +1959,7 @@ class Burn_Type_Module(f90wrap.runtime.FortranModule):
         Element net_ienuc ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 33
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-burn_type.F90 line 20
         
         """
         return _StarKillerMicrophysics.f90wrap_burn_type_module__get__net_ienuc()
@@ -2498,7 +1985,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
     Module eos_type_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 14-495
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 1-482
     
     """
     class Eos_T(f90wrap.runtime.FortranDerivedType):
@@ -2506,7 +1993,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Type(name=eos_t)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 122-170
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 109-157
         
         """
         def __init__(self, handle=None):
@@ -2514,7 +2001,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             self = Eos_T()
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 122-170
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 109-157
             
             
             Returns
@@ -2533,7 +2020,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Destructor for class Eos_T
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 122-170
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 109-157
             
             Parameters
             ----------
@@ -2552,7 +2039,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element rho ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 124
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 111
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__rho(self._handle)
@@ -2567,7 +2054,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element t ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 125
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 112
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__t(self._handle)
@@ -2582,7 +2069,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element p ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 126
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 113
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__p(self._handle)
@@ -2597,7 +2084,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element e ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 127
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 114
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__e(self._handle)
@@ -2612,7 +2099,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element h ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 128
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 115
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__h(self._handle)
@@ -2627,7 +2114,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element s ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 129
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 116
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__s(self._handle)
@@ -2642,7 +2129,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element xn ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 130
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 117
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -2666,7 +2153,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element aux ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 131
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 118
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -2690,7 +2177,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpdt ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 133
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 120
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dpdt(self._handle)
@@ -2705,7 +2192,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpdr ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 134
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 121
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dpdr(self._handle)
@@ -2720,7 +2207,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dedt ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 135
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 122
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dedt(self._handle)
@@ -2735,7 +2222,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dedr ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 136
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 123
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dedr(self._handle)
@@ -2750,7 +2237,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dhdt ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 137
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 124
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dhdt(self._handle)
@@ -2765,7 +2252,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dhdr ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 138
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 125
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dhdr(self._handle)
@@ -2780,7 +2267,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dsdt ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 139
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 126
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dsdt(self._handle)
@@ -2795,7 +2282,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dsdr ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 140
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 127
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dsdr(self._handle)
@@ -2810,7 +2297,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpde ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 141
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 128
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dpde(self._handle)
@@ -2825,7 +2312,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpdr_e ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 142
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 129
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dpdr_e(self._handle)
@@ -2840,7 +2327,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element cv ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 144
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 131
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__cv(self._handle)
@@ -2855,7 +2342,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element cp ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 145
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 132
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__cp(self._handle)
@@ -2870,7 +2357,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element xne ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 146
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 133
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__xne(self._handle)
@@ -2885,7 +2372,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element xnp ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 147
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 134
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__xnp(self._handle)
@@ -2900,7 +2387,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element eta ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 148
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 135
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__eta(self._handle)
@@ -2915,7 +2402,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element pele ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 149
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 136
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__pele(self._handle)
@@ -2930,7 +2417,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element ppos ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 150
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 137
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__ppos(self._handle)
@@ -2945,7 +2432,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element mu ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 151
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 138
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__mu(self._handle)
@@ -2960,7 +2447,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element mu_e ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 152
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 139
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__mu_e(self._handle)
@@ -2975,7 +2462,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element y_e ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 153
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 140
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__y_e(self._handle)
@@ -2990,7 +2477,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dedx ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 154
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 141
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -3014,7 +2501,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpdx ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 155
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 142
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -3038,7 +2525,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dhdx ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 156
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 143
             
             """
             array_ndim, array_type, array_shape, array_handle = \
@@ -3062,7 +2549,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element gam1 ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 157
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 144
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__gam1(self._handle)
@@ -3077,7 +2564,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element cs ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 158
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 145
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__cs(self._handle)
@@ -3092,7 +2579,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element abar ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 160
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 147
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__abar(self._handle)
@@ -3107,7 +2594,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element zbar ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 161
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 148
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__zbar(self._handle)
@@ -3122,7 +2609,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpda ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 163
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 150
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dpda(self._handle)
@@ -3137,7 +2624,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dpdz ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 164
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 151
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dpdz(self._handle)
@@ -3152,7 +2639,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element deda ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 165
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 152
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__deda(self._handle)
@@ -3167,7 +2654,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element dedz ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 166
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 153
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__dedz(self._handle)
@@ -3182,7 +2669,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
             Element conductivity ftype=real(rt) pytype=float
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 168
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 155
             
             """
             return _StarKillerMicrophysics.f90wrap_eos_t__get__conductivity(self._handle)
@@ -3285,7 +2772,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         copy_eos_t(self, from_eos)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 176-233
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 163-220
         
         Parameters
         ----------
@@ -3302,7 +2789,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         composition(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 238-263
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 225-250
         
         Parameters
         ----------
@@ -3317,7 +2804,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         composition_derivatives(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 267-297
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 254-284
         
         Parameters
         ----------
@@ -3332,7 +2819,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         normalize_abundances(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 302-318
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 289-305
         
         Parameters
         ----------
@@ -3347,7 +2834,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         clean_state(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 322-335
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 309-322
         
         Parameters
         ----------
@@ -3362,7 +2849,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         print_state(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 339-351
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 326-338
         
         Parameters
         ----------
@@ -3377,7 +2864,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         small_temp_out = eos_get_small_temp()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 353-367
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 340-354
         
         
         Returns
@@ -3394,7 +2881,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         small_dens_out = eos_get_small_dens()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 369-383
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 356-370
         
         
         Returns
@@ -3411,7 +2898,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         max_temp_out = eos_get_max_temp()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 385-399
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 372-386
         
         
         Returns
@@ -3428,7 +2915,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         max_dens_out = eos_get_max_dens()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 401-414
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 388-401
         
         
         Returns
@@ -3445,7 +2932,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         has = eos_input_has_var(input, ivar)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 418-495
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 lines 405-482
         
         Parameters
         ----------
@@ -3466,7 +2953,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_rt ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 24
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 11
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_rt()
@@ -3477,7 +2964,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_rh ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 25
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 12
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_rh()
@@ -3488,7 +2975,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_tp ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 26
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 13
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_tp()
@@ -3499,7 +2986,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_rp ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 27
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 14
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_rp()
@@ -3510,7 +2997,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_re ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 28
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 15
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_re()
@@ -3521,7 +3008,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_ps ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 29
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 16
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_ps()
@@ -3532,7 +3019,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_ph ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 30
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 17
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_ph()
@@ -3543,7 +3030,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element eos_input_th ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 31
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 18
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__eos_input_th()
@@ -3554,7 +3041,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element itemp ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 35
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 22
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__itemp()
@@ -3565,7 +3052,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element idens ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 36
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 23
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__idens()
@@ -3576,7 +3063,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element iener ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 37
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 24
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__iener()
@@ -3587,7 +3074,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ienth ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 38
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 25
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ienth()
@@ -3598,7 +3085,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ientr ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 39
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 26
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ientr()
@@ -3609,7 +3096,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ipres ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 40
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 27
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ipres()
@@ -3620,7 +3107,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_general ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 43
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 30
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_general()
@@ -3631,7 +3118,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_input ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 44
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 31
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_input()
@@ -3642,7 +3129,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_iter_conv ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 45
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 32
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_iter_conv()
@@ -3653,7 +3140,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_neg_e ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 46
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 33
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_neg_e()
@@ -3664,7 +3151,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_neg_p ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 47
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 34
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_neg_p()
@@ -3675,7 +3162,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_neg_h ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 48
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 35
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_neg_h()
@@ -3686,7 +3173,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_neg_s ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 49
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 36
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_neg_s()
@@ -3697,7 +3184,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_iter_var ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 50
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 37
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_iter_var()
@@ -3708,7 +3195,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_init ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 51
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 38
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_init()
@@ -3719,7 +3206,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_init_xn ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 52
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 39
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__ierr_init_xn()
@@ -3730,7 +3217,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_out_of_bounds ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 53
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 40
         
         """
         return \
@@ -3742,7 +3229,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element ierr_not_implemented ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 54
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 41
         
         """
         return \
@@ -3754,7 +3241,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element mintemp ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 58
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 45
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__mintemp()
@@ -3769,7 +3256,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxtemp ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 59
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 46
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxtemp()
@@ -3784,7 +3271,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element mindens ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 60
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 47
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__mindens()
@@ -3799,7 +3286,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxdens ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 61
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 48
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxdens()
@@ -3814,7 +3301,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element minx ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 62
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 49
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__minx()
@@ -3829,7 +3316,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxx ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 63
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 50
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxx()
@@ -3844,7 +3331,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element minye ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 64
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 51
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__minye()
@@ -3859,7 +3346,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxye ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 65
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 52
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxye()
@@ -3874,7 +3361,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element mine ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 66
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 53
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__mine()
@@ -3889,7 +3376,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxe ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 67
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 54
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxe()
@@ -3904,7 +3391,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element minp ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 68
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 55
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__minp()
@@ -3919,7 +3406,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxp ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 69
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 56
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxp()
@@ -3934,7 +3421,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element mins ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 70
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 57
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__mins()
@@ -3949,7 +3436,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxs ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 71
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 58
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxs()
@@ -3964,7 +3451,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element minh ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 72
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 59
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__minh()
@@ -3979,7 +3466,7 @@ class Eos_Type_Module(f90wrap.runtime.FortranModule):
         Element maxh ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 73
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos_type.F90 line 60
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_type_module__get__maxh()
@@ -4087,7 +3574,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
     Module eos_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 14-609
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 1-596
     
     """
     @staticmethod
@@ -4096,7 +3583,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         eos_init([small_temp, small_dens])
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 27-120
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 14-107
         
         Parameters
         ----------
@@ -4113,7 +3600,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         eos_finalize()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 122-131
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 109-118
         
         
         """
@@ -4125,7 +3612,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         eos(input, state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 133-185
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 120-172
         
         Parameters
         ----------
@@ -4141,7 +3628,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_inputs(input, state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 187-250
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 174-237
         
         Parameters
         ----------
@@ -4159,7 +3646,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_rho(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 254-271
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 241-258
         
         Parameters
         ----------
@@ -4176,7 +3663,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_t(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 275-292
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 262-279
         
         Parameters
         ----------
@@ -4193,7 +3680,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_e(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 294-313
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 281-300
         
         Parameters
         ----------
@@ -4210,7 +3697,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_h(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 315-334
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 302-321
         
         Parameters
         ----------
@@ -4227,7 +3714,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_s(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 336-355
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 323-342
         
         Parameters
         ----------
@@ -4244,7 +3731,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         reset_p(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 357-376
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 344-363
         
         Parameters
         ----------
@@ -4261,7 +3748,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         eos_reset(state, has_been_reset)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 381-404
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 368-391
         
         Parameters
         ----------
@@ -4278,7 +3765,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_inputs(input, state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 406-485
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 393-472
         
         Parameters
         ----------
@@ -4294,7 +3781,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_rho(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 487-506
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 474-493
         
         Parameters
         ----------
@@ -4309,7 +3796,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_t(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 508-527
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 495-514
         
         Parameters
         ----------
@@ -4324,7 +3811,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_e(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 529-548
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 516-535
         
         Parameters
         ----------
@@ -4339,7 +3826,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_h(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 550-569
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 537-556
         
         Parameters
         ----------
@@ -4354,7 +3841,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_s(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 571-590
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 558-577
         
         Parameters
         ----------
@@ -4369,7 +3856,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         check_p(state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 592-609
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 lines 579-596
         
         Parameters
         ----------
@@ -4384,7 +3871,7 @@ class Eos_Module(f90wrap.runtime.FortranModule):
         Element initialized ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 line 20
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-eos.F90 line 7
         
         """
         return _StarKillerMicrophysics.f90wrap_eos_module__get__initialized()
@@ -4410,7 +3897,7 @@ class Network(f90wrap.runtime.FortranModule):
     Module network
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 35-142
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 22-129
     
     """
     @staticmethod
@@ -4419,7 +3906,7 @@ class Network(f90wrap.runtime.FortranModule):
         network_init()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 52-86
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 39-73
         
         
         """
@@ -4431,7 +3918,7 @@ class Network(f90wrap.runtime.FortranModule):
         r = network_species_index(name)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 88-103
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 75-90
         
         Parameters
         ----------
@@ -4451,7 +3938,7 @@ class Network(f90wrap.runtime.FortranModule):
         name = get_network_species_name(index_bn)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 105-117
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 92-104
         
         Parameters
         ----------
@@ -4472,7 +3959,7 @@ class Network(f90wrap.runtime.FortranModule):
         name = get_network_short_species_name(index_bn)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 119-131
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 106-118
         
         Parameters
         ----------
@@ -4493,7 +3980,7 @@ class Network(f90wrap.runtime.FortranModule):
         network_finalize()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 133-142
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 lines 120-129
         
         
         """
@@ -4505,7 +3992,7 @@ class Network(f90wrap.runtime.FortranModule):
         Element network_initialized ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 line 42
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 line 29
         
         """
         return _StarKillerMicrophysics.f90wrap_network__get__network_initialized()
@@ -4521,7 +4008,7 @@ class Network(f90wrap.runtime.FortranModule):
         Element aion_inv ftype=real(rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 line 45
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-network.F90 line 32
         
         """
         array_ndim, array_type, array_shape, array_handle = \
@@ -4558,7 +4045,7 @@ class Microphysics_Module(f90wrap.runtime.FortranModule):
     Module microphysics_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-microphysics.F90 lines 14-58
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-microphysics.F90 lines 1-45
     
     """
     @staticmethod
@@ -4567,7 +4054,7 @@ class Microphysics_Module(f90wrap.runtime.FortranModule):
         microphysics_init([small_temp, small_dens])
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-microphysics.F90 lines 28-50
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-microphysics.F90 lines 15-37
         
         Parameters
         ----------
@@ -4584,7 +4071,7 @@ class Microphysics_Module(f90wrap.runtime.FortranModule):
         microphysics_finalize()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-microphysics.F90 lines 52-58
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-microphysics.F90 lines 39-45
         
         
         """
@@ -4600,7 +4087,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
     Module extern_probin_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 lines 25-111
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 lines 12-98
     
     """
     @property
@@ -4609,7 +4096,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element small_temp ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 33
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 20
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__small_temp()
@@ -4625,7 +4112,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element small_dens ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 35
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 22
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__small_dens()
@@ -4641,7 +4128,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element use_eos_coulomb ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 37
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 24
         
         """
         return \
@@ -4658,7 +4145,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element eos_input_is_constant ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 39
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 26
         
         """
         return \
@@ -4675,7 +4162,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element eos_ttol ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 41
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 28
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__eos_ttol()
@@ -4690,7 +4177,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element eos_dtol ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 43
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 30
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__eos_dtol()
@@ -4705,7 +4192,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element small_x ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 45
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 32
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__small_x()
@@ -4720,7 +4207,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element use_tables ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 47
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 34
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__use_tables()
@@ -4736,7 +4223,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element use_c12ag_deboer17 ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 49
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 36
         
         """
         return \
@@ -4748,12 +4235,46 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
             _StarKillerMicrophysics.f90wrap_extern_probin_module__set__use_c12ag_deboer17(use_c12ag_deboer17)
     
     @property
+    def disable_thermal_neutrinos(self):
+        """
+        Element disable_thermal_neutrinos ftype=logical pytype=bool
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 38
+        
+        """
+        return \
+            _StarKillerMicrophysics.f90wrap_extern_probin_module__get__disable_thermal_neutrinos()
+    
+    @disable_thermal_neutrinos.setter
+    def disable_thermal_neutrinos(self, disable_thermal_neutrinos):
+        \
+            _StarKillerMicrophysics.f90wrap_extern_probin_module__set__disable_thermal_neutrinos(disable_thermal_neutrinos)
+    
+    @property
+    def use_jacobian_caching(self):
+        """
+        Element use_jacobian_caching ftype=logical pytype=bool
+        
+        
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 40
+        
+        """
+        return \
+            _StarKillerMicrophysics.f90wrap_extern_probin_module__get__use_jacobian_caching()
+    
+    @use_jacobian_caching.setter
+    def use_jacobian_caching(self, use_jacobian_caching):
+        \
+            _StarKillerMicrophysics.f90wrap_extern_probin_module__set__use_jacobian_caching(use_jacobian_caching)
+    
+    @property
     def do_constant_volume_burn(self):
         """
         Element do_constant_volume_burn ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 51
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 42
         
         """
         return \
@@ -4770,7 +4291,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element call_eos_in_rhs ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 53
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 44
         
         """
         return \
@@ -4787,7 +4308,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element dt_crit ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 55
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 46
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__dt_crit()
@@ -4802,7 +4323,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element burning_mode ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 57
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 48
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__burning_mode()
@@ -4818,7 +4339,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element burning_mode_factor ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 59
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 50
         
         """
         return \
@@ -4835,7 +4356,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element integrate_temperature ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 61
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 52
         
         """
         return \
@@ -4852,7 +4373,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element integrate_energy ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 63
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 54
         
         """
         return \
@@ -4869,7 +4390,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element jacobian ftype=integer pytype=int
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 65
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 56
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__jacobian()
@@ -4884,7 +4405,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element centered_diff_jac ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 67
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 58
         
         """
         return \
@@ -4901,7 +4422,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element burner_verbose ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 69
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 60
         
         """
         return \
@@ -4918,7 +4439,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element rtol_spec ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 71
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 62
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__rtol_spec()
@@ -4933,7 +4454,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element rtol_temp ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 73
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 64
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__rtol_temp()
@@ -4948,7 +4469,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element rtol_enuc ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 75
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 66
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__rtol_enuc()
@@ -4963,7 +4484,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element atol_spec ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 77
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 68
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__atol_spec()
@@ -4978,7 +4499,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element atol_temp ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 79
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 70
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__atol_temp()
@@ -4993,7 +4514,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element atol_enuc ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 81
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 72
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__atol_enuc()
@@ -5008,7 +4529,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element retry_burn ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 83
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 74
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__retry_burn()
@@ -5024,7 +4545,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element retry_burn_factor ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 85
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 76
         
         """
         return \
@@ -5041,7 +4562,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element retry_burn_max_change ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 87
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 78
         
         """
         return \
@@ -5058,7 +4579,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element abort_on_failure ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 89
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 80
         
         """
         return \
@@ -5075,7 +4596,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element renormalize_abundances ftype=logical pytype=bool
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 91
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 82
         
         """
         return \
@@ -5092,7 +4613,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element small_x_safe ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 93
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 84
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__small_x_safe()
@@ -5108,7 +4629,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element max_temp ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 95
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 86
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__max_temp()
@@ -5123,7 +4644,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element react_boost ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 97
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 88
         
         """
         return _StarKillerMicrophysics.f90wrap_extern_probin_module__get__react_boost()
@@ -5139,7 +4660,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element reactions_density_scale ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 99
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 90
         
         """
         return \
@@ -5156,7 +4677,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element reactions_temperature_scale ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 101
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 92
         
         """
         return \
@@ -5173,7 +4694,7 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         Element reactions_energy_scale ftype=real (kind=rt) pytype=float
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 103
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 94
         
         """
         return \
@@ -5183,40 +4704,6 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
     def reactions_energy_scale(self, reactions_energy_scale):
         \
             _StarKillerMicrophysics.f90wrap_extern_probin_module__set__reactions_energy_scale(reactions_energy_scale)
-    
-    @property
-    def ode_max_steps(self):
-        """
-        Element ode_max_steps ftype=integer pytype=int
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 105
-        
-        """
-        return \
-            _StarKillerMicrophysics.f90wrap_extern_probin_module__get__ode_max_steps()
-    
-    @ode_max_steps.setter
-    def ode_max_steps(self, ode_max_steps):
-        \
-            _StarKillerMicrophysics.f90wrap_extern_probin_module__set__ode_max_steps(ode_max_steps)
-    
-    @property
-    def use_jacobian_caching(self):
-        """
-        Element use_jacobian_caching ftype=logical pytype=bool
-        
-        
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 line 107
-        
-        """
-        return \
-            _StarKillerMicrophysics.f90wrap_extern_probin_module__get__use_jacobian_caching()
-    
-    @use_jacobian_caching.setter
-    def use_jacobian_caching(self, use_jacobian_caching):
-        \
-            _StarKillerMicrophysics.f90wrap_extern_probin_module__set__use_jacobian_caching(use_jacobian_caching)
     
     def __str__(self):
         ret = ['<extern_probin_module>{\n']
@@ -5238,6 +4725,10 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         ret.append(repr(self.use_tables))
         ret.append(',\n    use_c12ag_deboer17 : ')
         ret.append(repr(self.use_c12ag_deboer17))
+        ret.append(',\n    disable_thermal_neutrinos : ')
+        ret.append(repr(self.disable_thermal_neutrinos))
+        ret.append(',\n    use_jacobian_caching : ')
+        ret.append(repr(self.use_jacobian_caching))
         ret.append(',\n    do_constant_volume_burn : ')
         ret.append(repr(self.do_constant_volume_burn))
         ret.append(',\n    call_eos_in_rhs : ')
@@ -5292,10 +4783,6 @@ class Extern_Probin_Module(f90wrap.runtime.FortranModule):
         ret.append(repr(self.reactions_temperature_scale))
         ret.append(',\n    reactions_energy_scale : ')
         ret.append(repr(self.reactions_energy_scale))
-        ret.append(',\n    ode_max_steps : ')
-        ret.append(repr(self.ode_max_steps))
-        ret.append(',\n    use_jacobian_caching : ')
-        ret.append(repr(self.use_jacobian_caching))
         ret.append('}')
         return ''.join(ret)
     
@@ -5309,7 +4796,7 @@ class Sneut_Module(f90wrap.runtime.FortranModule):
     Module sneut_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 14-1369
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 1-1356
     
     """
     @staticmethod
@@ -5318,7 +4805,7 @@ class Sneut_Module(f90wrap.runtime.FortranModule):
         sneut5(temp, den, abar, zbar, snu, dsnudt, dsnudd, dsnuda, dsnudz)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 21-1200
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 8-1187
         
         Parameters
         ----------
@@ -5342,7 +4829,7 @@ class Sneut_Module(f90wrap.runtime.FortranModule):
         ifermi12r = ifermi12(f)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 1202-1278
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 1189-1265
         
         Parameters
         ----------
@@ -5362,7 +4849,7 @@ class Sneut_Module(f90wrap.runtime.FortranModule):
         zfermim12r = zfermim12(x)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 1280-1369
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-sneut5.F90 lines 1267-1356
         
         Parameters
         ----------
@@ -5386,7 +4873,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
     Module screening_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 14-692
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 1-679
     
     """
     class Plasma_State(f90wrap.runtime.FortranDerivedType):
@@ -5394,7 +4881,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         Type(name=plasma_state)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 51-65
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 38-52
         
         """
         def __init__(self, handle=None):
@@ -5402,7 +4889,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             self = Plasma_State()
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 51-65
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 38-52
             
             
             Returns
@@ -5421,7 +4908,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Destructor for class Plasma_State
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 51-65
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 38-52
             
             Parameters
             ----------
@@ -5440,7 +4927,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element qlam0z ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 53
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 40
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__qlam0z(self._handle)
@@ -5455,7 +4942,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element qlam0zdt ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 54
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 41
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__qlam0zdt(self._handle)
@@ -5471,7 +4958,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element qlam0zdd ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 55
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 42
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__qlam0zdd(self._handle)
@@ -5487,7 +4974,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element taufac ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 57
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 44
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__taufac(self._handle)
@@ -5502,7 +4989,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element taufacdt ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 58
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 45
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__taufacdt(self._handle)
@@ -5518,7 +5005,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element aa ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 60
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 47
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__aa(self._handle)
@@ -5533,7 +5020,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element daadt ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 61
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 48
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__daadt(self._handle)
@@ -5548,7 +5035,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
             Element daadd ftype=double precision pytype=unknown
             
             
-            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 62
+            Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 line 49
             
             """
             return _StarKillerMicrophysics.f90wrap_plasma_state__get__daadd(self._handle)
@@ -5586,7 +5073,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         screening_init()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 75-104
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 62-91
         
         
         """
@@ -5598,7 +5085,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         screening_finalize()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 106-152
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 93-139
         
         
         """
@@ -5610,7 +5097,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         add_screening_factor(z1, a1, z2, a2)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 154-228
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 141-215
         
         Parameters
         ----------
@@ -5628,7 +5115,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         fill_plasma_state(state, temp, dens, y)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 230-281
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 217-268
         
         Parameters
         ----------
@@ -5647,7 +5134,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         screen5(state, jscreen, scor, scordt, scordd)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 283-504
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 270-491
         
         Parameters
         ----------
@@ -5667,7 +5154,7 @@ class Screening_Module(f90wrap.runtime.FortranModule):
         screenz(t, d, z1, z2, a1, a2, ymass, scfac, dscfacdt)
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 506-692
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-screen.F90 lines 493-679
         
         Parameters
         ----------
@@ -5695,8 +5182,7 @@ class Actual_Conductivity_Module(f90wrap.runtime.FortranModule):
     Module actual_conductivity_module
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-stellar_conductivity.F90 lines \
-        14-373
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-stellar_conductivity.F90 lines 1-360
     
     """
     @staticmethod
@@ -5705,7 +5191,7 @@ class Actual_Conductivity_Module(f90wrap.runtime.FortranModule):
         actual_conductivity_init()
         
         
-        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-stellar_conductivity.F90 lines 22-27
+        Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-stellar_conductivity.F90 lines 9-14
         
         
         """
@@ -5718,7 +5204,7 @@ class Actual_Conductivity_Module(f90wrap.runtime.FortranModule):
         
         
         Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-stellar_conductivity.F90 lines \
-            29-373
+            16-360
         
         Parameters
         ----------
@@ -5789,7 +5275,7 @@ def runtime_init(probin):
     runtime_init(probin)
     
     
-    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 lines 113-236
+    Defined at tmp_build_dir/f/3d.gnu.EXE/F90PP-extern.F90 lines 100-223
     
     Parameters
     ----------

@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_dvnlsd_module
 
   use cuvode_parameters_module, only: VODE_LMAX, VODE_NEQS, VODE_LIW,   &
@@ -205,15 +192,12 @@ contains
        CSCALE = TWO/(ONE + vstate % RC)
        CALL DSCALN (VODE_NEQS, CSCALE, vstate % Y, 1)
     ENDIF
-
-
     DEL = DVNORM (vstate % Y, rwork % EWT)
     call daxpyn(VODE_NEQS, ONE, vstate % Y, 1, rwork % acor, 1)
 
     do I = 1,VODE_NEQS
        vstate % Y(I) = rwork % YH(I,1) + rwork % ACOR(I)
     end do
-
     ! -----------------------------------------------------------------------
     !  Test for convergence.  If M .gt. 0, an estimate of the convergence
     !  rate constant is stored in CRATE, and this is used in the test.

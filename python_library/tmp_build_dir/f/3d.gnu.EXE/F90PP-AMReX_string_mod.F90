@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 module amrex_string_module
 
   use iso_c_binding
