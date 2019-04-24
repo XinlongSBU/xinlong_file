@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 module amrex_bc_types_module
 
   implicit none

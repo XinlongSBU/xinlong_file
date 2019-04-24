@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 ! the network module provides the information about the species we are
 ! advecting:
 !

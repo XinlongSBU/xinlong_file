@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module burn_type_module
 
   use actual_network, only: nspec, nspec_evolve, naux

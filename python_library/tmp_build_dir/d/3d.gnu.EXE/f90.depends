@@ -1,9 +1,9 @@
-tmp_build_dir/o/3d.gnu.EXE/starkiller_initialization.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
 tmp_build_dir/o/3d.gnu.EXE/starkiller_initialization.o: tmp_build_dir/o/3d.gnu.EXE/microphysics.o
+tmp_build_dir/o/3d.gnu.EXE/starkiller_initialization.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
 tmp_build_dir/o/3d.gnu.EXE/starkiller_initialization.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
-tmp_build_dir/o/3d.gnu.EXE/constants_cgs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/constants_cgs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/constants_cgs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
 tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
@@ -11,57 +11,59 @@ tmp_build_dir/o/3d.gnu.EXE/rate_type.o: tmp_build_dir/o/3d.gnu.EXE/actual_networ
  
 tmp_build_dir/o/3d.gnu.EXE/integration_data.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
+tmp_build_dir/o/3d.gnu.EXE/physical_constants.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+ 
 tmp_build_dir/o/3d.gnu.EXE/microphysics.o: tmp_build_dir/o/3d.gnu.EXE/stellar_conductivity.o
 tmp_build_dir/o/3d.gnu.EXE/microphysics.o: tmp_build_dir/o/3d.gnu.EXE/actual_burner.o
-tmp_build_dir/o/3d.gnu.EXE/microphysics.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
 tmp_build_dir/o/3d.gnu.EXE/microphysics.o: tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o
 tmp_build_dir/o/3d.gnu.EXE/microphysics.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/microphysics.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
  
-tmp_build_dir/o/3d.gnu.EXE/network.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/network.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
 tmp_build_dir/o/3d.gnu.EXE/network.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
 tmp_build_dir/o/3d.gnu.EXE/network.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/network.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
+tmp_build_dir/o/3d.gnu.EXE/network.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
-tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
-tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_ParallelDescriptor_F.o
 tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
-tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/actual_eos.o
 tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/eos_override.o
-tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/actual_eos.o
+tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_ParallelDescriptor_F.o
  
 tmp_build_dir/o/3d.gnu.EXE/eos_override.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
  
-tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
-tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
 tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
  
-tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
-tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
+tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
+tmp_build_dir/o/3d.gnu.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
  
-tmp_build_dir/o/3d.gnu.EXE/AMReX_FILCC_3D.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_filcc_mod.o
 tmp_build_dir/o/3d.gnu.EXE/AMReX_FILCC_3D.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/AMReX_FILCC_3D.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_filcc_mod.o
  
  
  
 tmp_build_dir/o/3d.gnu.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_bc_types_mod.o
-tmp_build_dir/o/3d.gnu.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
  
  
  
-tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_string_mod.o
 tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_string_mod.o
  
-tmp_build_dir/o/3d.gnu.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_string_mod.o
 tmp_build_dir/o/3d.gnu.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
 tmp_build_dir/o/3d.gnu.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_string_mod.o
  
  
  
@@ -70,242 +72,243 @@ tmp_build_dir/o/3d.gnu.EXE/AMReX_ParallelDescriptor_F.o: tmp_build_dir/o/3d.gnu.
  
 tmp_build_dir/o/3d.gnu.EXE/AMReX_mempool_mod.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
+tmp_build_dir/o/3d.gnu.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
 tmp_build_dir/o/3d.gnu.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
 tmp_build_dir/o/3d.gnu.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
 tmp_build_dir/o/3d.gnu.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
  
 tmp_build_dir/o/3d.gnu.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.EXE/network.o
-tmp_build_dir/o/3d.gnu.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
 tmp_build_dir/o/3d.gnu.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
  
 tmp_build_dir/o/3d.gnu.EXE/microphysics_math.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
 tmp_build_dir/o/3d.gnu.EXE/microphysics_math.o: tmp_build_dir/o/3d.gnu.EXE/esum_module.o
  
-tmp_build_dir/o/3d.gnu.EXE/esum_module.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/esum_module.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/esum_module.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
  
 tmp_build_dir/o/3d.gnu.EXE/linpack_module.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
  
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
 tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/vode_type.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/network.o
-tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/network.o
 tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/vode_type.o
 tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/cuvode.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
  
-tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
-tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
+tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
 tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
-tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/vode_type.o
-tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/vode_type.o
+tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
+tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
  
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
 tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
 tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
-tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/network.o
 tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
+tmp_build_dir/o/3d.gnu.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
  
 tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/linpack_module.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.EXE/rpar.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dacopy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dacopy.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dacopy.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dacopy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_output.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dacopy.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/linpack_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dacopy.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/linpack_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjac.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
  
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvset.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvset.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/linpack_module.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvjust.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvset.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_nordsieck.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/blas_module.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvset.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_dvnlsd.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.EXE/vode_rhs.o
  
-tmp_build_dir/o/3d.gnu.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
-tmp_build_dir/o/3d.gnu.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
 tmp_build_dir/o/3d.gnu.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.EXE/cuvode_parameters.o
  
 tmp_build_dir/o/3d.gnu.EXE/cuvode_constants.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
-tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
-tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/integration_data.o
 tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o
-tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
 tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/actual_integrator.o
-tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
 tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o
+tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/integration_data.o
+tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/integrator.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
  
-tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
-tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o
-tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
+tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o
+tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
 tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o
-tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
 tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
 tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
  
 tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
-tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
 tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
-tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
-tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
-tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o
-tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
 tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
-tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
+tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o
+tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
 tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
  
 tmp_build_dir/o/3d.gnu.EXE/rpar.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
 tmp_build_dir/o/3d.gnu.EXE/rpar.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
  
 tmp_build_dir/o/3d.gnu.EXE/sneut5.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
  
+tmp_build_dir/o/3d.gnu.EXE/actual_network.o: tmp_build_dir/o/3d.gnu.EXE/physical_constants.o
 tmp_build_dir/o/3d.gnu.EXE/actual_network.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
+tmp_build_dir/o/3d.gnu.EXE/reaclib_rates.o: tmp_build_dir/o/3d.gnu.EXE/network.o
+tmp_build_dir/o/3d.gnu.EXE/reaclib_rates.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/reaclib_rates.o: tmp_build_dir/o/3d.gnu.EXE/screen.o
+ 
+tmp_build_dir/o/3d.gnu.EXE/table_rates.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.EXE/table_rates.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/reaclib_rates.o
 tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
-tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
-tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/table_rates.o
+tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/network.o
 tmp_build_dir/o/3d.gnu.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.EXE/integrator.o
  
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/sneut5.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/physical_constants.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/reaclib_rates.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o
 tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/jacobian_sparsity.o
 tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/screen.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_ParallelDescriptor_F.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/eos.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/actual_network.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/tfactors.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/rate_type.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/temperature_integration.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/sneut5.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/table_rates.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/network.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/microphysics_math.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/eos_type.o
-tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/aprox_rates.o
+tmp_build_dir/o/3d.gnu.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.EXE/extern.o
  
-tmp_build_dir/o/3d.gnu.EXE/aprox_rates.o: tmp_build_dir/o/3d.gnu.EXE/tfactors.o
- 
- 
+tmp_build_dir/o/3d.gnu.EXE/screen.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
 tmp_build_dir/o/3d.gnu.EXE/screen.o: tmp_build_dir/o/3d.gnu.EXE/network.o
 tmp_build_dir/o/3d.gnu.EXE/screen.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_constants_mod.o
-tmp_build_dir/o/3d.gnu.EXE/screen.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  
 tmp_build_dir/o/3d.gnu.EXE/extern.o: tmp_build_dir/o/3d.gnu.EXE/AMReX_fort_mod.o
  

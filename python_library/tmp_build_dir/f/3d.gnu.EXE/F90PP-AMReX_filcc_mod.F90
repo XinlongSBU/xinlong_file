@@ -1,17 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 module amrex_filcc_module
 
   use amrex_fort_module, only : amrex_real, amrex_spacedim, amrex_get_loop_bounds
@@ -128,7 +115,7 @@ contains
 
        if (lo(1) < ilo) then
           imin = lo(1)
-          imax = ilo-1
+          imax = min(hi(1),ilo-1)
 
           if (bc(1,1,n) .eq. amrex_bc_ext_dir) then
 
@@ -189,7 +176,7 @@ contains
        end if
 
        if (hi(1) > ihi) then
-          imin = ihi+1
+          imin = max(lo(1),ihi+1)
           imax = hi(1)
 
           if (bc(1,2,n) .eq. amrex_bc_ext_dir) then
@@ -251,9 +238,10 @@ contains
        end if
 
 
+
        if (lo(2) < jlo) then
           jmin = lo(2)
-          jmax = jlo-1
+          jmax = min(hi(2),jlo-1)
 
           if (bc(2,1,n) .eq. amrex_bc_ext_dir) then
 
@@ -314,7 +302,7 @@ contains
        end if
 
        if (hi(2) > jhi) then
-          jmin = jhi+1
+          jmin = max(lo(2),jhi+1)
           jmax = hi(2)
 
           if (bc(2,2,n) .eq. amrex_bc_ext_dir) then
@@ -378,10 +366,9 @@ contains
 
 
 
-
        if (lo(3) < klo) then
           kmin = lo(3)
-          kmax = klo-1
+          kmax = min(hi(3),klo-1)
 
           if (bc(3,1,n) .eq. amrex_bc_ext_dir) then
 
@@ -442,7 +429,7 @@ contains
        end if
 
        if (hi(3) > khi) then
-          kmin = khi+1
+          kmin = max(lo(3),khi+1)
           kmax = hi(3)
 
           if (bc(3,2,n) .eq. amrex_bc_ext_dir) then
@@ -1022,7 +1009,6 @@ contains
     end do
 
   end subroutine amrex_filccn
-
 
   subroutine amrex_hoextraptocc (q, qlo, qhi, domlo, domhi, dx, xlo) &
        bind(c,name='amrex_hoextraptocc')

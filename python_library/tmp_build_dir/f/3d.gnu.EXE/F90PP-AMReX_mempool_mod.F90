@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module amrex_mempool_module
 
   use iso_c_binding

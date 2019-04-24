@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_dvnorm_module
 
   use amrex_fort_module, only: rt => amrex_real

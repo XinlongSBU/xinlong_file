@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_dvhin_module
 
   use vode_rhs_module, only: f_rhs, jac

@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module vode_type_module
 
   use cuvode_parameters_module, only: VODE_NEQS, VODE_LMAX, VODE_LENWM

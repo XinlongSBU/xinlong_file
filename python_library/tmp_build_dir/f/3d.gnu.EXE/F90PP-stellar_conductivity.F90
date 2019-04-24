@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module actual_conductivity_module
 
   use amrex_fort_module, only : rt => amrex_real

@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module cuvode_dvset_module
 
   use cuvode_types_module, only: dvode_t

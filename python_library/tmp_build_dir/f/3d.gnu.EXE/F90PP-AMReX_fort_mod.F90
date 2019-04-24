@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module amrex_fort_module
 
   use iso_c_binding, only : c_char, c_short, c_int, c_long, c_float, c_double, c_size_t, c_ptr

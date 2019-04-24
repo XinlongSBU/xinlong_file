@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 module numerical_jac_module
 
   use amrex_constants_module, only: ZERO, HALF, ONE

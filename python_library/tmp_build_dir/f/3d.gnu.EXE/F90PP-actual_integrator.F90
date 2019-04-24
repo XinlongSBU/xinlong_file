@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 ! Common variables and routines for burners
 ! that use VODE for their integration.
 
