@@ -32,10 +32,37 @@
   temperature   = 1.0d8
 
 
-! f20   initial mass fraction
+! p     initial mass fraction
   massfractions(1) = 0.0d0
 
-! ne20  initial mass fraction
+! he4   initial mass fraction
   massfractions(2) = 0.0d0
+
+! o16   initial mass fraction
+  massfractions(3) = 0.0d0
+
+! o20   initial mass fraction
+  massfractions(4) = 0.0d0
+
+! f20   initial mass fraction
+  massfractions(5) = 0.0d0
+
+! ne20  initial mass fraction
+  massfractions(6) = 0.0d0
+
+! mg24  initial mass fraction
+  massfractions(7) = 0.0d0
+
+! al27  initial mass fraction
+  massfractions(8) = 0.0d0
+
+! si28  initial mass fraction
+  massfractions(9) = 0.0d0
+
+! p31   initial mass fraction
+  massfractions(10) = 0.0d0
+
+! s32   initial mass fraction
+  massfractions(11) = 0.0d0
 
 /
