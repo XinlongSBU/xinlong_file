@@ -1,5 +1,7 @@
 #include <iostream>
 #include <iomanip>
+#include "xinlong.H"
+
 using namespace std;
 
 void DrawAsterisk (int);
