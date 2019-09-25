@@ -1,0 +1,194 @@
+==============================================================================
+ MAESTROeX Job Information
+==============================================================================
+job name: 
+
+inputs file: input_ecsn_2d
+
+number of MPI processes: 64
+number of threads:       16
+tile size: 1024000 1024000 
+
+CPU time used since start of simulation (CPU-hours): 0.724127
+
+==============================================================================
+ Plotfile Information
+==============================================================================
+output data / time: Tue Sep 24 09:12:55 2019
+output dir:         /global/cscratch1/sd/xinlong
+
+
+==============================================================================
+ Build Information
+==============================================================================
+build date:    2019-09-23 06:48:27.624610
+build machine: Linux cori08 4.12.14-150.27-default #1 SMP Thu Jul 11 11:24:28 UTC 2019 (bf2abc2) x86_64 x86_64 x86_64 GNU/Linux
+build dir:     /global/u1/x/xinlong/github_folder/try_test/MAESTROeX/Exec/SCIENCE/ecsn
+AMReX dir:     /global/homes/x/xinlong/github_folder/try_test/amrex/
+
+COMP:          gnu
+COMP version:  8.2.0
+
+C++ compiler:  CC
+C++ flags:      -Werror=return-type -g -O3  -fopenmp -pthread  -DNDEBUG -DBL_USE_MPI -DAMREX_USE_MPI -DBL_USE_OMP -DAMREX_USE_OMP -DAMREX_GIT_VERSION="19.09-198-g7fba3e3dc355" -DBL_GCC_VERSION=8.2.0 -DBL_GCC_MAJOR_VERSION=8 -DBL_GCC_MINOR_VERSION=2 -DAMREX_LAUNCH= -DAMREX_DEVICE= -DAMREX_CUDA_FORT_GLOBAL= -DAMREX_CUDA_FORT_DEVICE= -DAMREX_CUDA_FORT_HOST= -DAMREX_CUDA_FORT_HOST_DEVICE= -DBL_SPACEDIM=2 -DAMREX_SPACEDIM=2 -DBL_FORT_USE_UNDERSCORE -DAMREX_FORT_USE_UNDERSCORE -DBL_Linux -DAMREX_Linux -DCRSEGRNDOMP -DEXTRA_THERMO -DINTEGRATOR=0 -I. -I. -I../../../Source -I../../../Source/Src_nd -I../../../Source/param_includes -I../../../constants -I../../../Util/model_parser -I../../../Util/simple_log -I../../../Microphysics/EOS -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/EOS/helmholtz -I../../../Microphysics/networks -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/networks/ECSN -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/EOS -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/networks -I../../../Microphysics/conductivity -I../../../Microphysics/conductivity -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/conductivity/stellar -I/global/homes/x/xinlong/github_folder/try_test/amrex//Src/Base -I/global/homes/x/xinlong/github_folder/try_test/amrex//Src/Boundary -I/global/homes/x/xinlong/github_folder/try_test/amrex//Src/AmrCore -I/global/homes/x/xinlong/github_folder/try_test/amrex//Src/LinearSolvers/C_CellMG -I/global/homes/x/xinlong/github_folder/try_test/amrex//Src/LinearSolvers/MLMG -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/util -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/util/LINPACK -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/util/BLAS -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/integration/VODE -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/integration/VODE/vode_source/ -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/integration/BS -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/integration/utils -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/integration -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/screening -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/neutrinos -I. -I../../../Source -I../../../Source/Src_nd -I../../../Source/param_includes -I../../../constants -I../../../Util/model_parser -I../../../Util/simple_log -I../../../Microphysics/EOS -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/EOS/helmholtz -I../../../Microphysics/networks -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/networks/ECSN -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/EOS -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/networks -I../../../Microphysics/conductivity -I../../../Microphysics/conductivity -I/global/homes/x/xinlong/github_folder/try_test/Microphysics/conductivity/stellar -I/global/homes/x/xinlong/github_folder/try_test/amrex//Tools/C_scripts
+
+Fortran comp:  ftn
+Fortran flags:  -g -O3 -ffree-line-length-none -fno-range-check -fno-second-underscore -fimplicit-none  -fopenmp 
+
+Link flags:    -L. -L/opt/gcc/8.2.0/snos/lib/gcc/x86_64-suse-linux/8.2.0/../../../../lib64/
+Libraries:     -lmpichf90 -lgfortran -lquadmath
+
+EOS: /global/homes/x/xinlong/github_folder/try_test/Microphysics/EOS/helmholtz
+NETWORK: /global/homes/x/xinlong/github_folder/try_test/Microphysics/networks/ECSN
+CONDUCTIVITY: /global/homes/x/xinlong/github_folder/try_test/Microphysics/conductivity/stellar
+MAESTROeX git describe: 19.09-50-g977c35f-dirty
+AMReX git describe: 19.09-198-g7fba3e3dc
+Microphysics git describe: 19.08-5-g0036b6cc
+
+
+==============================================================================
+ Grid Information
+==============================================================================
+ level: 0
+   number of boxes = 32
+   maximum zones   = 32 2048 
+
+ Boundary conditions
+   -x: interior
+   +x: interior
+   -y: symmetry
+   +y: outflow
+
+
+==============================================================================
+ Species Information
+==============================================================================
+ index                         name              A              Z
+------------------------------------------------------------------------------
+     0                           h1              1              1
+     1                          he4              4              2
+     2                          o16             16              8
+     3                          o20             20              8
+     4                          f20             20              9
+     5                         ne20             20             10
+     6                         mg24             24             12
+     7                         al27             27             13
+     8                         si28             28             14
+     9                          p31             31             15
+    10                          s32             32             16
+
+
+==============================================================================
+ Inputs File Parameters
+==============================================================================
+maestro.model_file = ECSN-ONe6040-final-4e7.hse.10240
+amr.max_level = 0
+amr.n_cell = 32 2048
+amr.max_grid_size = 64
+amr.refine_grid_layout = 0
+maestro.anelastic_cutoff_density = 1.e6
+maestro.base_cutoff_density = 1.e4
+maestro.burning_cutoff_density = 1.e5
+maestro.do_sponge = 1
+maestro.sponge_center_density = 3.e6
+maestro.sponge_start_factor = 3.333e0
+maestro.sponge_kappa = 10.e0
+maestro.spherical = 0
+geometry.prob_lo = 0.0 0.0
+geometry.prob_hi = 6.25e5 4.0e7
+maestro.max_step = 30000
+maestro.init_iter = 1
+maestro.stop_time = 30000
+maestro.plot_file(nvals = 1)  :: [plt]
+maestro.plot_int = 50
+maestro.check_base_name = chk
+maestro.chk_int = 100
+maestro.cfl = 0.7
+maestro.init_shrink = 0.1e0
+maestro.max_dt_growth = 1.1e0
+maestro.use_soundspeed_firstdt = true
+maestro.use_divu_firstdt = true
+maestro.lo_bc = 0 3
+maestro.hi_bc = 0 2
+geometry.is_periodic = 1 0
+maestro.v(nvals = 1)  :: [1]
+maestro.mg_verbose = 1
+maestro.cg_verbose = 0
+maestro.do_initial_projection = true
+maestro.init_divu_iter = 2
+maestro.do_burning = true
+maestro.evolve_base_state = false
+maestro.dpdt_factor = 0.0e0
+maestro.use_tfromp = true
+maestro.small_temp = 1.e7
+maestro.do_planar_invsq_grav = true
+maestro.fix_base_state = true
+maestro.eps_init_proj_cart = 1.e-12
+maestro.eps_init_proj_sph = 1.e-10
+maestro.eps_divu_cart = 1.e-12
+maestro.eps_divu_sph = 1.e-10
+maestro.divu_iter_factor = 100.
+maestro.divu_level_factor = 10.
+maestro.eps_mac = 1.e-10
+maestro.eps_mac_max = 1.e-8
+maestro.mac_level_factor = 10.
+maestro.eps_mac_bottom = 1.e-3
+maestro.eps_hg = 1.e-11
+maestro.eps_hg_max = 1.e-10
+maestro.hg_level_factor = 10.
+maestro.eps_hg_bottom = 1.e-4
+                     velpert_amplitude =      100000.0000    
+                        velpert_radius =      20000000.00    
+                         velpert_scale =      10000000.00    
+                         velpert_steep =      100000.0000    
+ [*]                     tag_density_1 =      8000000000.    
+                         tag_density_2 =      100000000.0    
+                         tag_density_3 =      100000000.0    
+                  particle_temp_cutoff =      600000000.0    
+              particle_tpert_threshold =      20000000.00    
+                       use_eos_coulomb = T
+                 eos_input_is_constant = T
+                              eos_ttol =     0.1000000000E-07
+                              eos_dtol =     0.1000000000E-07
+                               small_x =     0.1000000000E-29
+             disable_thermal_neutrinos = F
+                            use_tables = F
+                    use_c12ag_deboer17 = F
+                        scaling_method =          2
+                use_timestep_estimator = F
+                       ode_scale_floor =     0.1000000000E-05
+                            ode_method =          1
+                         safety_factor =      1000000000.    
+               do_constant_volume_burn = F
+                       call_eos_in_rhs = F
+                               dT_crit =     0.1000000000E+21
+                          burning_mode =          1
+                   burning_mode_factor =     0.1000000000    
+                 integrate_temperature = T
+                      integrate_energy = T
+                              jacobian =          1
+                     centered_diff_jac = F
+                        burner_verbose = F
+ [*]                         rtol_spec =     0.1000000000E-05
+                             rtol_temp =     0.1000000000E-05
+                             rtol_enuc =     0.1000000000E-05
+                             atol_spec =     0.1000000000E-11
+                             atol_temp =     0.1000000000E-05
+                             atol_enuc =     0.1000000000E-05
+                            retry_burn = F
+                     retry_burn_factor =      1.250000000    
+                 retry_burn_max_change =      100.0000000    
+                      abort_on_failure = T
+                renormalize_abundances = F
+                          SMALL_X_SAFE =     0.1000000000E-29
+                              MAX_TEMP =     0.1000000000E+12
+                           react_boost =     -1.000000000    
+               reactions_density_scale =      1.000000000    
+           reactions_temperature_scale =      1.000000000    
+                reactions_energy_scale =      1.000000000    
+                         ode_max_steps =     150000
+                  use_jacobian_caching = T
+                              nonaka_i =          0
+                              nonaka_j =          0
+                              nonaka_k =          0
+                           nonaka_file = nonaka_plot.dat
