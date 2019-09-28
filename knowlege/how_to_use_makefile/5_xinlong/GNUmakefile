@@ -1,7 +1,7 @@
 # variables to note the compiler
 FCOMP := gfortran
 COMP := g++
-DEBUG := TRUE
+DEBUG := FALSE
 
 # set the compiler flags depending on whether we are in DEBUG mode
 ifdef DEBUG
@@ -14,7 +14,7 @@ endif
 
 # list of source files
 f90sources := compute.f90 print_result.f90
-cxxsources := main.cpp githash.cpp
+cxxsources := main.cpp githash.cpp make_example.cpp
 
 # the list of object files that need to be created -- here we use a
 # makefile function to automatically change each .f90 into a .o
@@ -61,3 +61,4 @@ clean:
 # e.g. FFLAGS, simply do "make print-FFLAGS".  This will
 # print out the value.
 print-%: ; @echo $* is $($*)
+
