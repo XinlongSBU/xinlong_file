@@ -2,7 +2,7 @@
 
 std::string gitstuff() {
 
-  std::string hash = "d163cb7a36e40b34ab6aa143d0911461519a7156";
+  std::string hash = "f20fb2204a69548ffa22abbb540a4891e36ea6f9";
 
   return hash;
 }
