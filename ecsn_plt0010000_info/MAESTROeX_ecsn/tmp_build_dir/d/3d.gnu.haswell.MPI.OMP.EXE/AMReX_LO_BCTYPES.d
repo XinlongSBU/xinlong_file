@@ -1,6 +1,0 @@
-tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.o tmp_build_dir/d/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.d: /global/homes/x/xinlong/github_folder/try_test/amrex//Src/Base/AMReX_ccse-mpi.H
-tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.o tmp_build_dir/d/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.d: /global/homes/x/xinlong/github_folder/try_test/amrex//Src/Base/AMReX_Exception.H
-tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.o tmp_build_dir/d/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.d: /global/homes/x/xinlong/github_folder/try_test/amrex//Src/Boundary/AMReX_LO_BCTYPES.cpp
-tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.o tmp_build_dir/d/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.d: /global/homes/x/xinlong/github_folder/try_test/amrex//Src/Base/AMReX_GpuQualifiers.H
-tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.o tmp_build_dir/d/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.d: /global/homes/x/xinlong/github_folder/try_test/amrex//Src/Base/AMReX.H
-tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.o tmp_build_dir/d/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_BCTYPES.d: /global/homes/x/xinlong/github_folder/try_test/amrex//Src/Boundary/AMReX_LO_BCTYPES.H
