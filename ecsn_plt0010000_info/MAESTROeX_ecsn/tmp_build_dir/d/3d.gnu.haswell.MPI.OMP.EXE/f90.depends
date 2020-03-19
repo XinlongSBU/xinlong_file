@@ -1,0 +1,699 @@
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/average.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/average.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/average.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/simple_log.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/constants_cgs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/model_parser.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/inlet_bc.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cell_to_edge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cell_to_edge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cell_to_edge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cell_to_edge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/initdata.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o
+ 
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_beta0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_beta0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_beta0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_state.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/constants_cgs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_grav.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_w0.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/model_parser.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/conductivity.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/maestro_init.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rotation.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rotation.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/regrid.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/regrid.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/regrid.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/state_sizes.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/constants_cgs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/constants_cgs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/model_parser.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/model_parser.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/model_parser.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/model_parser.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/simple_log.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/physical_constants.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rate_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integration_data.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/nonaka_plot.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/nonaka_plot.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/nonaka_plot.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/nonaka_plot.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner_loop.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/advect_base.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/advect_base.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/advect_base.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/advect_base.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_state.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bc_fill_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bc_fill_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bc_fill_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_bc_types_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_dt.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/compute_grad_phi.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/debug.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/debug.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/constants_cgs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/diag.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/enforce_HSE.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/enforce_HSE.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_grav.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/enforce_HSE.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/enforce_HSE.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+ 
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_flux.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_flux.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_flux.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_flux.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_flux.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_eta.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_eta.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_eta.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_eta.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/slope.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_edge_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/ppm.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_explicit_thermal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/conductivity.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_heating.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_gamma.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_gamma.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_gamma.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_gamma.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_gamma.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_intra_coeffs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_intra_coeffs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_intra_coeffs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_intra_coeffs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_intra_coeffs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_intra_coeffs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_grav.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_grav.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/constants_cgs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_grav.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_grav.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_pi_cc.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_plot_variables.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_plot_variables.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_plot_variables.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_plot_variables.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_plot_variables.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_psi.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_psi.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_psi.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_S.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_scal_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_vel_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_vel_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_vel_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/make_vel_force.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mac_solver.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/slope.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/mkutrans.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/ppm.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/ppm.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/ppm.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/ppm.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/rhoh_vs_t.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/fill_3d_data.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/slope.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/slope.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/sponge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/sponge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/sponge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/sponge.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_vel.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_vel.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_vel.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/update_scal.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/slope.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/velpred.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/ppm.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/tagging.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/base_state_geometry.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/tagging.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/tagging.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/tagging.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/state_sizes.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_parmparse_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/meth_params.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_FILCC_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_FILCC_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_filcc_mod.o
+ 
+ 
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_filcc_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_bc_types_mod.o
+ 
+ 
+ 
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_string_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_string_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_parmparse_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+ 
+ 
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_UTIL.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_UTIL.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_FLUXREG_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_INTERP_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_INTERP_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_INTERP_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_INTERP_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_bc_types_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_FillPatchUtil_3d.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_FillPatchUtil_3d.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_mempool_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ABec_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ABec_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ABec_UTIL.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_lo_bctypes_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_UTIL.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LP_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LP_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_MG_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_MG_3D.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_MLLinOp_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_lo_bctypes_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_MLLinOp_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_LO_UTIL.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_MLLinOp_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_MLLinOp_nd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_override.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_override.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_ParallelDescriptor_F.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_eos.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/physical_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/reaclib_rates.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/screen.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/reaclib_rates.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/reaclib_rates.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/table_rates.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/table_rates.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/reaclib_rates.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/table_rates.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_burner.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/jacobian_sparsity.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/physical_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/reaclib_rates.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/table_rates.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/screen.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/sneut5.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/microphysics_math.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/esum_module.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/microphysics_math.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/esum_module.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/esum_module.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integration_data.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator_scaling.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator_scaling.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/linpack_module.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_output.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvindy.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dewset.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_output.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_output.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dacopy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dacopy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dewset.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvhin.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_output.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvindy.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dacopy.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/linpack_module.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjust.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvsol.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/linpack_module.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjac.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvset.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvset.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvset.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/linpack_module.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvsol.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_nordsieck.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvset.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnorm.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvnlsd.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvstep.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_dvjust.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_nordsieck.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_constants.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/linpack_module.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/cuvode_parameters.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integration_data.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/composition.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rpar.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network_rhs.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/linpack_module.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_jac.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stiff_ode.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rhs.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rpar.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_rpar.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/bs_integrator.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator_scaling.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/vode_integrator.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integration_data.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/integrator_scaling.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/jacobian_sparsity.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/numerical_jacobian.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/actual_rhs.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network_rhs.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/jacobian_sparsity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/jacobian_sparsity.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/burn_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/temperature_integration.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/screen.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/screen.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/screen.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/sneut5.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stellar_conductivity.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/eos_type.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/stellar_conductivity.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/network.o
+ 
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_parmparse_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_fort_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_error_mod.o
+tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/extern.o: tmp_build_dir/o/3d.gnu.haswell.MPI.OMP.EXE/AMReX_constants_mod.o
+ 
