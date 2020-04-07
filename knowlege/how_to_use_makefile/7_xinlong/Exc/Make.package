@@ -1,0 +1,8 @@
+all: $(executable)
+        @echo SUCCESS
+
+TOP_DIR := ..
+
+include $(TOP_DIR)/Make.package
+
+clean::
