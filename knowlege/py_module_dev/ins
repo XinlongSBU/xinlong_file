@@ -1,0 +1,2 @@
+cd ~/.local/lib/python3.6/site-packages/
+cp -r /Users/sailor/Desktop/asro_work/git_fun/xinlong_file/knowlege/py_module_dev pmd

@@ -1,0 +1,3 @@
+CEXE_sources += module.cpp
+
+CEXE_headers += hello.h
