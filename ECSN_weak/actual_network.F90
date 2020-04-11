@@ -22,15 +22,15 @@ module actual_network
   real(rt), parameter :: mass_proton   = 1.67262163783e-24_rt
   real(rt), parameter :: mass_electron = 9.10938215450e-28_rt
 
-  integer, parameter :: nrates = 18
+  integer, parameter :: nrates = 19
 
 
   ! For each rate, we need: rate, drate/dT, screening, dscreening/dT
   integer, parameter :: num_rate_groups = 4
 
   ! Number of reaclib rates
-  integer, parameter :: nrat_reaclib = 14
-  integer, parameter :: number_reaclib_sets = 34
+  integer, parameter :: nrat_reaclib = 15
+  integer, parameter :: number_reaclib_sets = 35
 
   ! Number of tabular rates
   integer, parameter :: nrat_tabular = 4
@@ -54,24 +54,25 @@ module actual_network
   integer, parameter :: js32   = 11
 
   ! Reactions
-  integer, parameter :: k_ne20__he4_o16   = 1
-  integer, parameter :: k_he4_o16__ne20   = 2
-  integer, parameter :: k_he4_ne20__mg24   = 3
+  integer, parameter :: k_he4_al27__p31   = 1
+  integer, parameter :: k_p_al27__he4_mg24   = 2
+  integer, parameter :: k_p_al27__si28   = 3
   integer, parameter :: k_he4_mg24__si28   = 4
-  integer, parameter :: k_p_al27__si28   = 5
-  integer, parameter :: k_he4_al27__p31   = 6
-  integer, parameter :: k_he4_si28__s32   = 7
-  integer, parameter :: k_p_p31__s32   = 8
-  integer, parameter :: k_o16_o16__p_p31   = 9
-  integer, parameter :: k_o16_o16__he4_si28   = 10
-  integer, parameter :: k_he4_mg24__p_al27   = 11
-  integer, parameter :: k_p_al27__he4_mg24   = 12
-  integer, parameter :: k_he4_si28__p_p31   = 13
-  integer, parameter :: k_p_p31__he4_si28   = 14
-  integer, parameter :: k_f20__o20   = 15
-  integer, parameter :: k_ne20__f20   = 16
-  integer, parameter :: k_o20__f20   = 17
-  integer, parameter :: k_f20__ne20   = 18
+  integer, parameter :: k_he4_mg24__p_al27   = 5
+  integer, parameter :: k_he4_ne20__mg24   = 6
+  integer, parameter :: k_ne20__he4_o16   = 7
+  integer, parameter :: k_he4_o16__ne20   = 8
+  integer, parameter :: k_o16_o16__he4_si28   = 9
+  integer, parameter :: k_o16_o16__p_p31   = 10
+  integer, parameter :: k_p_p31__he4_si28   = 11
+  integer, parameter :: k_p_p31__s32   = 12
+  integer, parameter :: k_s32__he4_si28   = 13
+  integer, parameter :: k_he4_si28__s32   = 14
+  integer, parameter :: k_he4_si28__p_p31   = 15
+  integer, parameter :: k_f20__o20   = 16
+  integer, parameter :: k_ne20__f20   = 17
+  integer, parameter :: k_o20__f20   = 18
+  integer, parameter :: k_f20__ne20   = 19
 
   real(rt), allocatable, save :: bion(:), mion(:)
 
@@ -83,7 +84,7 @@ module actual_network
 
 #ifdef REACT_SPARSE_JACOBIAN
   ! Shape of Jacobian in Compressed Sparse Row format
-  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 90
+  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 92
   integer, allocatable :: csr_jac_col_index(:), csr_jac_row_count(:)
 
 #ifdef AMREX_USE_CUDA
@@ -98,6 +99,8 @@ contains
     implicit none
 
     integer :: i
+
+    call network_properties_init()
 
     ! Allocate ion info arrays
     allocate(bion(nspec))
@@ -148,6 +151,7 @@ contains
       8, &
       9, &
       10, &
+      11, &
       12, &
       2, &
       3, &
@@ -183,6 +187,7 @@ contains
       8, &
       9, &
       10, &
+      11, &
       12, &
       1, &
       2, &
@@ -226,18 +231,18 @@ contains
     csr_jac_row_count = [ &
       1, &
       9, &
-      18, &
-      22, &
-      25, &
-      29, &
-      34, &
-      40, &
-      45, &
-      53, &
-      60, &
-      66, &
-      78, &
-      91  ]
+      19, &
+      23, &
+      26, &
+      30, &
+      35, &
+      41, &
+      46, &
+      55, &
+      62, &
+      68, &
+      80, &
+      93  ]
 #endif
 
   end subroutine actual_network_init
