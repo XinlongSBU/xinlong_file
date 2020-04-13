@@ -1,6 +1,0 @@
-cd /global/homes/x/xinlong/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages
-cp -r /global/homes/x/xinlong/github_folder/xinlong_file/knowlege/py_module_dev/ pmd
-
-
-#cd ~/.local/lib/python3.6/site-packages/
-#cp -r /Users/sailor/Desktop/asro_work/git_fun/xinlong_file/knowlege/py_module_dev pmd

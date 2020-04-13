@@ -6,4 +6,4 @@ class Myinfo:
 		if self.name:
 			return "My name is "+self.name+"."
 		else:
-			return "I am no born yet."
+			return "I am not born yet."
