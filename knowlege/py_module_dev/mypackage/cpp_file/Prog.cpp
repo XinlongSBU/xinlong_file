@@ -3,9 +3,13 @@
 
 using namespace std;
 
-void DrawAsterisk (int);
+void DrawAsterisk (int x)
+{
+        for (int j = 1 ; j <= x ; j++)
+		cout << "*";
+}       
 
-int main()
+void print_hist()
 {
 	unsigned int Figures[10] = {18,20,32,29,4,0,29,12,9,10} ;
 	
@@ -18,11 +22,4 @@ int main()
 		cout << endl;
 	}
 
-	return 0;
-}
-
-void DrawAsterisk ( int x )
-{
-	for (int j = 1 ; j <= x ; j++)
-		cout << "*";
 }
