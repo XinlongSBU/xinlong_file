@@ -1,0 +1,1189 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{data\_cleaning}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \section{1 Problem description}\label{problem-description}
+
+    The aim of this data exercise is to test a data source, called 'Signal',
+which claims to be predictive of future returns of the SP500 index (use
+SPY as a proxy).
+
+There will be two main parts in the following text. - Data cleaning:
+identify any errors in the data - Time series analysis: to check if
+'Signal' could be used to predict future values of 'ClosePrice' of
+SP500.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{pandas\PYZus{}market\PYZus{}calendars} \PY{k}{as} \PY{n+nn}{mcal}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib} \PY{k}{as} \PY{n+nn}{mpl}
+        \PY{k+kn}{import} \PY{n+nn}{statsmodels}\PY{n+nn}{.}\PY{n+nn}{api} \PY{k}{as} \PY{n+nn}{sm}
+        \PY{k+kn}{from} \PY{n+nn}{statsmodels}\PY{n+nn}{.}\PY{n+nn}{graphics}\PY{n+nn}{.}\PY{n+nn}{tsaplots} \PY{k}{import} \PY{n}{plot\PYZus{}acf}\PY{p}{,} \PY{n}{plot\PYZus{}pacf}
+        \PY{k+kn}{from} \PY{n+nn}{statsmodels}\PY{n+nn}{.}\PY{n+nn}{tsa}\PY{n+nn}{.}\PY{n+nn}{stattools} \PY{k}{import} \PY{n}{adfuller}\PY{p}{,} \PY{n}{kpss}
+        \PY{k+kn}{from} \PY{n+nn}{statsmodels}\PY{n+nn}{.}\PY{n+nn}{tsa}\PY{n+nn}{.}\PY{n+nn}{seasonal} \PY{k}{import} \PY{n}{seasonal\PYZus{}decompose}
+        \PY{k+kn}{from} \PY{n+nn}{statsmodels}\PY{n+nn}{.}\PY{n+nn}{tsa}\PY{n+nn}{.}\PY{n+nn}{arima\PYZus{}model} \PY{k}{import} \PY{n}{ARIMA}
+        \PY{k+kn}{import} \PY{n+nn}{pmdarima} \PY{k}{as} \PY{n+nn}{pm}
+\end{Verbatim}
+
+
+    Import data from the excel file:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ResearchDatasetV2.0.xlsx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{c+c1}{\PYZsh{},index\PYZus{}col=\PYZsq{}Date\PYZsq{})}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{head} \PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+       Date    Signal  ClosePrice
+0  20120103  3.107767     127.495
+1  20120104  3.107282     127.700
+2  20120105  3.099757     128.040
+3  20120106  3.134223     127.710
+4  20120109  3.135922     128.020
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 667 entries, 0 to 666
+Data columns (total 3 columns):
+Date          667 non-null int64
+Signal        667 non-null float64
+ClosePrice    667 non-null float64
+dtypes: float64(2), int64(1)
+memory usage: 15.7 KB
+None
+
+    \end{Verbatim}
+
+    There are three columns in the dataframe: - Date - Signal, which may be
+predictive of future returns of the SP500 index (use SPY as a proxy) -
+Close price, which is the SPY price
+
+    \section{1 Data Cleaning}\label{data-cleaning}
+
+    Firstly, Let's check if there are missing values.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{isna}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Date          False
+Signal        False
+ClosePrice    False
+dtype: bool
+Date          False
+Signal        False
+ClosePrice    False
+dtype: bool
+
+    \end{Verbatim}
+
+    There is no missing value. let's convert type of the Date column from
+int64 to datetime format
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{to\PYZus{}datetime}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}\PY{n+nb}{format}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{Y}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{m}\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{utc}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+
+
+    Then we add a column "Day of Week" to the dataframe
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Day of Week}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{dt}\PY{o}{.}\PY{n}{weekday\PYZus{}name}
+\end{Verbatim}
+
+
+    Let's check if the dates are unique
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{is\PYZus{}unique}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+True
+
+    \end{Verbatim}
+
+    We get the calendar of trading days for the date range of dataframe df
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{nyse} \PY{o}{=} \PY{n}{mcal}\PY{o}{.}\PY{n}{get\PYZus{}calendar}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NYSE}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{val\PYZus{}day} \PY{o}{=} \PY{n}{nyse}\PY{o}{.}\PY{n}{valid\PYZus{}days}\PY{p}{(}\PY{n}{start\PYZus{}date}\PY{o}{=}\PY{n+nb}{min}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{Date}\PY{p}{)}\PY{p}{,} \PY{n}{end\PYZus{}date}\PY{o}{=}\PY{n+nb}{max}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{Date}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    Let's check if all the dates are trading days
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{wrong\PYZus{}date}\PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{o}{\PYZti{}}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{val\PYZus{}day}\PY{p}{)}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{wrong\PYZus{}date}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                         Date    Signal  ClosePrice Day of Week
+494 2013-12-25 00:00:00+00:00  4.439806      182.93   Wednesday
+499 2014-01-01 00:00:00+00:00  4.454369      184.69   Wednesday
+525 2014-02-08 00:00:00+00:00  4.466505      179.68    Saturday
+526 2014-02-09 00:00:00+00:00  4.466505      179.68      Sunday
+
+    \end{Verbatim}
+
+    We can see there are 4 days which are illegal. 2013-12-25 is Christmas
+Day, 2014-01-01 is New Year's Day. 2014-02-08 and 2014-02-09 are
+weekends. So we dope them with their corresponding rows.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{val\PYZus{}day}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+
+
+    Let's check if there are missing trading dates in the dataframe:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{days} \PY{o}{=} \PY{n}{val\PYZus{}day}\PY{p}{[}\PY{o}{\PYZti{}}\PY{n}{val\PYZus{}day}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}\PY{p}{]}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{The }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{ missing dates are:}\PY{l+s+s2}{\PYZdq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{val\PYZus{}day}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{df}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{p}{[}\PY{n+nb}{print}\PY{p}{(}\PY{n}{item}\PY{p}{)} \PY{k}{for} \PY{n}{item} \PY{o+ow}{in} \PY{n}{days}\PY{o}{.}\PY{n}{strftime}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{Y\PYZhy{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{m\PYZhy{}}\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+The 6 missing dates are:
+2013-01-14
+2013-01-15
+2013-01-16
+2013-01-17
+2014-01-06
+2014-02-11
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}11}]:} [None, None, None, None, None, None]
+\end{Verbatim}
+            
+    We interpolate the missing values
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2013\PYZhy{}01\PYZhy{}11}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2013\PYZhy{}01\PYZhy{}20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{reindex}\PY{p}{(}\PY{n}{val\PYZus{}day}\PY{p}{)}\PY{o}{.}\PY{n}{interpolate}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2013\PYZhy{}01\PYZhy{}11}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2013\PYZhy{}01\PYZhy{}20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                             Signal  ClosePrice Day of Week
+Date                                                       
+2013-01-11 00:00:00+00:00  3.569660      147.07      Friday
+2013-01-18 00:00:00+00:00  3.625485      148.33      Friday
+                             Signal  ClosePrice Day of Week
+2013-01-11 00:00:00+00:00  3.569660     147.070      Friday
+2013-01-14 00:00:00+00:00  3.580825     147.322         NaN
+2013-01-15 00:00:00+00:00  3.591990     147.574         NaN
+2013-01-16 00:00:00+00:00  3.603155     147.826         NaN
+2013-01-17 00:00:00+00:00  3.614320     148.078         NaN
+2013-01-18 00:00:00+00:00  3.625485     148.330      Friday
+
+    \end{Verbatim}
+
+    The 4 NaNs above should be Monday, Tuesday, Wednesday and Thursday.
+
+    Then Let's check if there are outliers in the Signal column
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{df}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_28_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_28_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    From the figures above, we can see there are 2 data points which are
+significantly larger than others. They are:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{wrong\PYZus{}signal\PYZus{}l} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{l+m+mi}{400}\PY{p}{]}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{wrong\PYZus{}signal\PYZus{}l}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                               Signal  ClosePrice Day of Week
+2013-11-05 00:00:00+00:00  429.514563      176.27     Tuesday
+2013-11-06 00:00:00+00:00  432.961165      177.17   Wednesday
+
+    \end{Verbatim}
+
+    Let's replace them with interpolated values and check again:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{\PYZgt{}}\PY{l+m+mi}{400}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{nan}
+         \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{interpolate}\PY{p}{(}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Signal}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_32_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_32_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Again, there are also a few data points which are significantly smaller
+than others. They are:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{wrong\PYZus{}signal\PYZus{}s} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{\PYZlt{}}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{wrong\PYZus{}signal\PYZus{}s}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                             Signal  ClosePrice Day of Week
+2013-03-26 00:00:00+00:00 -3.802670    156.1900     Tuesday
+2014-04-14 00:00:00+00:00  0.004560    182.9401      Monday
+2014-04-15 00:00:00+00:00  0.454976    184.2000     Tuesday
+2014-04-16 00:00:00+00:00  0.455898    186.1250   Wednesday
+
+    \end{Verbatim}
+
+    Let's replace them with interpolated values and then we get the figure
+of time series 'Signal'.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{\PYZlt{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{nan}
+         \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{interpolate}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+count    669.000000
+mean       3.913538
+std        0.523309
+min        3.099757
+25\%        3.422816
+50\%        3.893689
+75\%        4.405583
+max        4.881311
+Name: Signal, dtype: float64
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_36_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    We can do the same thing for the ClosePrice column
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{df}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ClosePrice}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}18}]:} Text(0, 0.5, 'ClosePrice')
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_38_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_38_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{wrong\PYZus{}ClosePrice} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{\PYZgt{}}\PY{l+m+mi}{600}\PY{p}{]}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{wrong\PYZus{}ClosePrice}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                             Signal  ClosePrice Day of Week
+2013-09-12 00:00:00+00:00  4.193204      618.95    Thursday
+2013-09-13 00:00:00+00:00  4.143689      619.33      Friday
+2013-09-16 00:00:00+00:00  4.124515      710.31      Monday
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{df}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{\PYZgt{}}\PY{l+m+mi}{600}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{nan}
+         \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{interpolate}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ClosePrice}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{df}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+count    669.000000
+mean     160.874214
+std       21.392170
+min      127.495000
+25\%      140.910000
+50\%      159.300000
+75\%      181.000000
+max      200.710000
+Name: ClosePrice, dtype: float64
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}20}]:} Text(0, 0.5, 'ClosePrice')
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_40_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_40_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Finally, We drop the column "Day of Week"
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Day of Week}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    Finally, Let's plot Signal and ClosePrice on top of each other
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{*}\PY{l+m+mf}{41.12}\PY{p}{,}\PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Signal*41.12}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}\PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Closeprice}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_44_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Note that 'ClosePrice' is approximately 40 times bigger than 'Signal'.
+
+    \section{2 Time series}\label{time-series}
+
+    It seems that 'Signal' may be used to predict 'ClosePrice'. Let's first
+have a glance on the decomposition plot on 'Signal'.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{decomposition} \PY{o}{=} \PY{n}{seasonal\PYZus{}decompose}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}\PY{n}{freq}\PY{o}{=}\PY{l+m+mi}{22}\PY{p}{)}
+         \PY{n}{fig} \PY{o}{=} \PY{n}{decomposition}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/anaconda3/lib/python3.6/site-packages/ipykernel\_launcher.py:1: FutureWarning: the 'freq' keyword is deprecated, use 'period' instead
+  """Entry point for launching an IPython kernel.
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_48_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \subsubsection{2.1 Check Stationary}\label{check-stationary}
+
+    From the figures above we can see that the time series is not
+stationary. Let's confirm this using Augmented Dickey Fuller (ADF) Test
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{k}{def} \PY{n+nf}{adf\PYZus{}test}\PY{p}{(}\PY{n}{timeseries}\PY{p}{)}\PY{p}{:}
+             \PY{c+c1}{\PYZsh{}Perform Dickey\PYZhy{}Fuller test:}
+             \PY{n+nb}{print} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Results of ADF Test:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{dftest} \PY{o}{=} \PY{n}{adfuller}\PY{p}{(}\PY{n}{timeseries}\PY{p}{,} \PY{n}{autolag}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{AIC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{dfoutput} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n}{dftest}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Test Statistic}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{p\PYZhy{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsh{}Lags Used}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of Observations Used}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+             \PY{k}{for} \PY{n}{key}\PY{p}{,}\PY{n}{value} \PY{o+ow}{in} \PY{n}{dftest}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{dfoutput}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Critical Value (}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{k}{key}] = value
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{dfoutput}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{}apply adf test on the series}
+         \PY{n}{adf\PYZus{}test}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Results of ADF Test:
+Test Statistic                  -0.306330
+p-value                          0.924603
+\#Lags Used                       2.000000
+Number of Observations Used    666.000000
+Critical Value (1\%)             -3.440207
+Critical Value (5\%)             -2.865889
+Critical Value (10\%)            -2.569086
+dtype: float64
+
+    \end{Verbatim}
+
+    The test statistic is bigger than the critical values, which implies
+that the time series 'Signal' is not stationary.
+
+    Let's try Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test to check it
+again
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{k}{def} \PY{n+nf}{kpss\PYZus{}test}\PY{p}{(}\PY{n}{timeseries}\PY{p}{)}\PY{p}{:}
+             \PY{n+nb}{print} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Results of KPSS Test:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{kpsstest} \PY{o}{=} \PY{n}{kpss}\PY{p}{(}\PY{n}{timeseries}\PY{p}{,} \PY{n}{regression}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{c}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{kpss\PYZus{}output} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n}{kpsstest}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Test Statistic}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{p\PYZhy{}value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lags Used}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+             \PY{k}{for} \PY{n}{key}\PY{p}{,}\PY{n}{value} \PY{o+ow}{in} \PY{n}{kpsstest}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{kpss\PYZus{}output}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Critical Value (}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{k}{key}] = value
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{kpss\PYZus{}output}\PY{p}{)}
+         \PY{n}{kpss\PYZus{}test}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Results of KPSS Test:
+Test Statistic            3.241585
+p-value                   0.010000
+Lags Used                20.000000
+Critical Value (10\%)      0.347000
+Critical Value (5\%)       0.463000
+Critical Value (2.5\%)     0.574000
+Critical Value (1\%)       0.739000
+dtype: float64
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/anaconda3/lib/python3.6/site-packages/statsmodels/tsa/stattools.py:1661: FutureWarning: The behavior of using lags=None will change in the next release. Currently lags=None is the same as lags='legacy', and so a sample-size lag length is used. After the next release, the default will change to be the same as lags='auto' which uses an automatic lag length selection method. To silence this warning, either use 'auto' or 'legacy'
+  warn(msg, FutureWarning)
+/anaconda3/lib/python3.6/site-packages/statsmodels/tsa/stattools.py:1685: InterpolationWarning: p-value is smaller than the indicated p-value
+  warn("p-value is smaller than the indicated p-value", InterpolationWarning)
+
+    \end{Verbatim}
+
+    With the test statistic bigger than the critical values, we reject the
+null hypothesis, which confirms again that the time series 'Signal' is
+not stationary. The p-value is less than 0.05.
+
+    Next, let's do a quick differencing on the column 'Signal' to make the
+time series stationary.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{shift}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{)}
+         \PY{n}{adf\PYZus{}test}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         \PY{n}{kpss\PYZus{}test}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Results of ADF Test:
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/anaconda3/lib/python3.6/site-packages/statsmodels/tsa/stattools.py:1661: FutureWarning: The behavior of using lags=None will change in the next release. Currently lags=None is the same as lags='legacy', and so a sample-size lag length is used. After the next release, the default will change to be the same as lags='auto' which uses an automatic lag length selection method. To silence this warning, either use 'auto' or 'legacy'
+  warn(msg, FutureWarning)
+/anaconda3/lib/python3.6/site-packages/statsmodels/tsa/stattools.py:1687: InterpolationWarning: p-value is greater than the indicated p-value
+  warn("p-value is greater than the indicated p-value", InterpolationWarning)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Test Statistic                 -20.202023
+p-value                          0.000000
+\#Lags Used                       1.000000
+Number of Observations Used    666.000000
+Critical Value (1\%)             -3.440207
+Critical Value (5\%)             -2.865889
+Critical Value (10\%)            -2.569086
+dtype: float64
+Results of KPSS Test:
+Test Statistic            0.050405
+p-value                   0.100000
+Lags Used                20.000000
+Critical Value (10\%)      0.347000
+Critical Value (5\%)       0.463000
+Critical Value (2.5\%)     0.574000
+Critical Value (1\%)       0.739000
+dtype: float64
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_57_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Both ADF test and KPSS test imply that the time series
+'Signal\_log\_diff' is stationary.
+
+    \subsubsection{2.2 ARIMA Model}\label{arima-model}
+
+    Firstly, let's have a look at the Auto Correlation Function (ACF) figure
+and Partial Auto Correlation Function (PACF) figure of 'Signal\_diff'.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{plot\PYZus{}acf}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{lags}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Autocorrelation of Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plot\PYZus{}pacf}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{lags}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Partial Autocorrelation of Signal\PYZus{}diff}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_61_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_61_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    We can conclude that p = q = 2 is a good choice to fit 'Signal\_diff'
+using ARIMA Model. We set d = 1 since we did a differencing on the
+column 'Signal'. However, We find that p = q = 1 has lower AIC. So we
+try (p,d,q) = (1,1,1)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{k}{class} \PY{n+nc}{Arima\PYZus{}model}\PY{p}{:}
+             \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,}\PY{n}{ts}\PY{p}{,}\PY{n}{order}\PY{p}{)}\PY{p}{:}
+                 \PY{c+c1}{\PYZsh{} fit model}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{order} \PY{o}{=} \PY{n}{order}
+                 \PY{n}{model} \PY{o}{=} \PY{n}{ARIMA}\PY{p}{(}\PY{n}{ts}\PY{p}{,} \PY{n}{order}\PY{o}{=}\PY{n}{order}\PY{p}{)}
+                 \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{        self.model = pm.auto\PYZus{}arima(ts, start\PYZus{}p=1, start\PYZus{}q=1,}
+         \PY{l+s+sd}{                                   test=\PYZsq{}adf\PYZsq{},       \PYZsh{} use adftest to find optimal \PYZsq{}d\PYZsq{}}
+         \PY{l+s+sd}{                                   max\PYZus{}p=4, max\PYZus{}q=4, \PYZsh{} maximum p and q}
+         \PY{l+s+sd}{                                   m=1,              \PYZsh{} frequency of series}
+         \PY{l+s+sd}{                                   d=None,           \PYZsh{} let model determine \PYZsq{}d\PYZsq{}}
+         \PY{l+s+sd}{                                   seasonal=False,   \PYZsh{} No Seasonality}
+         \PY{l+s+sd}{                                   start\PYZus{}P=0, }
+         \PY{l+s+sd}{                                   D=0, }
+         \PY{l+s+sd}{                                   trace=True,}
+         \PY{l+s+sd}{                                   error\PYZus{}action=\PYZsq{}ignore\PYZsq{},  }
+         \PY{l+s+sd}{                                   suppress\PYZus{}warnings=True, }
+         \PY{l+s+sd}{                                   stepwise=True)}
+         \PY{l+s+sd}{        \PYZsq{}\PYZsq{}\PYZsq{}}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{model\PYZus{}fit} \PY{o}{=} \PY{n}{model}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{disp}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+                 \PY{n+nb}{print}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{model\PYZus{}fit}\PY{o}{.}\PY{n}{summary}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+         
+             \PY{k}{def} \PY{n+nf}{plot\PYZus{}residuals}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{lags}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{:}        
+                 \PY{c+c1}{\PYZsh{} plot residual errors}
+                 
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{residuals} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{model\PYZus{}fit}\PY{o}{.}\PY{n}{resid}\PY{p}{)}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{residuals}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{fitted residual of Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{residuals}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{kind}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{kde}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+                 \PY{n}{plot\PYZus{}acf}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{residuals}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{lags}\PY{o}{=}\PY{n}{lags}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+                 \PY{n}{plot\PYZus{}pacf}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{residuals}\PY{o}{.}\PY{n}{dropna}\PY{p}{(}\PY{p}{)}\PY{p}{,}\PY{n}{lags}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+                 
+             \PY{c+c1}{\PYZsh{} Accuracy metrics}
+             \PY{k}{def} \PY{n+nf}{forecast\PYZus{}accuracy}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{mape} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{fc} \PY{o}{\PYZhy{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{p}{)}\PY{o}{/}\PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{p}{)}\PY{p}{)}  \PY{c+c1}{\PYZsh{} MAPE}
+                 \PY{c+c1}{\PYZsh{}me = np.mean(self.fc \PYZhy{} self.test)             \PYZsh{} ME}
+                 \PY{c+c1}{\PYZsh{}mae = np.mean(np.abs(self.fc \PYZhy{} self.test))    \PYZsh{} MAE}
+                 \PY{c+c1}{\PYZsh{}mpe = np.mean((self.fc \PYZhy{} self.test)/self.test)   \PYZsh{} MPE}
+                 \PY{c+c1}{\PYZsh{}rmse = np.mean((self.fc \PYZhy{} self.test)**2)**.5  \PYZsh{} RMSE}
+                 \PY{n}{corr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{corrcoef}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{fc}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}   \PY{c+c1}{\PYZsh{} corr}
+                 \PY{n}{mins} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{amin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{hstack}\PY{p}{(}\PY{p}{[}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{fc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{k+kc}{None}\PY{p}{]}\PY{p}{,} 
+                                       \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{k+kc}{None}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+                 \PY{n}{maxs} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{amax}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{hstack}\PY{p}{(}\PY{p}{[}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{fc}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{k+kc}{None}\PY{p}{]}\PY{p}{,} 
+                                       \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{k+kc}{None}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+                 \PY{n}{minmax} \PY{o}{=} \PY{l+m+mi}{1} \PY{o}{\PYZhy{}} \PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{mins}\PY{o}{/}\PY{n}{maxs}\PY{p}{)}             \PY{c+c1}{\PYZsh{} minmax}
+                 \PY{c+c1}{\PYZsh{}acf1 = acf(self.fc\PYZhy{}self.test)[1]                      \PYZsh{} ACF1}
+                 \PY{c+c1}{\PYZsh{}return(\PYZob{}\PYZsq{}mape\PYZsq{}:mape, \PYZsq{}me\PYZsq{}:me, \PYZsq{}mae\PYZsq{}: mae, }
+                         \PY{c+c1}{\PYZsh{}\PYZsq{}mpe\PYZsq{}: mpe, \PYZsq{}rmse\PYZsq{}:rmse, \PYZsq{}acf1\PYZsq{}:acf1, }
+                         \PY{c+c1}{\PYZsh{}\PYZsq{}corr\PYZsq{}:corr, \PYZsq{}minmax\PYZsq{}:minmax\PYZcb{})}
+                 \PY{k}{return}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mape}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{n}{mape}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{corr}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{n}{corr}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{minmax}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{n}{minmax}\PY{p}{\PYZcb{}}\PY{p}{)}
+                 
+                 
+             \PY{k}{def} \PY{n+nf}{forecast}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{factor}\PY{p}{,} \PY{n}{test\PYZus{}no}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.005}\PY{p}{)}\PY{p}{:}
+                 
+                 \PY{n}{train} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{ClosePrice}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{n}{test\PYZus{}no}\PY{p}{)}\PY{o}{.}\PY{n}{index}\PY{p}{)}\PY{o}{/}\PY{n}{factor}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{ClosePrice}\PY{o}{.}\PY{n}{tail}\PY{p}{(}\PY{n}{test\PYZus{}no}\PY{p}{)}\PY{o}{/}\PY{n}{factor}
+                 
+                 \PY{n}{model} \PY{o}{=} \PY{n}{ARIMA}\PY{p}{(}\PY{n}{train}\PY{p}{,} \PY{n}{order}\PY{o}{=}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{order}\PY{p}{)}  
+                 \PY{n}{fitted} \PY{o}{=} \PY{n}{model}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{disp}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}  
+                 \PY{n+nb}{print}\PY{p}{(}\PY{n}{fitted}\PY{o}{.}\PY{n}{summary}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                 
+                 \PY{c+c1}{\PYZsh{} Forecast}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{fc}\PY{p}{,} \PY{n}{se}\PY{p}{,} \PY{n}{conf} \PY{o}{=} \PY{n}{fitted}\PY{o}{.}\PY{n}{forecast}\PY{p}{(}\PY{n}{test\PYZus{}no}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{n}{alpha}\PY{p}{)}  \PY{c+c1}{\PYZsh{} 95\PYZpc{} conf}
+                 
+                 \PY{c+c1}{\PYZsh{} Make as pandas series}
+                 \PY{n}{fc\PYZus{}series} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{fc}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{o}{.}\PY{n}{index}\PY{p}{)}
+                 \PY{n}{lower\PYZus{}series} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n}{conf}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{o}{.}\PY{n}{index}\PY{p}{)}
+                 \PY{n}{upper\PYZus{}series} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{Series}\PY{p}{(}\PY{n}{conf}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{index}\PY{o}{=}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{o}{.}\PY{n}{index}\PY{p}{)}
+                 
+                 \PY{c+c1}{\PYZsh{} Plot}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{,} \PY{n}{dpi}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{train}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{training}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{test}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{fc\PYZus{}series}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Forecast from Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{fill\PYZus{}between}\PY{p}{(}\PY{n}{lower\PYZus{}series}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{lower\PYZus{}series}\PY{p}{,} \PY{n}{upper\PYZus{}series}\PY{p}{,} 
+                          \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{o}{.}\PY{l+m+mi}{15}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Forecast vs ClosePrice}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{upper left}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{)}
+                 \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+                 
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{ar111} \PY{o}{=} \PY{n}{Arima\PYZus{}model}\PY{p}{(}\PY{n}{ts}\PY{o}{=}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Signal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}\PY{n}{order}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                             ARIMA Model Results                              
+==============================================================================
+Dep. Variable:               D.Signal   No. Observations:                  668
+Model:                 ARIMA(1, 1, 1)   Log Likelihood                1393.087
+Method:                       css-mle   S.D. of innovations              0.030
+Date:                Mon, 20 Apr 2020   AIC                          -2778.175
+Time:                        08:50:01   BIC                          -2760.158
+Sample:                    01-04-2012   HQIC                         -2771.195
+                         - 08-29-2014                                         
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const              0.0026      0.000     18.386      0.000       0.002       0.003
+ar.L1.D.Signal     0.9627      0.011     87.747      0.000       0.941       0.984
+ma.L1.D.Signal    -1.0000      0.008   -120.710      0.000      -1.016      -0.984
+                                    Roots                                    
+=============================================================================
+                  Real          Imaginary           Modulus         Frequency
+-----------------------------------------------------------------------------
+AR.1            1.0388           +0.0000j            1.0388            0.0000
+MA.1            1.0000           +0.0000j            1.0000            0.0000
+-----------------------------------------------------------------------------
+
+    \end{Verbatim}
+
+    The autoregressive term has a p-value that is less than the significance
+level of 0.05. So I can conclude that the coefficient for the
+autoregressive term is statistically significant.
+
+Then let's check the residules.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{ar111}\PY{o}{.}\PY{n}{plot\PYZus{}residuals}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_66_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_66_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_66_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_66_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    From the figures above, we can see that the residules follow the normal
+distribution. And no significant correlation are present, we can
+conclude that the residuals are independent. Overall, it seems to be a
+good fit. Let's forecast.
+
+    We can also perform Ljung Box Test on the residues and the square values
+of residues.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{sm}\PY{o}{.}\PY{n}{stats}\PY{o}{.}\PY{n}{acorr\PYZus{}ljungbox}\PY{p}{(}\PY{n}{ar111}\PY{o}{.}\PY{n}{model\PYZus{}fit}\PY{o}{.}\PY{n}{resid}\PY{p}{,} \PY{n}{lags}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{return\PYZus{}df}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+   lb\_pvalue   lb\_stat
+1   0.183195  1.771512
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{sm}\PY{o}{.}\PY{n}{stats}\PY{o}{.}\PY{n}{acorr\PYZus{}ljungbox}\PY{p}{(}\PY{n}{ar111}\PY{o}{.}\PY{n}{model\PYZus{}fit}\PY{o}{.}\PY{n}{resid}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{lags}\PY{o}{=}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{return\PYZus{}df}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+   lb\_pvalue   lb\_stat
+1   0.749881  0.101631
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{ar111}\PY{o}{.}\PY{n}{model\PYZus{}fit}\PY{o}{.}\PY{n}{plot\PYZus{}predict}\PY{p}{(}\PY{n}{dynamic}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_71_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    The above plot shows that the ARIMA(1,1,1) model can fit 'Signal' very
+well. Next let's use it to forecast 'ClosePrice' of SP500 to see if
+'Signal' could be predictive of future returns of the SP500 index.
+
+Let's use the last 100 rows of dataframe df as test set and the rest of
+the rows as training set. We use 'Signal' of the training set to train
+the ARIMA(1,1,1) model. Then we test the model by forecasting the
+'ClosePrice' in the test set. Note that we divided the 'ClosePrice' by
+38 to make 'ClosePrice' and 'Signal' equal at the starting date of the
+test set
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{ar111}\PY{o}{.}\PY{n}{forecast}\PY{p}{(}\PY{n}{factor} \PY{o}{=} \PY{l+m+mi}{38}\PY{p}{,} \PY{n}{test\PYZus{}no}\PY{o}{=}\PY{l+m+mi}{100}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+                             ARIMA Model Results                              
+==============================================================================
+Dep. Variable:           D.ClosePrice   No. Observations:                  568
+Model:                 ARIMA(1, 1, 1)   Log Likelihood                1182.385
+Method:                       css-mle   S.D. of innovations              0.030
+Date:                Mon, 20 Apr 2020   AIC                          -2356.770
+Time:                        08:50:04   BIC                          -2339.401
+Sample:                    01-04-2012   HQIC                         -2349.992
+                         - 04-08-2014                                         
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                  0.0027      0.000     12.672      0.000       0.002       0.003
+ar.L1.D.ClosePrice     0.9696      0.011     89.483      0.000       0.948       0.991
+ma.L1.D.ClosePrice    -1.0000      0.007   -147.355      0.000      -1.013      -0.987
+                                    Roots                                    
+=============================================================================
+                  Real          Imaginary           Modulus         Frequency
+-----------------------------------------------------------------------------
+AR.1            1.0313           +0.0000j            1.0313            0.0000
+MA.1            1.0000           +0.0000j            1.0000            0.0000
+-----------------------------------------------------------------------------
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_73_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    From the figure above, the ARIMA(1,1,1) model seems to give a
+directionally correct forecast. And the actual observed 'ClosePrice' lie
+within the 95\% confidence band.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{ar111}\PY{o}{.}\PY{n}{forecast\PYZus{}accuracy}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}36}]:} \{'mape': 0.017322513026562892,
+          'corr': 0.8557742214558138,
+          'minmax': 0.017311234266007558\}
+\end{Verbatim}
+            
+    The MAPE, Correlation and Min-Max Error are used to evaluate the
+forcast. Around 1.7\% MAPE implies the model is about 98.3\% accurate in
+predicting the next 100 trading days. So I think this forcast is quite
+good.
+
+    \section{3 Conclusion.}\label{conclusion.}
+
+    \begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  From the data cleaning section. We find that there are 4 days which
+  are illegal.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  2013-12-25 is Christmas Day
+\item
+  2014-01-01 is New Year's Day
+\item
+  2014-02-08
+\item
+  2014-02-09 are weekends.
+\end{itemize}
+
+What's more, there are 6 outliers in the 'Signal' column, which are -
+2013-11-05 - 2013-11-06 - 2013-03-26 - 2014-04-14 - 2014-04-15 -
+2014-04-16.
+
+Also, there are 3 outliers in the 'ClosePrice' column, which are -
+2013-09-12 - 2013-09-13 - 2013-09-16.
+
+In addition, there are 6 missing dates which are actually trading days
+but are absent in the table. They are - 2013-01-14 - 2013-01-15 -
+2013-01-16 - 2013-01-17 - 2014-01-06 - 2014-02-11
+
+    \begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  By training the ARIMA model using 'Signal', we can predict future
+  values of 'ClosePrice'. So 'Signal'can be predictive of future returns
+  of the SP500 index (use SPY as a proxy).
+\end{enumerate}
+
+However, we should tell the Portfolio Manager that 'ClosePrice' is
+approximately 40 times bigger than 'Signal'. We should calculate this
+factor today before we forecast the 'Closeprice' tomorrow.
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
