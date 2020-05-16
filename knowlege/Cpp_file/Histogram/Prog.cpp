@@ -19,6 +19,13 @@ int main()
 		cout << endl;
 	}
 
+	int aaa = 1;
+	int *sss = &aaa;
+	*sss = -1;
+	if(*sss<0){
+		cout<<"*sss"<<*sss<<endl;
+	}
+
 	return 0;
 }
 
