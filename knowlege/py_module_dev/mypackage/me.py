@@ -1,3 +1,5 @@
+import Prog
+
 class Myinfo:
 	def __init__(self,name = None):
 		self.name = name
