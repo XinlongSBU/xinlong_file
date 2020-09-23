@@ -11,13 +11,17 @@ module table_rates
   public j_ne20_f20
   public j_o20_f20
   public j_f20_ne20
+  public j_mg24_na24
+  public j_na24_mg24
+  public j_al27_mg27
+  public j_mg27_al27
 
   public jtab_mu, jtab_dq, jtab_vs, jtab_rate, jtab_nuloss, jtab_gamma
 
   private num_tables
   private k_drate_dt, add_vars
 
-  integer, parameter :: num_tables   = 4
+  integer, parameter :: num_tables   = 8
   integer, parameter :: jtab_mu      = 1
   integer, parameter :: jtab_dq      = 2
   integer, parameter :: jtab_vs      = 3
@@ -35,6 +39,10 @@ module table_rates
   integer, parameter :: j_ne20_f20   = 2
   integer, parameter :: j_o20_f20   = 3
   integer, parameter :: j_f20_ne20   = 4
+  integer, parameter :: j_mg24_na24   = 5
+  integer, parameter :: j_na24_mg24   = 6
+  integer, parameter :: j_al27_mg27   = 7
+  integer, parameter :: j_mg27_al27   = 8
 
   real(rt), allocatable :: rate_table_j_f20_o20(:,:,:), rhoy_table_j_f20_o20(:), temp_table_j_f20_o20(:)
   integer, allocatable  :: num_rhoy_j_f20_o20, num_temp_j_f20_o20, num_vars_j_f20_o20
@@ -56,6 +64,26 @@ module table_rates
   character(len=50)     :: rate_table_file_j_f20_ne20
   integer               :: num_header_j_f20_ne20
 
+  real(rt), allocatable :: rate_table_j_mg24_na24(:,:,:), rhoy_table_j_mg24_na24(:), temp_table_j_mg24_na24(:)
+  integer, allocatable  :: num_rhoy_j_mg24_na24, num_temp_j_mg24_na24, num_vars_j_mg24_na24
+  character(len=50)     :: rate_table_file_j_mg24_na24
+  integer               :: num_header_j_mg24_na24
+
+  real(rt), allocatable :: rate_table_j_na24_mg24(:,:,:), rhoy_table_j_na24_mg24(:), temp_table_j_na24_mg24(:)
+  integer, allocatable  :: num_rhoy_j_na24_mg24, num_temp_j_na24_mg24, num_vars_j_na24_mg24
+  character(len=50)     :: rate_table_file_j_na24_mg24
+  integer               :: num_header_j_na24_mg24
+
+  real(rt), allocatable :: rate_table_j_al27_mg27(:,:,:), rhoy_table_j_al27_mg27(:), temp_table_j_al27_mg27(:)
+  integer, allocatable  :: num_rhoy_j_al27_mg27, num_temp_j_al27_mg27, num_vars_j_al27_mg27
+  character(len=50)     :: rate_table_file_j_al27_mg27
+  integer               :: num_header_j_al27_mg27
+
+  real(rt), allocatable :: rate_table_j_mg27_al27(:,:,:), rhoy_table_j_mg27_al27(:), temp_table_j_mg27_al27(:)
+  integer, allocatable  :: num_rhoy_j_mg27_al27, num_temp_j_mg27_al27, num_vars_j_mg27_al27
+  character(len=50)     :: rate_table_file_j_mg27_al27
+  integer               :: num_header_j_mg27_al27
+
 
 #ifdef AMREX_USE_CUDA
 
@@ -70,6 +98,18 @@ module table_rates
 
   attributes(managed) :: rate_table_j_f20_ne20, rhoy_table_j_f20_ne20, temp_table_j_f20_ne20
   attributes(managed) :: num_rhoy_j_f20_ne20, num_temp_j_f20_ne20, num_vars_j_f20_ne20
+
+  attributes(managed) :: rate_table_j_mg24_na24, rhoy_table_j_mg24_na24, temp_table_j_mg24_na24
+  attributes(managed) :: num_rhoy_j_mg24_na24, num_temp_j_mg24_na24, num_vars_j_mg24_na24
+
+  attributes(managed) :: rate_table_j_na24_mg24, rhoy_table_j_na24_mg24, temp_table_j_na24_mg24
+  attributes(managed) :: num_rhoy_j_na24_mg24, num_temp_j_na24_mg24, num_vars_j_na24_mg24
+
+  attributes(managed) :: rate_table_j_al27_mg27, rhoy_table_j_al27_mg27, temp_table_j_al27_mg27
+  attributes(managed) :: num_rhoy_j_al27_mg27, num_temp_j_al27_mg27, num_vars_j_al27_mg27
+
+  attributes(managed) :: rate_table_j_mg27_al27, rhoy_table_j_mg27_al27, temp_table_j_mg27_al27
+  attributes(managed) :: num_rhoy_j_mg27_al27, num_temp_j_mg27_al27, num_vars_j_mg27_al27
 
 #endif
 
@@ -130,6 +170,58 @@ contains
     allocate(temp_table_j_f20_ne20(num_temp_j_f20_ne20))
     call init_tab_info(rate_table_j_f20_ne20, rhoy_table_j_f20_ne20, temp_table_j_f20_ne20, num_rhoy_j_f20_ne20, num_temp_j_f20_ne20, num_vars_j_f20_ne20, rate_table_file_j_f20_ne20, num_header_j_f20_ne20)
 
+    allocate(num_temp_j_mg24_na24)
+    allocate(num_rhoy_j_mg24_na24)
+    allocate(num_vars_j_mg24_na24)
+    num_temp_j_mg24_na24 = 39
+    num_rhoy_j_mg24_na24 = 152
+    num_vars_j_mg24_na24 = 6
+    num_header_j_mg24_na24 = 5
+    rate_table_file_j_mg24_na24 = trim("24mg-24na_electroncapture.dat")
+    allocate(rate_table_j_mg24_na24(num_temp_j_mg24_na24, num_rhoy_j_mg24_na24, num_vars_j_mg24_na24))
+    allocate(rhoy_table_j_mg24_na24(num_rhoy_j_mg24_na24))
+    allocate(temp_table_j_mg24_na24(num_temp_j_mg24_na24))
+    call init_tab_info(rate_table_j_mg24_na24, rhoy_table_j_mg24_na24, temp_table_j_mg24_na24, num_rhoy_j_mg24_na24, num_temp_j_mg24_na24, num_vars_j_mg24_na24, rate_table_file_j_mg24_na24, num_header_j_mg24_na24)
+
+    allocate(num_temp_j_na24_mg24)
+    allocate(num_rhoy_j_na24_mg24)
+    allocate(num_vars_j_na24_mg24)
+    num_temp_j_na24_mg24 = 39
+    num_rhoy_j_na24_mg24 = 152
+    num_vars_j_na24_mg24 = 6
+    num_header_j_na24_mg24 = 5
+    rate_table_file_j_na24_mg24 = trim("24na-24mg_betadecay.dat")
+    allocate(rate_table_j_na24_mg24(num_temp_j_na24_mg24, num_rhoy_j_na24_mg24, num_vars_j_na24_mg24))
+    allocate(rhoy_table_j_na24_mg24(num_rhoy_j_na24_mg24))
+    allocate(temp_table_j_na24_mg24(num_temp_j_na24_mg24))
+    call init_tab_info(rate_table_j_na24_mg24, rhoy_table_j_na24_mg24, temp_table_j_na24_mg24, num_rhoy_j_na24_mg24, num_temp_j_na24_mg24, num_vars_j_na24_mg24, rate_table_file_j_na24_mg24, num_header_j_na24_mg24)
+
+    allocate(num_temp_j_al27_mg27)
+    allocate(num_rhoy_j_al27_mg27)
+    allocate(num_vars_j_al27_mg27)
+    num_temp_j_al27_mg27 = 39
+    num_rhoy_j_al27_mg27 = 152
+    num_vars_j_al27_mg27 = 6
+    num_header_j_al27_mg27 = 6
+    rate_table_file_j_al27_mg27 = trim("27al-27mg_electroncapture.dat")
+    allocate(rate_table_j_al27_mg27(num_temp_j_al27_mg27, num_rhoy_j_al27_mg27, num_vars_j_al27_mg27))
+    allocate(rhoy_table_j_al27_mg27(num_rhoy_j_al27_mg27))
+    allocate(temp_table_j_al27_mg27(num_temp_j_al27_mg27))
+    call init_tab_info(rate_table_j_al27_mg27, rhoy_table_j_al27_mg27, temp_table_j_al27_mg27, num_rhoy_j_al27_mg27, num_temp_j_al27_mg27, num_vars_j_al27_mg27, rate_table_file_j_al27_mg27, num_header_j_al27_mg27)
+
+    allocate(num_temp_j_mg27_al27)
+    allocate(num_rhoy_j_mg27_al27)
+    allocate(num_vars_j_mg27_al27)
+    num_temp_j_mg27_al27 = 39
+    num_rhoy_j_mg27_al27 = 152
+    num_vars_j_mg27_al27 = 6
+    num_header_j_mg27_al27 = 6
+    rate_table_file_j_mg27_al27 = trim("27mg-27al_betadecay.dat")
+    allocate(rate_table_j_mg27_al27(num_temp_j_mg27_al27, num_rhoy_j_mg27_al27, num_vars_j_mg27_al27))
+    allocate(rhoy_table_j_mg27_al27(num_rhoy_j_mg27_al27))
+    allocate(temp_table_j_mg27_al27(num_temp_j_mg27_al27))
+    call init_tab_info(rate_table_j_mg27_al27, rhoy_table_j_mg27_al27, temp_table_j_mg27_al27, num_rhoy_j_mg27_al27, num_temp_j_mg27_al27, num_vars_j_mg27_al27, rate_table_file_j_mg27_al27, num_header_j_mg27_al27)
+
 
   end subroutine init_tabular
 
@@ -163,6 +255,34 @@ contains
     deallocate(rate_table_j_f20_ne20)
     deallocate(rhoy_table_j_f20_ne20)
     deallocate(temp_table_j_f20_ne20)
+
+    deallocate(num_temp_j_mg24_na24)
+    deallocate(num_rhoy_j_mg24_na24)
+    deallocate(num_vars_j_mg24_na24)
+    deallocate(rate_table_j_mg24_na24)
+    deallocate(rhoy_table_j_mg24_na24)
+    deallocate(temp_table_j_mg24_na24)
+
+    deallocate(num_temp_j_na24_mg24)
+    deallocate(num_rhoy_j_na24_mg24)
+    deallocate(num_vars_j_na24_mg24)
+    deallocate(rate_table_j_na24_mg24)
+    deallocate(rhoy_table_j_na24_mg24)
+    deallocate(temp_table_j_na24_mg24)
+
+    deallocate(num_temp_j_al27_mg27)
+    deallocate(num_rhoy_j_al27_mg27)
+    deallocate(num_vars_j_al27_mg27)
+    deallocate(rate_table_j_al27_mg27)
+    deallocate(rhoy_table_j_al27_mg27)
+    deallocate(temp_table_j_al27_mg27)
+
+    deallocate(num_temp_j_mg27_al27)
+    deallocate(num_rhoy_j_mg27_al27)
+    deallocate(num_vars_j_mg27_al27)
+    deallocate(rate_table_j_mg27_al27)
+    deallocate(rhoy_table_j_mg27_al27)
+    deallocate(temp_table_j_mg27_al27)
 
 
   end subroutine term_table_meta

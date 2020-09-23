@@ -22,18 +22,18 @@ module actual_network
   real(rt), parameter :: mass_proton   = 1.67262163783e-24_rt
   real(rt), parameter :: mass_electron = 9.10938215450e-28_rt
 
-  integer, parameter :: nrates = 26
+  integer, parameter :: nrates = 34
 
 
   ! For each rate, we need: rate, drate/dT, screening, dscreening/dT
   integer, parameter :: num_rate_groups = 4
 
   ! Number of reaclib rates
-  integer, parameter :: nrat_reaclib = 22
-  integer, parameter :: number_reaclib_sets = 50
+  integer, parameter :: nrat_reaclib = 26
+  integer, parameter :: number_reaclib_sets = 54
 
   ! Number of tabular rates
-  integer, parameter :: nrat_tabular = 4
+  integer, parameter :: nrat_tabular = 8
 
   ! Binding Energies Per Nucleon (MeV)
   real(rt) :: ebind_per_nucleon(nspec)
@@ -47,39 +47,49 @@ module actual_network
   integer, parameter :: jo20   = 4
   integer, parameter :: jf20   = 5
   integer, parameter :: jne20   = 6
-  integer, parameter :: jmg24   = 7
-  integer, parameter :: jal27   = 8
-  integer, parameter :: jsi28   = 9
-  integer, parameter :: jp31   = 10
-  integer, parameter :: js32   = 11
+  integer, parameter :: jna24   = 7
+  integer, parameter :: jmg24   = 8
+  integer, parameter :: jmg27   = 9
+  integer, parameter :: jal27   = 10
+  integer, parameter :: jsi28   = 11
+  integer, parameter :: jp31   = 12
+  integer, parameter :: js32   = 13
 
   ! Reactions
   integer, parameter :: k_ne20__he4_o16   = 1
-  integer, parameter :: k_mg24__he4_ne20   = 2
-  integer, parameter :: k_si28__p_al27   = 3
-  integer, parameter :: k_si28__he4_mg24   = 4
-  integer, parameter :: k_p31__he4_al27   = 5
-  integer, parameter :: k_s32__p_p31   = 6
-  integer, parameter :: k_s32__he4_si28   = 7
-  integer, parameter :: k_he4_o16__ne20   = 8
-  integer, parameter :: k_he4_ne20__mg24   = 9
-  integer, parameter :: k_he4_mg24__si28   = 10
-  integer, parameter :: k_p_al27__si28   = 11
-  integer, parameter :: k_he4_al27__p31   = 12
-  integer, parameter :: k_he4_si28__s32   = 13
-  integer, parameter :: k_p_p31__s32   = 14
-  integer, parameter :: k_o16_o16__p_p31   = 15
-  integer, parameter :: k_o16_o16__he4_si28   = 16
-  integer, parameter :: k_he4_mg24__p_al27   = 17
-  integer, parameter :: k_p_al27__he4_mg24   = 18
-  integer, parameter :: k_he4_si28__p_p31   = 19
-  integer, parameter :: k_he4_si28__o16_o16   = 20
-  integer, parameter :: k_p_p31__he4_si28   = 21
-  integer, parameter :: k_p_p31__o16_o16   = 22
-  integer, parameter :: k_f20__o20   = 23
-  integer, parameter :: k_ne20__f20   = 24
-  integer, parameter :: k_o20__f20   = 25
-  integer, parameter :: k_f20__ne20   = 26
+  integer, parameter :: k_na24__he4_f20   = 2
+  integer, parameter :: k_mg24__he4_ne20   = 3
+  integer, parameter :: k_si28__p_al27   = 4
+  integer, parameter :: k_si28__he4_mg24   = 5
+  integer, parameter :: k_p31__he4_al27   = 6
+  integer, parameter :: k_s32__p_p31   = 7
+  integer, parameter :: k_s32__he4_si28   = 8
+  integer, parameter :: k_he4_o16__ne20   = 9
+  integer, parameter :: k_he4_f20__na24   = 10
+  integer, parameter :: k_he4_ne20__mg24   = 11
+  integer, parameter :: k_he4_mg24__si28   = 12
+  integer, parameter :: k_p_al27__si28   = 13
+  integer, parameter :: k_he4_al27__p31   = 14
+  integer, parameter :: k_he4_si28__s32   = 15
+  integer, parameter :: k_p_p31__s32   = 16
+  integer, parameter :: k_o16_o16__p_p31   = 17
+  integer, parameter :: k_o16_o16__he4_si28   = 18
+  integer, parameter :: k_he4_na24__p_mg27   = 19
+  integer, parameter :: k_he4_mg24__p_al27   = 20
+  integer, parameter :: k_p_mg27__he4_na24   = 21
+  integer, parameter :: k_p_al27__he4_mg24   = 22
+  integer, parameter :: k_he4_si28__p_p31   = 23
+  integer, parameter :: k_he4_si28__o16_o16   = 24
+  integer, parameter :: k_p_p31__he4_si28   = 25
+  integer, parameter :: k_p_p31__o16_o16   = 26
+  integer, parameter :: k_f20__o20   = 27
+  integer, parameter :: k_ne20__f20   = 28
+  integer, parameter :: k_o20__f20   = 29
+  integer, parameter :: k_f20__ne20   = 30
+  integer, parameter :: k_mg24__na24   = 31
+  integer, parameter :: k_na24__mg24   = 32
+  integer, parameter :: k_al27__mg27   = 33
+  integer, parameter :: k_mg27__al27   = 34
 
   real(rt), allocatable, save :: bion(:), mion(:)
 
@@ -91,7 +101,7 @@ module actual_network
 
 #ifdef REACT_SPARSE_JACOBIAN
   ! Shape of Jacobian in Compressed Sparse Row format
-  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 101
+  integer, parameter   :: NETWORK_SPARSE_JAC_NNZ = 127
   integer, allocatable :: csr_jac_col_index(:), csr_jac_row_count(:)
 
 #ifdef AMREX_USE_CUDA
@@ -119,7 +129,9 @@ contains
     ebind_per_nucleon(jo20)   = 7.56857000000000e+00_rt
     ebind_per_nucleon(jf20)   = 7.72013400000000e+00_rt
     ebind_per_nucleon(jne20)   = 8.03224000000000e+00_rt
+    ebind_per_nucleon(jna24)   = 8.06348800000000e+00_rt
     ebind_per_nucleon(jmg24)   = 8.26070900000000e+00_rt
+    ebind_per_nucleon(jmg27)   = 8.26385200000000e+00_rt
     ebind_per_nucleon(jal27)   = 8.33155300000000e+00_rt
     ebind_per_nucleon(jsi28)   = 8.44774400000000e+00_rt
     ebind_per_nucleon(jp31)   = 8.48116700000000e+00_rt
@@ -151,9 +163,12 @@ contains
       10, &
       11, &
       12, &
+      13, &
+      14, &
       1, &
       2, &
       3, &
+      5, &
       6, &
       7, &
       8, &
@@ -161,75 +176,82 @@ contains
       10, &
       11, &
       12, &
+      13, &
+      14, &
       1, &
       2, &
       3, &
       6, &
-      9, &
-      10, &
+      11, &
       12, &
+      14, &
       4, &
       5, &
-      12, &
-      4, &
-      5, &
-      6, &
-      12, &
+      14, &
       2, &
-      3, &
-      5, &
-      6, &
-      7, &
-      12, &
-      1, &
-      2, &
-      6, &
-      7, &
-      8, &
-      9, &
-      12, &
-      1, &
-      2, &
-      7, &
-      8, &
-      9, &
-      10, &
-      12, &
-      1, &
-      2, &
-      3, &
-      7, &
-      8, &
-      9, &
-      10, &
-      11, &
-      12, &
-      1, &
-      2, &
-      3, &
-      8, &
-      9, &
-      10, &
-      11, &
-      12, &
-      1, &
-      2, &
-      9, &
-      10, &
-      11, &
-      12, &
-      1, &
-      2, &
-      3, &
       4, &
       5, &
       6, &
       7, &
+      14, &
+      2, &
+      3, &
+      5, &
+      6, &
+      8, &
+      14, &
+      1, &
+      2, &
+      5, &
+      7, &
+      8, &
+      9, &
+      14, &
+      1, &
+      2, &
+      6, &
+      7, &
+      8, &
+      10, &
+      11, &
+      14, &
+      1, &
+      2, &
+      7, &
+      9, &
+      10, &
+      14, &
+      1, &
+      2, &
       8, &
       9, &
       10, &
       11, &
       12, &
+      14, &
+      1, &
+      2, &
+      3, &
+      8, &
+      10, &
+      11, &
+      12, &
+      13, &
+      14, &
+      1, &
+      2, &
+      3, &
+      10, &
+      11, &
+      12, &
+      13, &
+      14, &
+      1, &
+      2, &
+      11, &
+      12, &
+      13, &
+      14, &
       1, &
       2, &
       3, &
@@ -242,23 +264,41 @@ contains
       10, &
       11, &
       12, &
-      13  ]
+      13, &
+      14, &
+      1, &
+      2, &
+      3, &
+      4, &
+      5, &
+      6, &
+      7, &
+      8, &
+      9, &
+      10, &
+      11, &
+      12, &
+      13, &
+      14, &
+      15  ]
 
     csr_jac_row_count = [ &
       1, &
-      10, &
-      20, &
-      27, &
-      30, &
-      34, &
-      40, &
+      12, &
+      25, &
+      32, &
+      35, &
+      41, &
       47, &
       54, &
-      63, &
-      71, &
-      77, &
-      89, &
-      102  ]
+      62, &
+      68, &
+      76, &
+      85, &
+      93, &
+      99, &
+      113, &
+      128  ]
 #endif
 
   end subroutine actual_network_init

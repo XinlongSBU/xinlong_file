@@ -6,10 +6,10 @@ mylibrary = pyna.rates.Library(library_file)
 
 data_list = mylibrary.get_rates()
 
-all_nuclei = ["p","he4","ne20","o20","f20","mg24","al27","o16","si28","s32","p31"]
+all_nuclei = ["p","he4","ne20","o20","f20","mg24","al27","o16","si28","s32","p31","na24","mg27"]
 
 escn_library = mylibrary.linking_nuclei(all_nuclei,with_reverse=True)
-escn_tabular = ["f20--o20-toki","ne20--f20-toki","o20--f20-toki","f20--ne20-toki"]
+escn_tabular = ["f20--o20-toki","ne20--f20-toki","o20--f20-toki","f20--ne20-toki","mg24--na24-toki","na24--mg24-toki","al27--mg27-toki","mg27--al27-toki"]
 
 rc = pyna.RateCollection(libraries=[escn_library])
 
@@ -32,7 +32,7 @@ comp.normalize()
 new_rate_list = []
 #ydots = rc.evaluate_rates(rho=7.e9, T=1.e9, composition=comp)
 for rate in rc.rates:
-    if rate.weak == False:
+    if not rate.weak:
         new_rate_list.append(rate)
 
 #ecsn = pyna.RateCollection(rates=new_rate_list, rate_files=escn_tabular)

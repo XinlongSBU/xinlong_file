@@ -74,6 +74,9 @@ contains
       zion(jo16), aion(jo16))
 
     call add_screening_factor(zion(jhe4), aion(jhe4), &
+      zion(jf20), aion(jf20))
+
+    call add_screening_factor(zion(jhe4), aion(jhe4), &
       zion(jne20), aion(jne20))
 
     call add_screening_factor(zion(jhe4), aion(jhe4), &
@@ -93,6 +96,12 @@ contains
 
     call add_screening_factor(zion(jo16), aion(jo16), &
       zion(jo16), aion(jo16))
+
+    call add_screening_factor(zion(jhe4), aion(jhe4), &
+      zion(jna24), aion(jna24))
+
+    call add_screening_factor(zion(jp), aion(jp), &
+      zion(jmg27), aion(jmg27))
 
 
     call screening_init()

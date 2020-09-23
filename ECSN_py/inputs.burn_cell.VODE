@@ -50,19 +50,25 @@
 ! ne20  initial mass fraction
   massfractions(6) = 0.0d0
 
-! mg24  initial mass fraction
+! na24  initial mass fraction
   massfractions(7) = 0.0d0
 
-! al27  initial mass fraction
+! mg24  initial mass fraction
   massfractions(8) = 0.0d0
 
-! si28  initial mass fraction
+! mg27  initial mass fraction
   massfractions(9) = 0.0d0
 
-! p31   initial mass fraction
+! al27  initial mass fraction
   massfractions(10) = 0.0d0
 
-! s32   initial mass fraction
+! si28  initial mass fraction
   massfractions(11) = 0.0d0
+
+! p31   initial mass fraction
+  massfractions(12) = 0.0d0
+
+! s32   initial mass fraction
+  massfractions(13) = 0.0d0
 
 /
